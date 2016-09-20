@@ -1,4 +1,4 @@
-TARGET = paper 
+TARGET = jaildocker
 
 LATEXSOURCES = \
 	$(TARGET).tex 
