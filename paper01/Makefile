@@ -1,4 +1,4 @@
-TARGET = scalability
+TARGET = paper 
 
 LATEXSOURCES = \
 	$(TARGET).tex 
