@@ -1,29 +1,37 @@
-\section{Evaluation}
+\section{Spark Scalability}
+
+
+\subsection{Benchmarks}
+
+
+
+\subsection{Scalability}
+
+
 
 
 \begin{figure*}[tb]
     \centering
     \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/wc_docker.eps}
-        \caption{Exim - 120core}
+        \includegraphics[width=1.8in]{graph/wc.eps}
+        \caption{Word Count}
     \end{subfigure}%
     \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/nb_docker.eps}
-        \caption{Lmbench - 120core}
+        \includegraphics[width=1.8in]{graph/nb.eps}
+        \caption{Naive Basian}
     \end{subfigure}%
     \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/grep_docker.eps}
-        \caption{AIM7 - 120core}
+        \includegraphics[width=1.8in]{graph/grep.eps}
+        \caption{Grep}
     \end{subfigure}%
         \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/pagerank_docker.eps}
-        \caption{Lmbench - 120core}
+        \includegraphics[width=1.8in]{graph/pagerank.eps}
+        \caption{Pagerank}
     \end{subfigure}
         \centering
     \caption{CPU utilization on 120 core.}
-    \label{fig:utilization3}
+    \label{fig:utilization}
 \end{figure*}
-
 
 
 \begin{figure*}[tb]
@@ -46,22 +54,27 @@
     \end{subfigure}
         \centering
     \caption{CPU utilization on 120 core.}
-    \label{fig:utilization2}
+    \label{fig:utilization}
 \end{figure*}
 
 
 
 
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 1: 무엇을 평가 했는지에 대한 설명 
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-This section answers the following questions experimentally:
-\begin{CompactItemize}
-\item Does \ldu's design matter for applications?
 
-\item Why does \ldu's scheme scale well?
 
-\item What about \ldu's read-write ratio?
-\end{CompactItemize}
+Figure~\ref{fig:utilization}(a)) since it waits to acquire
+
+\subsection{CPU Utilization}
+
+
+
+\subsection{Memory usage}
+
+
+
+\subsection{Lock}
+
+
+
 
