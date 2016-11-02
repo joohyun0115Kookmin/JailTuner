@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{Arbel2014ConcurrentRCU}
+Maya Arbel and Hagit Attiya.
+\newblock {Concurrent Updates with RCU: Search Tree As an Example}.
+\newblock In {\em Proceedings of the 2014 ACM Symposium on Principles of
+  Distributed Computing}, PODC '14, pages 196--205, 2014.
+
+\bibitem{Boyd-WickizerCorey}
+Silas Boyd-Wickizer, Haibo Chen, Rong Chen, Yandong Mao, Frans Kaashoek, Robert
+  Morris, Aleksey Pesterev, Lex Stein, Ming Wu, Yuehua Dai, Yang Zhang, and
+  Zheng Zhang.
+\newblock {Corey: An Operating System for Many Cores}.
+\newblock In {\em Proceedings of the 8th USENIX Conference on Operating Systems
+  Design and Implementation}, OSDI'08, pages 43--57, 2008.
+
+\bibitem{SilasBoydWickizer2010LinuxScales48}
+Silas Boyd-Wickizer, Austin~T. Clements, Yandong Mao, Aleksey Pesterev,
+  M.~Frans Kaashoek, Robert Morris, and Nickolai Zeldovich.
+\newblock {An Analysis of Linux Scalability to Many Cores}.
+\newblock In {\em Proceedings of the 9th USENIX Conference on Operating Systems
+  Design and Implementation}, OSDI'10, pages 1--16, 2010.
+
+\bibitem{SilasBoydWickizerPth}
+Silas Boyd-Wickizer, M.~Frans Kaashoek, Robert Morris, and Nickolai Zeldovich.
+\newblock {OpLog: a library for scaling update-heavy data structures}.
+\newblock In {\em Technical Report MIT-CSAIL-TR2014-019}, 2014.
+
+\bibitem{Chabbi2016CLL}
+Milind Chabbi and John Mellor-Crummey.
+\newblock {Contention-conscious, Locality-preserving Locks}.
+\newblock In {\em Proceedings of the 21st ACM SIGPLAN Symposium on Principles
+  and Practice of Parallel Programming}, PPoPP '16, pages 22:1--22:14, 2016.
+
+\bibitem{AustinTClements2012RCUBalancedTrees}
+Austin~T. Clements, M.~Frans Kaashoek, and Nickolai Zeldovich.
+\newblock {Scalable Address Spaces Using RCU Balanced Trees}.
+\newblock In {\em Proceedings of the Seventeenth International Conference on
+  Architectural Support for Programming Languages and Operating Systems},
+  ASPLOS XVII, pages 199--210, 2012.
+
+\bibitem{Clements2013RadixVM}
+Austin~T. Clements, M.~Frans Kaashoek, and Nickolai~and Zeldovich.
+\newblock {RadixVM: Scalable Address Spaces for Multithreaded Applications}.
+\newblock In {\em Proceedings of the 8th ACM European Conference on Computer
+  Systems}, EuroSys '13, pages 211--224, 2013.
+
+\bibitem{Dodds2015SCT}
+Mike Dodds, Andreas Haas, and Christoph~M. Kirsch.
+\newblock {A Scalable, Correct Time-Stamped Stack}.
+\newblock In {\em Proceedings of the 42Nd Annual ACM SIGPLAN-SIGACT Symposium
+  on Principles of Programming Languages}, POPL '15, pages 233--246, 2015.
+
+\bibitem{Fatourou2012RCS}
+Panagiota Fatourou and Nikolaos~D. Kallimanis.
+\newblock {Revisiting the Combining Synchronization Technique}.
+\newblock {\em SIGPLAN Not.}, 47(8):257--266, February 2012.
+
+\bibitem{Harris2001Lockfree}
+Timothy~L. Harris.
+\newblock {A Pragmatic Implementation of Non-blocking Linked-Lists}.
+\newblock In {\em Proceedings of the 15th International Conference on
+  Distributed Computing}, DISC '01, pages 300--314, 2001.
+
+\bibitem{Hendler2010FC}
+Danny Hendler, Itai Incze, Nir Shavit, and Moran Tzafrir.
+\newblock {Flat Combining and the Synchronization-parallelism Tradeoff}.
+\newblock SPAA '10, pages 355--364, 2010.
+
+\bibitem{Delegation2014}
+David Klaftenegger, Konstantinos Sagonas, and Kjell Winblad.
+\newblock {Delegation Locking Libraries for Improved Performance of
+  Multithreaded Program}.
+\newblock In {\em Euro-Par 2014 Parallel Processing}, pages 572--583, 2014.
+
+\bibitem{Kyong2016LDU}
+Joohyun Kyong and Sung-Soo Lim.
+\newblock {LDU: A Lightweight Concurrent Update Method with Deferred Processing
+  for Linux Kernel Scalability}.
+\newblock In {\em Proceedings of the IASTED International Conference, Parallel
+  and Distributed Computing and Networks (PDCN 2016)}, 2016.
+
+\bibitem{Magnusson1994QLC}
+Peter~S. Magnusson, Anders Landin, and Erik Hagersten.
+\newblock {Queue Locks on Cache Coherent Multiprocessors}.
+\newblock In {\em Proceedings of the 8th International Symposium on Parallel
+  Processing}, pages 165--171. IEEE Computer Society, 1994.
+
+\bibitem{Matveev2015RLU}
+Alexander Matveev, Nir Shavit, Pascal Felber, and Patrick Marlier.
+\newblock {Read-log-update: A Lightweight Synchronization Mechanism for
+  Concurrent Programming}.
+\newblock In {\em Proceedings of the 25th Symposium on Operating Systems
+  Principles}, SOSP '15, pages 168--183, 2015.
+
+\bibitem{McKenney98}
+Paul~E. McKenney and John~D. Slingwine.
+\newblock {Read-Copy Update: Using Execution History to Solve Concurrency
+  Problems}.
+\newblock In {\em {Parallel and Distributed Computing and Systems}}, pages
+  509--518, October 1998.
+
+\bibitem{MellorCrummey1991MCS}
+John~M. Mellor-Crummey and Michael~L. Scott.
+\newblock {Algorithms for Scalable Synchronization on Shared-memory
+  Multiprocessors}.
+\newblock {\em ACM Trans. Comput. Syst.}, 9(1):21--65, February 1991.
+
+\bibitem{petrank2013lock}
+Erez Petrank and Shahar Timnat.
+\newblock {Lock-free data-structure iterators}.
+\newblock In {\em DISC '13 Proceedings of the 27th International Conference on
+  Distributed Computing, Jerusalem, Israel}. 2013.
+
+\bibitem{Radovic2003HBL}
+Zoran Radovic and Erik Hagersten.
+\newblock {Hierarchical Backoff Locks for Nonuniform Communication
+  Architectures}.
+\newblock In {\em Proceedings of the 9th International Symposium on
+  High-Performance Computer Architecture}, HPCA '03, pages 241--. IEEE Computer
+  Society, 2003.
+
+\bibitem{Wentzlaff2010fOS}
+David Wentzlaff, Charles Gruenwald, III, Nathan Beckmann, Kevin Modzelewski,
+  Adam Belay, Lamia Youseff, Jason Miller, and Anant Agarwal.
+\newblock {An Operating System for Multicore and Clouds: Mechanisms and
+  Implementation}.
+\newblock In {\em Proceedings of the 1st ACM Symposium on Cloud Computing},
+  SoCC '10, pages 3--14, 2010.
+
+\end{thebibliography}
