@@ -16,5 +16,4 @@ set font  "arial,20"
 
 plot \
 "./data/grep_default.data" every :::0::0 with lp title "grep", \
-"./data/grep_8.data" every :::0::0 with lp title "grep per lock", \
 "./data/grep_15.data" every :::0::0 with lp title "grep per socket"

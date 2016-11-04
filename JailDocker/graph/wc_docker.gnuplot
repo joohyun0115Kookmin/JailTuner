@@ -16,5 +16,4 @@ set font  "arial,20"
 
 plot \
 "./data/wc_default.data" every :::0::0 with lp title "word count",\
-"./data/wc_15.data" every :::0::0 with lp title "word count per socket",\
-"./data/wc_8.data" every :::0::0 with lp title "word count per lock"
+"./data/wc_15.data" every :::0::0 with lp title "word count per socket"
