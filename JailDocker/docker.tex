@@ -26,6 +26,9 @@ runtime엔진을 scale-up서버를 위해 scalable하게 만드는 것이다.
 파티션닝 방법이 필요한 가장 큰 이유는 GC의 영향 때문이다. 
 GC가 발생하면 모든 Thread는 멈추고 동작하는데, pararrell GC를 사용해도, 여전히 
 GC가 완벽하게 parrall하게 동작하지는 않기 때문에, 여전히 serializaed 되는 부분이 존재한다.
+하지만, JVM에서 도는 thread 수가 적을 수록 GC의 영향은 적게 받는다. 
+본 논문은 이러한 점을 이용하여 JVM을 나누어 동작시키도록 하여 GC의 영향을 최소화 하도록
+하였다. 
 \else
 
 \fi
