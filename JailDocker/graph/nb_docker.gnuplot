@@ -15,6 +15,7 @@ set font  "arial,20"
 
 
 plot \
-"./data/nb_default.data" every :::0::0 with lp title "naive bayes", \
-"./data/nb_8.data" every :::0::0 with lp title "naive bayes per lock", \
-"./data/nb_15.data" every :::0::0 with lp title "naive bayes per socket"
+"./data/nb_default.data" every :::0::0 with lp title "naive bayes PS GC", \
+"./data/nb_default_g1.data" every :::0::0 with lp title "naive bayes G1 GC", \
+"./data/nb_15.data" every :::0::0 with lp title "naive bayes partitioning(per-socket)", \
+"./data/nb_30.data" every :::0::0 with lp title "naive bayes partitioning(best-fit)"

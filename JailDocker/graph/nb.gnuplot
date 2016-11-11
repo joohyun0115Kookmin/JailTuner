@@ -15,4 +15,5 @@ set font  "arial,20"
 
 
 plot \
-"./data/nb_default.data" every :::0::0 with lp title "naive bayes"
+"./data/nb_default.data" every :::0::0 with lp title "naive bayes PS GC", \
+"./data/nb_default_g1.data" every :::0::0 with lp title "naive bayes G1 GC"

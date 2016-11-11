@@ -1,74 +1,15 @@
 \section{Evaluation}
 
 
-\begin{figure*}[tb]
-    \centering
-    \begin{subfigure}[b]{0.33\textwidth}
-        \includegraphics[width=2.2in]{graph/wc_docker.eps}
-        \caption{Exim - 120core}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.33\textwidth}
-        \includegraphics[width=2.2in]{graph/nb_docker.eps}
-        \caption{Lmbench - 120core}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.33\textwidth}
-        \includegraphics[width=2.2in]{graph/grep_docker.eps}
-        \caption{AIM7 - 120core}
-    \end{subfigure}
-        \begin{subfigure}[b]{0.33\textwidth}
-        \includegraphics[width=2.2in]{graph/pagerank_docker.eps}
-        \caption{Lmbench - 120core}
-    \end{subfigure}%
-        \begin{subfigure}[b]{0.33\textwidth}
-        \includegraphics[width=2.2in]{graph/nb_docker.eps}
-        \caption{Lmbench - 120core}
-    \end{subfigure}%
-        \centering
-    \caption{CPU utilization on 120 core.}
-    \label{fig:utilization3}
-\end{figure*}
-
-
-
-
-
-\begin{figure*}[tb]
-    \centering
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Word Count}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Naive Basian}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Grep}
-    \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Pagerank}
-    \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Pagerank}
-    \end{subfigure}
-        \centering
-    \caption{CPU utilization on 120 core.}
-    \label{fig:utilization2}
-\end{figure*}
-
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1: 실험 환경 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-이번 장에서는 스파크의 Scalalbility에 대해서 설명한다. 실험 환경은 2장에서 수행한 방법과
-같은 플랫폼에서 실험을 하였고, 
-We ran the three benchmarks on Linux 3.19.rc4 with stock Linux with 
-the automatic NUMA balancing feature disabled because the
-Harris linked list has the iteration issue~\cite{petrank2013lock}. 
+이번 장에서는 스파크의 Scalalbility에 대해서 설명한다. 
+실험 환경은 2장에서 수행한 방법과 같은 플랫폼에서 실험을 하였고,
+아직 앞장에서 설명한 disition engine에 대해서는 구현하지 못하여,
+ 수동으로 도커로 파티션하여 동작하도록 실험을 하였다. 
+We ran the three benchmarks on Linux 3.19.rc4 with stock Linux. 
 All experiments were performed on a 120 core machine with 8-socket, 15-core
 Intel E7-8870 chips equipped with 792 GB DDR3 DRAM.
 \else
@@ -83,12 +24,12 @@ Intel E7-8870 chips equipped with 792 GB DDR3 DRAM.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
 이번 장에서는 스파크의 Scalalbility에 대해서 설명한다. 첫째로 
-둘째로, NUMA socket 단위로 파티션닝을 수행한 방법이다. 우리의 시스템은 한 소켓당 15코어를
-가지는 NUMA machine이므로 15개의 코어를 가지는 도커를 8개를 생성하여 동작시켰다.
-Heap 메모리 설정은 표와 같다. 기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고,
-input 데이터는 10G 이상으로 설정하였다. 그 이유는 heap 메모리가 데이터 사이즈 보다 크면
-scalabiliy가 문제가 없으나, 실제 1테라 이상의 데이터를 사용하는 big data
-영역에서는 heap 메모리 사이즈가 데이터 사이즈보다 일반적으로 크기 때문이다.
+fine-graind partitioning을 방법인 NUMA socket 단위로 파티션닝을 수행한 방법이다.
+우리의 시스템은 한 소켓당 15코어를 가지는 NUMA machine이므로 15개의 코어를 가지는 도커를 8개를 생성하여 동작시켰다.
+둘째로는 낙오자된 태스크 때문에 발생하는 문제를 제거하기 위해, 보다 corese-graind한
+파티션 Heap 메모리 설정은 표와 같다. 기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고,
+input 데이터는 10G 이상으로 설정하였다.
+데이터를 사용하는 big data 영역에서는 heap 메모리 사이즈가 데이터 사이즈보다 일반적으로 크기 때문이다.
 그리고 메모리 설정은 파티션을 수행한 경우는 각 도커에 512MB로 설정하여 메모리 사용을 
 동일하게 하여 동작 시켰다. 
 \else
@@ -130,7 +71,7 @@ of which is 10 GB.
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 2: pagerank 결과에 대한 설명
+%Paragraph 2: K-means의 낙오자에 대한 결과에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
 AIM7 forks many processes, each of which concurrently runs. 

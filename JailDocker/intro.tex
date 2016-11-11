@@ -3,18 +3,20 @@
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Background : 스파크 -> cloud가 아닌 scale-up server 에서의 scalability에 대한 연구가 필요해짐
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-빅데이터 처리하는데 많이 사용되는 framework 중 하나는 스파크이다.
-최근 효율적인 Spark를 이용하여, large scale data에서 원하는 
-정보만 추출한 데이터를 science fields와 machine learning에서 활용되기 시작하였다.
-Science fields와 machine learning에서 사용되는 환경은 보통 cloud로 구성된 환경이 아닌,
-scale-up server 환경이 많이 이용된다[].
-뿐만 아니라, 점차 core수와 메모리 크기가 증가함[]에 따라, 
-Scale-up 환경도 중요해 지고 있으며, 
-scale-up 서버에서의 스파크에 대한 scalalbility 역시 중요해지고 있다. 
-\else
-
-\fi
+%빅데이터 처리하는데 많이 사용되는 framework 중 하나는 스파크이다.
+Popular big data analytics infrastructures(e.g, Spark[], Hadoop[]) have been
+developed for a cluster scale-out environment, which adds nodes to a
+cluster system.
+On the other hand, scale-up environment, which adds resources(e.g, cpu, memory)
+to a single node system, only special-purpose techniques exist.
+In science and machine learning fields, researchers
+commonly used scale-up server environments, and they now need big data analytics
+frameworks[HPC].
+Moreover, hardware trends are beginning to change to the scale-up
+server; a scale-up server can now have substantial CPU, memory,
+and storage I/O resources[rethink].
+Therefore, the big data analytics infrastructure on scale-up server is
+also importance.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -25,15 +27,22 @@ scale-up 서버에서의 스파크에 대한 scalalbility 역시 중요해지고
 % 3. Scalable한 파일 시스템을 사용한 후 Scalability에 대한 분석한 결과와 해결방법은 없음.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-이처럼 Scale-Up 서버를 위한 scalability 연구들이 진행되고 있다.
-그 중 Single node로 된 scale-up 서버에서의 아파치 스파크의 scalalbility에 가장 많은 
-영향을 미치는 요소는 GC(Garbage Collecter)와 memory access latency이다[].
-A.J. Awan et al.은 스파크의 GC의 serialize 문제점을 parrale GC로 수정하여 성능차이를 
-보였다.
-하지만, 이러한 방법 모두 GC가 가지고 있는 근본적인 성능 저하 때문에 여전히 
+%이처럼 Scale-Up 서버를 위한 scalability 연구들이 진행되고 있다.
+Apache Spark is one of thet widely used big data analytics framework.
+However, Apache Saprk has been reported that it does
+not scale on the single node scale-up server because of garbage
+collection(GC)[][][] and remote memory access latency[][][]. 
+%A.J. Awan et al. conduct 스파크의 GC의 serialize 문제점을 parrale GC로 수정하여 성능차이를 
+%보였다, while these mehtod
+A.J. Awan et al. conducted 
+이러한 방법 모두 GC가 가지고 있는 근본적인 성능 저하 때문에 여전히 
 scalability 문제가 있다(section 2). 
-또한 Spark이외에도 NUMA 구조 때문에 발생하는 memory access latency 문제를 해결하기 위해,
-여러 NUMA 밸런싱[][]에 대한 연구가 진행되고 있다. 
+%문제를 해결하기 위해, 여러 NUMA 밸런싱[][]에 대한 연구가 진행되고 있다. 
+%그러나, 이러한 방법도 파티션되어 로컬에 메모리에 접근하는 것 만큼 효과를
+% 얻지 못한다[](section 2).
+Moreover, in order to solve the memory access latency problem, researchs have
+attempt to NUMA balancing[][], but these method also can not satisfactory
+compared to partitioning approch(see section 2).
 \else
 
 
@@ -45,11 +54,17 @@ scalability 문제가 있다(section 2).
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-본 연구는 스파크 scalabiity에 가장 많은 영향을 미치는 GC와 memory access latency에 
-대한 문제를 동시에 해결하기 위해, 파티션닝 기법을 제안한다.
-이 방법은 코어와 메모리를 나누어 적은 코어와 적은 메모리로 실행시키도록 만들었다.
-따라서, 적은 코어 그룹이 공유데이터를 대상으로 작업 하므로 근본적으로 GC에 의해 
-thread들이 serialized 되는 현상을 줄일 수 있다. 
+%본 연구는 스파크 scalabiity에 가장 많은 영향을 미치는 GC와 memory access latency에 
+%대한 문제를 동시에 해결하기 위해, 파티션닝 기법을 제안한다.
+In order to solve the GC problem and the memory access latency probelem
+that have been a major problem of spark scalability, we present a docker
+containers-based patitioning method.
+%이 방법은 코어와 메모리를 나누어 적은 코어와 적은 메모리로 실행시키도록 해준다.
+This method make cpu and memory run with small size of cpu and memory.
+%따라서, 적은 코어 그룹이 공유데이터를 대상으로 작업 하므로 근본적으로 GC에 의해 
+%thread들이 serialized 되는 현상을 줄일 수 있다. 
+Therefore, since small size of cpu groups work with shared global data, it can
+mitigate the thread serialized problem cased by GC.
 또한 파티션된어 NUMA 소켓의 로컬 메모리만 접근하므로 memory access latency 줄일 수 있다. 
 뿐만아니라 이러한 방법은 Scale-up 서버의 shared-memory 시스템에서 사용되는
 운영체제의 근본적인 문제인 공유 때문에 발생하는
@@ -69,10 +84,12 @@ distributed-system 처럼 구성하여 scalability를 향상 시켰다.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-우리의 Docker container 기반 방법은 Scale-Up server에서 최적의 성능을 내기 위한 방법이다. 
-우리의 방법을 적용한 결과 
-The evaluation of the proposed apporch on a 120 core system reveals that 
-the execution times could be improved by 1.7x, 1.6x, and 2.2x for 
+또한 문제를 해결하기 위해, 본 논문은 최고의 성능 확장서을 내기 위한 파티션 방법에 대해서 설명한다. 
+그 이유는 만약 너무 작게 파티션을 한다면 전형적인 scale-out 시스템의 문제점인 straggler tasks 때문에 
+job completion 시간이 연기가 되어 성능에 문제가 있고, 너무 크게 파티션을 한다면 GC와 
+memory latency 문제가 발생하기 때문이다.  
+우리의 효율적인 파티션 방법의 평가는 evaluation of the proposed apporch on a 120 core system
+reveals that the execution times could be improved by 1.7x, 1.6x, and 2.2x for 
 a big data workload- , respectively.
 \else
 
@@ -89,13 +106,19 @@ a big data workload- , respectively.
 \textbf{Contributions.} Our research makes the following contributions:
 \begin{itemize}
 \item 
-우리는 120코어로 구성된 scale-up 서버에서의 Spark에 대한 scalability를 분석하였다. 
-분석 결과, pararell GC 통해 약간의 성능을 향상시킬 수 있었으나, 결국 60코어 이상되는 부분 부터는 
-더 이상 성능향상은 없었다. 
+%우리는 120코어로 구성된 scale-up 서버에서의 Spark에 대한 scalability를 분석하였다. 
+We analyzed Apache Spark performance scalability on 120 core scale-up server.
+%분석 결과, pararell GC 통해 약간의 성능을 향상시킬 수 있었으나, 결국 60코어 이상되는 부분 부터는 
+%더 이상 성능향상은 없었다. 
+The results of scalability was that parrlel GC can improve performance
+scalability up to 60 core, but then the GC flattens out after 60 core.
 \item 
-우리는 도커기반의 파티션닝 방법을 120코어 시스템에 적용하여 BigDataBench의 
-5가 워크로드에 대한 scalability 문제를 해결하였다. 
-Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
+%우리는 도커기반의 파티션닝 방법을 120코어 시스템에 적용하여 BigDataBench의 
+%5가 워크로드에 대한 scalability 문제를 해결하였다. 
+We applied our docker container-based partitioning method to scale-up server
+thereby solving scalability problems in BigDataBench.
+Our design improved throughput and execution time from 1.5x through
+2.7x on 120 core.
 \end{itemize}
 
 \else

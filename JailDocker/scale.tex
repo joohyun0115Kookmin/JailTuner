@@ -3,26 +3,22 @@
 
 \begin{figure*}[tb]
     \centering
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc.eps}
         \caption{Word Count}
     \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/nb.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb.eps}
         \caption{Naive Basian}
     \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/grep.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep.eps}
         \caption{Grep}
     \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/pagerank.eps}
-        \caption{Pagerank}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans.eps}
+        \caption{K-means}
     \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/pagerank.eps}
-        \caption{Pagerank}
-    \end{subfigure}
     \caption{CPU utilization on 120 core.}
     \label{fig:utilization}
 \end{figure*}
@@ -31,26 +27,22 @@
 
 \begin{figure*}[tb]
     \centering
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc_cpuutils.eps}
         \caption{Word Count}
     \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb_cpuutils.eps}
         \caption{Naive Basian}
     \end{subfigure}%
-    \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep_cpuutils.eps}
         \caption{Grep}
     \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Pagerank}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans_cpuutils.eps}
+        \caption{K-means}
     \end{subfigure}%
-        \begin{subfigure}[b]{0.20\textwidth}
-        \includegraphics[width=1.4in]{graph/wc_cpuutils.eps}
-        \caption{Pagerank}
-    \end{subfigure}
         \centering
     \caption{CPU utilization on 120 core.}
     \label{fig:utilization}
@@ -130,22 +122,16 @@ Our design improved throughput and execution time from 1.5x through 2.7x on 120 
 \item \textbf{Naive Basian. }
 We applied the in Linux kernel to two reverse mapping(anonymous, file) on
 Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
-\item \textbf{K-means. }
-We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
-\item \textbf{pagerank. }
+\item \textbf{K-means.}
 We applied the in Linux kernel to two reverse mapping(anonymous, file) on
 Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
 \end{itemize}
-
-
 \else
 
 \fi
 
+
 \subsection{Spark Scalability Problem}
-
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Scalability 결과에 대한 대략 적인 설명
@@ -203,14 +189,14 @@ runtime엔진을 scale-up서버를 위해 scalable하게 만드는 것이다.
 % Linux kernel scalability (lock, cache cohearnci, scheduler)등등 OS 노이즈에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-NUMA의 영향 뿐만 아니라, 추가적으로 operating system의 scalability 저해 요소 때문에 
-파티션닝 방법은 필요하다.
-우리는 operation system에서 scalability의 영향을 주는 것을 확인하기 위해 가장먼저
-lock을 조사해보았다.
-첫째로 공유 데이터를 lock이 있다. 표 xxx 앞에서 실험한 spark의 wordcount에 대해서 .
-JVM 위에서 동작하는 thread간의 공유하는 single address space때문에 발생하는 공유 문제이다.
-다음으로 scheduler가 아직 
-마지막으로 cache cohearci traffic이 있다. 
+%NUMA의 영향 뿐만 아니라, 추가적으로 operating system의 scalability 저해 요소 때문에 
+%파티션닝 방법은 필요하다.
+%우리는 operation system에서 scalability의 영향을 주는 것을 확인하기 위해 가장먼저
+%lock을 조사해보았다.
+%첫째로 공유 데이터를 lock이 있다. 표 xxx 앞에서 실험한 spark의 wordcount에 대해서 .
+%JVM 위에서 동작하는 thread간의 공유하는 single address space때문에 발생하는 공유 문제이다.
+%다음으로 scheduler가 아직 
+%마지막으로 cache cohearci traffic이 있다. 
 \else
 
 \fi
