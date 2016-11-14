@@ -34,9 +34,9 @@ not scale on the single node scale-up server because of garbage
 collection(GC)[][][] and remote memory access latency[][][]. 
 %A.J. Awan et al. conduct 스파크의 GC의 serialize 문제점을 parrale GC로 수정하여 성능차이를 
 %보였다, while these mehtod
-A.J. Awan et al. conducted 
-이러한 방법 모두 GC가 가지고 있는 근본적인 성능 저하 때문에 여전히 
-scalability 문제가 있다(section 2). 
+A.J. Awan et al. analysed GC time and compared state of the art
+garbage collectors, changing GC can not solve the scalability problem(section
+2).
 %문제를 해결하기 위해, 여러 NUMA 밸런싱[][]에 대한 연구가 진행되고 있다. 
 %그러나, 이러한 방법도 파티션되어 로컬에 메모리에 접근하는 것 만큼 효과를
 % 얻지 못한다[](section 2).
@@ -56,40 +56,44 @@ compared to partitioning approch(see section 2).
 \ifkor
 %본 연구는 스파크 scalabiity에 가장 많은 영향을 미치는 GC와 memory access latency에 
 %대한 문제를 동시에 해결하기 위해, 파티션닝 기법을 제안한다.
-In order to solve the GC problem and the memory access latency probelem
-that have been a major problem of spark scalability, we present a docker
-containers-based patitioning method.
+Our goals is to reduce the GC and the memory access latency overheads that
+have been a major problem of spark scalability.
+To achieve our goal, this paper presents a new partitioning method that
+eliminates the GC and NUMA latency overheads by applying docker
+container-based and by using efficieny partitioning to Spark on scale-up server.
+Our basic key idea is that shared-memory system is dealt with as the
+distributed-system using partitioning approch in order to eliminate GC and
+memory access overheads.
+
 %이 방법은 코어와 메모리를 나누어 적은 코어와 적은 메모리로 실행시키도록 해준다.
-This method make cpu and memory run with small size of cpu and memory.
-%따라서, 적은 코어 그룹이 공유데이터를 대상으로 작업 하므로 근본적으로 GC에 의해 
-%thread들이 serialized 되는 현상을 줄일 수 있다. 
-Therefore, since small size of cpu groups work with shared global data, it can
-mitigate the thread serialized problem cased by GC.
-또한 파티션된어 NUMA 소켓의 로컬 메모리만 접근하므로 memory access latency 줄일 수 있다. 
-뿐만아니라 이러한 방법은 Scale-up 서버의 shared-memory 시스템에서 사용되는
-운영체제의 근본적인 문제인 공유 때문에 발생하는
-문제들(e.g, lock contention[Bonsai, Radix], cache communication overhead[Oplog,FC], single address space problem)을
-함께 제거할 수 있다. 
-우리는 docker container를 이용하여 파티션닝 기법을 구현하였고, 그 결과 shared-memory 시스템을 마치
-distributed-system 처럼 구성하여 scalability를 향상 시켰다.
+%Shared data contention is one of the most fundamental and important
+%problems.
+Our method make shared resource to small size group as much as
+possible(minimal partition value is per-socket) because prior work have showed
+that shared resource contention should be minimized by partitioning shared
+resource accesses~\ref{Qureshi2006MICRO}.
+Small size cpu groups can mitigate the thread serialized problem cased by GC
+pause time, and these group may only accees to local NUMA memory.
+Moreover, partiting method can somewhat reduce the operating systems
+scalalbility problems(e.g, lock contention[Bonsai, Radix], cache communication
+overhead[Oplog,FC], single address space problem)
 \else
 
-
 \fi
-
-
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-또한 문제를 해결하기 위해, 본 논문은 최고의 성능 확장서을 내기 위한 파티션 방법에 대해서 설명한다. 
-그 이유는 만약 너무 작게 파티션을 한다면 전형적인 scale-out 시스템의 문제점인 straggler tasks 때문에 
-job completion 시간이 연기가 되어 성능에 문제가 있고, 너무 크게 파티션을 한다면 GC와 
-memory latency 문제가 발생하기 때문이다.  
-우리의 효율적인 파티션 방법의 평가는 evaluation of the proposed apporch on a 120 core system
-reveals that the execution times could be improved by 1.7x, 1.6x, and 2.2x for 
+To evaluate our approach, we applied our paritioning method on 120 core
+scale-up server.
+A too small size partitioning may reduce GC and NUMA remote access, but the
+benefits do not come for free because it may cause straggler tasks problem[].
+Thus, the this paper additionally describes performance scalability
+depending on partitioning size.
+Evaluation of the proposed best-fit partitioning on a 120 core system
+ reveals that the execution times could be improved by 1.7x, 1.6x, and 2.2x for
 a big data workload- , respectively.
 \else
 
@@ -115,9 +119,9 @@ scalability up to 60 core, but then the GC flattens out after 60 core.
 \item 
 %우리는 도커기반의 파티션닝 방법을 120코어 시스템에 적용하여 BigDataBench의 
 %5가 워크로드에 대한 scalability 문제를 해결하였다. 
-We applied our docker container-based partitioning method to scale-up server
-thereby solving scalability problems in BigDataBench.
-Our design improved throughput and execution time from 1.5x through
+We evaluated proposal partitioning approach on a manycore scale-up
+server thereby mitigating scale-up server scalability problems in BigDataBench.
+Our approach improved throughput and execution time from 1.5x through
 2.7x on 120 core.
 \end{itemize}
 

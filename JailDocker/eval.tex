@@ -1,17 +1,15 @@
 \section{Evaluation}
 
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1: 실험 환경 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-이번 장에서는 스파크의 Scalalbility에 대해서 설명한다. 
-실험 환경은 2장에서 수행한 방법과 같은 플랫폼에서 실험을 하였고,
-아직 앞장에서 설명한 disition engine에 대해서는 구현하지 못하여,
- 수동으로 도커로 파티션하여 동작하도록 실험을 하였다. 
-We ran the three benchmarks on Linux 3.19.rc4 with stock Linux. 
+In this section we discuss the docker container-based partitioning on the
+scale-up server described in Section 3.
+We ran the four benchmarks on Linux 4.5-rc4 with stock Linux. 
 All experiments were performed on a 120 core machine with 8-socket, 15-core
 Intel E7-8870 chips equipped with 792 GB DDR3 DRAM.
+We used ram file system for HDFS due to the eliminating the HDFS bottlenect.
 \else
 
 \fi
@@ -23,75 +21,70 @@ Intel E7-8870 chips equipped with 792 GB DDR3 DRAM.
 %Paragraph 2: 비교 대상 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-이번 장에서는 스파크의 Scalalbility에 대해서 설명한다. 첫째로 
-fine-graind partitioning을 방법인 NUMA socket 단위로 파티션닝을 수행한 방법이다.
-우리의 시스템은 한 소켓당 15코어를 가지는 NUMA machine이므로 15개의 코어를 가지는 도커를 8개를 생성하여 동작시켰다.
-둘째로는 낙오자된 태스크 때문에 발생하는 문제를 제거하기 위해, 보다 corese-graind한
-파티션 Heap 메모리 설정은 표와 같다. 기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고,
-input 데이터는 10G 이상으로 설정하였다.
-데이터를 사용하는 big data 영역에서는 heap 메모리 사이즈가 데이터 사이즈보다 일반적으로 크기 때문이다.
-그리고 메모리 설정은 파티션을 수행한 경우는 각 도커에 512MB로 설정하여 메모리 사용을 
-동일하게 하여 동작 시켰다. 
+%기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고, input 데이터는 10G 이상으로 설정하였다.
+We used four different experiment settings.
+First, we used non-partitioning method as Figure~ section 2 graph and we set
+heap size(4G).
+Second we used fine-grained partitiong that is per-socket(15 core) partitiong
+because it can make maximize locality.
+We allocated heap size by modifing heap size is that we divide 4G of number of
+partitining.
+Finaly, we used corese-grained partitiong that is per-socket(30 core) partitiong
+since it can mitegrate the straggler tasks problem.
 \else
 
 \fi
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 2: default 설정 결과 설명 
+%Paragraph 2: WC, NB 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-그림 X-x는 실험 결과를 보여 준다. 대부분이 비슷한 양상을 보였고, 60코어 이하까지는
-파티션한것과 Native와는 비슷한 결과를 가졌다. 하지만 60코어 이상이 되는 순간
-도커 파티션닝 기법의 성능이 더 좋아지며, 120코어에서는 X배의 성능 항상을 이루었다.
-그 이유는 파티션된 도커 워커에서 수행하는 것이 GC와 
-NUMA의 영향과 operating system의 scalabilby 저해요소를 제거 했기 때문에 
-Native로 수행한 것보다 높은 성능을 보였다. 
+The results for Word Count are shown in Figure~\ref{fig:docker}(a), and the
+result shows the thoughput of BigDataBench with our four different settings.
+Up to 60 core, the PS GC version of non-partiting approach scales linearly and
+then it flattens out.
+However, up to 60 core, our per-socket partitioning outperform non-partitioning
+since it can remove GC and NUMA latency overheads, and then the straggler tasks
+problem become bottlenecks.
+our corese-grained partitiong outperforms non-partitioning by 1.5x and
+per-socket partiting by 1.5x on 120 core.
+The results(Figure~\ref{docker}(b)) for Naive Basian is similar to Word Count
+workload.
+Our per-socket partitining outperform non-partitioning by 1.5x and per-socket
+partidfa by 1.5. on 120 core.
 \else 
 
 \fi
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 2: 60코어 이후 결과 설명
+%Paragraph 3: Grep 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-AIM7 forks many processes, each of which concurrently runs. 
-We used AIM7-multiuser, which is one of workload in AIM7.
-The multiuser workload is composed of various workloads such as disk-file
-operations, process creation, virtual memory operations, pipe I/O, and
-arithmetic operation.
-To minimize IO bottlenecks, the workload was executed with tmpfs filesystems, each
-of which is 10 GB.
-\else
+The results for Word Count are shown in Figure~\ref{fig:docker}(a), and the
+result shows the thoughput of BigDataBench with our four different settings.
+Up to 60 core, the PS GC version of non-partiting approach scales linearly and
+then it flattens out.
+\else 
 
 \fi
 
 
-
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 2: K-means의 낙오자에 대한 결과에 대한 설명
+% Paragraph 4: K-means 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-AIM7 forks many processes, each of which concurrently runs. 
-We used AIM7-multiuser, which is one of workload in AIM7.
-The multiuser workload is composed of various workloads such as disk-file
-operations, process creation, virtual memory operations, pipe I/O, and
-\else
+The results for Word Count are shown in Figure~\ref{fig:docker}(a), and the
+result shows the thoughput of BigDataBench with our four different settings.
+Up to 60 core, the PS GC version of non-partiting approach scales linearly and
+then it flattens out.
+However, up to 60 core, our per-socket partitioning outperform non-partitioning
+since it can remove GC and NUMA latency overheads, and then the straggler tasks
+problem become bottlenecks.
+our corese-grained partitiong outperforms non-partitioning by 1.5x and
+per-socket partiting by 1.5x on 120 core.
+\else 
 
 \fi
 
-
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 2: CPU utilization에 대한 설명
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-AIM7 forks many processes, each of which concurrently runs. 
-We used AIM7-multiuser, which is one of workload in AIM7.
-The multiuser workload is composed of various workloads such as disk-file
-operations, process creation, virtual memory operations, pipe I/O, and
-\else
-
-\fi

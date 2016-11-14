@@ -1,17 +1,35 @@
-\section{Conclusion}
+\section{Conclusion and Future Works}
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 1:Linux Scalability의 연구에 대한 설명
+%Paragraph 1:Spark Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-We propose a concurrent update algorithm, , for update-heavy data structures 
-scalable for many-core systems.
-To achieve the scalability during process spawning, 
-we applied deferred log processing with global log queue and 
-update-side absorbing to Linux reverse mapping.
-Evaluation results using the AIM7, Exim and lmbench reveal that \deferu shows
-better performance up to 2.2 times compared to existing solutions.
-\deferu is implemented on to Linux kernel 3.19 and available as open-source from
+We propose a docker container-based partitioning method for Apache
+Spark scalability on scale-up server.
+To eliminate GC and NUMA effect, we divide per-socket and best-fit partitioning
+using the docker container.
+Evaluation results using the wordcount, navi-basian, grep and k-means reveal
+that our method better performance up to 1.5 times compared to existing
+solutions.
+\newline\\
+\noindent
+\textbf{Future Directions.} 
+To achieve our goal, this paper only focused on the manual docker
+container-based partitioning, and our future directions are:
+\begin{itemize}
+\item \textbf{Solving the straggler tasks problem.} straggler tasks
+significantly extend job completion times.
+To mitigate this problem, we may use dynamic resource allocation solution in
+dockers to maximized cpu utilization for the straggler tasks by using our new
+resource hand-over solution.
+\item \textbf{Auto-tuned partitioning.} In this paper, only support manualy
+partition using docker containner. However, many of sicentiy or big data acaldld
+may reuse simillar workload, so training phase for finding the best-fit
+partitiong can be superior solution than manulay partiion simillay way of
+compiler-based auto-tuner[].
+
+\end{itemize}
+
 \else
 
 \fi

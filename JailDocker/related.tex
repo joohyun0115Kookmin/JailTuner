@@ -22,58 +22,23 @@ which is one of the fork scalability bottleneck.
 
 \fi
 
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%Paragraph 1:Partitioning의 연구에 대한 설명
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-\noindent
-\textbf{Spark Garbage Collect Problems.}
-In order to improve Li
-멀티커널.등등 공유메모리를 사용 X
-Many scalable data structures with scalable schemes show
-different performances depending on their update ratios.
-In low and middle update rate, researchers have attempted to create new scalable
-schemes~\cite{McKenney98}~\cite{Matveev2015RLU}~\cite{Harris2001Lockfree}
-%~\cite{Fomitchev2004Lockfree}
-%~\cite{Timnat2012}
-or have attempted to adapt these scheme to data structures~\cite{Arbel2014ConcurrentRCU}~\cite{Dodds2015SCT}~\cite{AustinTClements2012RCUBalancedTrees}.
-In high update rate, the OpLog shows significant improvement in
-performance scalability for update-heavy data structures in
-many core systems, but suffers from limitation and overhead due
-to time-stamp counter management.
-We substantially extend our preliminary work~\cite{Kyong2016LDU} not only to support 
-per-core algorithm but also to apply the  to anonymous rmap due to improving the
-Linux kernel scalability.
-\else
-
-\fi
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1:Manycore Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
 \noindent
-\textbf{Manycore Scalability.}
-OS scalability.원천기술.
-Scalable locks have been designed by the
-queue-based locks~\cite{MellorCrummey1991MCS}~\cite{Magnusson1994QLC},
-%~\cite{Wang2016BeMyGuest},
-%~\cite{Scott2013SS}
-%~\cite{Bueso2014MCS}~\cite{Bueso2015STP}
-hierarchical locks~\cite{Radovic2003HBL}~\cite{Chabbi2016CLL} and
-%~\cite{Luchangco2006HCQ}
-%~\cite{Chabbi2015HPL}
-delegation techniques~\cite{Hendler2010FC}~\cite{Fatourou2012RCS}~\cite{Delegation2014}.
-%Some approaches have been gradually adapted in real production software.
-%For example, Linux kernel has replaced non-scalable locks with
-%MCS locks~\cite{overviewofkernellock}.
-Our research is similar to the delegation techniques because
-the s \code{synchronize} function runs as a
-combiner thread;it improves cache locality.
-However, our approach not only can improve cache locality but also
-can eliminate synchronization methods during updates due to using a lock-free manner.
-%MCS~\cite{MellorCrummey91}, a scalable lock.
+\textbf{Manycore Scale-up Server Scalability.}
+To improve the scalability, researchers have attempted to create new
+operating systems~\cite{Boyd-WickizerCorey}~\cite{Wentzlaff2010fOS}
+%~\cite{Baumann2009Barrelfish}~\cite{Zellweger2014Multikernel}
+%~\cite{Liu2009Tessellation}~\cite{Farrington2010Helios}
+or have
+attempted to optimize existing operating systems~\cite{SilasBoydWickizer2010LinuxScales48}~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM}~\cite{SilasBoydWickizerPth}
+%~\cite{Changwoo2016UMSF}.
+Our research belongs to optimizing existing operating systems in order to
+solve the Linux fork scalability problem.
+However, previous research did not deal with the anonymous reverse mapping,
+which is one of the fork scalability bottleneck.
 
 \else
 

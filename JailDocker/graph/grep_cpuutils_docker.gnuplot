@@ -44,5 +44,5 @@ set format y '%2.0f%%
 set output 'grep_cpuutils_docker.eps'
 set term eps
 plot './data/grep_cpuutils_docker.data' using 2 ti col, '' using 3 ti col, '' \
-		using 4 ti col, '' using 5 ti col, '' using 6:key(1) ti col
+		 using 4:key(1) ti col
 

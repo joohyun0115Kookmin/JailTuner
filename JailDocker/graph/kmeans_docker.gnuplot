@@ -16,5 +16,5 @@ set font  "arial,20"
 
 plot \
 "./data/kmeans_default.data" every :::0::0 with lp title "k-means PS GC",\
-"./data/kmeans_default_g1.data" every :::0::0 with lp title "k-means G1 GC",\
-"./data/kmeans_15.data" every :::0::0 with lp title "k-means partitioning"
+"./data/kmeans_15.data" every :::0::0 with lp title "k-means per-socket", \
+"./data/kmeans_30.data" every :::0::0 with lp title "k-means partitioning"

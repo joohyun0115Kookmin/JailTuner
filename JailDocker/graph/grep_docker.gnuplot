@@ -16,6 +16,5 @@ set font  "arial,20"
 
 plot \
 "./data/grep_default.data" every :::0::0 with lp title "grep PS GC", \
-"./data/grep_default_g1.data" every :::0::0 with lp title "grep G1 GC", \
 "./data/grep_15.data" every :::0::0 with lp title "grep per-socket", \
 "./data/grep_30.data" every :::0::0 with lp title "grep partiotioning"
