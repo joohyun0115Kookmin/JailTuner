@@ -4,19 +4,19 @@
 %Background : 스파크 -> cloud가 아닌 scale-up server 에서의 scalability에 대한 연구가 필요해짐
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %빅데이터 처리하는데 많이 사용되는 framework 중 하나는 스파크이다.
-Popular big data analytics infrastructures(e.g, Spark[], Hadoop[]) have been
-developed for a cluster scale-out environment, which adds nodes to a
-cluster system.
+Popular big data analytics infrastructures(e.g, Spark~\cite{Zaharia2012RDD},
+Hadoop~\cite{Shvachko2010HDF}) have been developed for a cluster scale-out
+environment, which adds nodes to a cluster system.
 On the other hand, scale-up environment, which adds resources(e.g, cpu, memory)
 to a single node system, only special-purpose techniques exist.
 In science and machine learning fields, researchers
 commonly used scale-up server environments, and they now need big data analytics
-frameworks[HPC].
-Moreover, hardware trends are beginning to change to the scale-up
+frameworks~\cite{Chaimov2016SSH}.
+Moreover, hardware trends are beginning to change for the scale-up
 server; a scale-up server can now have substantial CPU, memory,
-and storage I/O resources[rethink].
+and storage I/O resources~\cite{Appuswamy2013SVS}.
 Therefore, the big data analytics infrastructure on scale-up server is
-also importance.
+also important.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -25,110 +25,132 @@ also importance.
 % 1. 24코어 이하의 서버에서의 Scalability 분석을 하였으나 해결책을 제안하지 않았음.
 % 2. HPC(100이상) 으로 분석하였으나 flie system 관점으로 분석하였음.:메인 병목지점은 파일 시스템
 % 3. Scalable한 파일 시스템을 사용한 후 Scalability에 대한 분석한 결과와 해결방법은 없음.
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-%이처럼 Scale-Up 서버를 위한 scalability 연구들이 진행되고 있다.
-Apache Spark is one of thet widely used big data analytics framework.
-However, Apache Saprk has been reported that it does
+Spark is one of widely used big data analytics framework.
+However, Saprk has been reported that it does
 not scale on the single node scale-up server because of garbage
-collection(GC)[][][] and remote memory access latency[][][]. 
-%A.J. Awan et al. conduct 스파크의 GC의 serialize 문제점을 parrale GC로 수정하여 성능차이를 
-%보였다, while these mehtod
+collection(GC)
+overhead~\cite{Ahsan2016SVS}~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} and
+locality of memory accesses on Non-Uniform Memory Access(NUMA)
+architecture~\cite{Cao2016ADS}.
 A.J. Awan et al. analysed GC time and compared state of the art
-garbage collectors, changing GC can not solve the scalability problem(section
-2).
-%문제를 해결하기 위해, 여러 NUMA 밸런싱[][]에 대한 연구가 진행되고 있다. 
-%그러나, 이러한 방법도 파티션되어 로컬에 메모리에 접근하는 것 만큼 효과를
-% 얻지 못한다[](section 2).
-Moreover, in order to solve the memory access latency problem, researchs have
-attempt to NUMA balancing[][], but these method also can not satisfactory
-compared to partitioning approch(see section 2).
-\else
-
-
-\fi
+garbage collectors by changing the GC.
+Moreover, in order to avoid high costs of remote memory access, researchs have
+attempt to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA}, but
+these method also can not satisfactory compared to partitioning approch(see section 2).
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-%본 연구는 스파크 scalabiity에 가장 많은 영향을 미치는 GC와 memory access latency에 
-%대한 문제를 동시에 해결하기 위해, 파티션닝 기법을 제안한다.
 Our goals is to reduce the GC and the memory access latency overheads that
 have been a major problem of spark scalability.
 To achieve our goal, this paper presents a new partitioning method that
-eliminates the GC and NUMA latency overheads by applying docker
-container-based and by using efficieny partitioning to Spark on scale-up server.
+eliminates the GC and remote access overheads by applying
+docker container-based efficieny partitioning for Spark on scale-up
+server.
 Our basic key idea is that shared-memory system is dealt with as the
 distributed-system using partitioning approch in order to eliminate GC and
 memory access overheads.
+We used docker containers since the overhead of a Docker
+container is much smaller than a traditional virtual
+machine~\cite{Merkel2014DLL} and the container-based approach can easily combine
+existing container management solutions such as Google Borg~\cite{Borg} and
+Kubernets~\cite{Kubernetes}.
 
-%이 방법은 코어와 메모리를 나누어 적은 코어와 적은 메모리로 실행시키도록 해준다.
-%Shared data contention is one of the most fundamental and important
-%problems.
 Our method make shared resource to small size group as much as
 possible(minimal partition value is per-socket) because prior work have showed
 that shared resource contention should be minimized by partitioning shared
-resource accesses~\ref{Qureshi2006MICRO}.
+resource accesses~\cite{Qureshi2006UCP}.
 Small size cpu groups can mitigate the thread serialized problem cased by GC
 pause time, and these group may only accees to local NUMA memory.
 Moreover, partiting method can somewhat reduce the operating systems
-scalalbility problems(e.g, lock contention[Bonsai, Radix], cache communication
-overhead[Oplog,FC], single address space problem)
-\else
-
-\fi
+scalalbility problems(e.g, address space
+problem ~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM},
+cache communication overhead~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC})
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 To evaluate our approach, we applied our paritioning method on 120 core
 scale-up server.
-A too small size partitioning may reduce GC and NUMA remote access, but the
-benefits do not come for free because it may cause straggler tasks problem[].
-Thus, the this paper additionally describes performance scalability
+A too small size partitioning may reduce GC overhead and remote memory access,
+but the benefits do not come for free because it may cause straggler tasks
+problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
+Thus, this paper additionally describes performance scalability
 depending on partitioning size.
 Evaluation of the proposed best-fit partitioning on a 120 core system
- reveals that the execution times could be improved by 1.7x, 1.6x, and 2.2x for
-a big data workload- , respectively.
-\else
-
-
-\fi
+ reveals that the execution times could be improved by 1.7x, 1.6x, 1.1x and 2.2x
+ for Word Count, Naive Basian, Grep and K-means in
+BigDataBenchmark~\cite{wang2014bigdatabench}, respectively.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 기여한 것 : 
 % 1. 100코어 이상의 scale-up 서버에서의 scalability 측정 및 분석
 % 2. 도커 파티션 기법을 활용한 scalability 향상 방법 제안
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 
 \textbf{Contributions.} Our research makes the following contributions:
 \begin{itemize}
 \item 
-%우리는 120코어로 구성된 scale-up 서버에서의 Spark에 대한 scalability를 분석하였다. 
 We analyzed Apache Spark performance scalability on 120 core scale-up server.
-%분석 결과, pararell GC 통해 약간의 성능을 향상시킬 수 있었으나, 결국 60코어 이상되는 부분 부터는 
-%더 이상 성능향상은 없었다. 
 The results of scalability was that parrlel GC can improve performance
 scalability up to 60 core, but then the GC flattens out after 60 core.
 \item 
-%우리는 도커기반의 파티션닝 방법을 120코어 시스템에 적용하여 BigDataBench의 
-%5가 워크로드에 대한 scalability 문제를 해결하였다. 
 We evaluated proposal partitioning approach on a manycore scale-up
 server thereby mitigating scale-up server scalability problems in BigDataBench.
 Our approach improved throughput and execution time from 1.5x through
 2.7x on 120 core.
 \end{itemize}
 
-\else
 
-\fi
+\begin{figure*}[tb]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc.eps}
+        \caption{Word Count}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb.eps}
+        \caption{Naive Basian}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep.eps}
+        \caption{Grep}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans.eps}
+        \caption{K-means}
+    \end{subfigure}%
+    \caption{Performance scalability on 120 core.}
+    \label{fig:utilization}
+\end{figure*}
 
+
+
+\begin{figure*}[tb]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc_cpuutils.eps}
+        \caption{Word Count}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb_cpuutils.eps}
+        \caption{Naive Basian}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep_cpuutils.eps}
+        \caption{Grep}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans_cpuutils.eps}
+        \caption{K-means}
+    \end{subfigure}%
+        \centering
+    \caption{CPU utilization on 120 core.}
+    \label{fig:cpuutilization}
+\end{figure*}
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

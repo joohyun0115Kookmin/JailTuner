@@ -1,51 +1,4 @@
 
-\begin{figure*}[tb]
-    \centering
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/wc.eps}
-        \caption{Word Count}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/nb.eps}
-        \caption{Naive Basian}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/grep.eps}
-        \caption{Grep}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/kmeans.eps}
-        \caption{K-means}
-    \end{subfigure}%
-    \caption{CPU utilization on 120 core.}
-    \label{fig:utilization}
-\end{figure*}
-
-
-
-\begin{figure*}[tb]
-    \centering
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/wc_cpuutils.eps}
-        \caption{Word Count}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/nb_cpuutils.eps}
-        \caption{Naive Basian}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/grep_cpuutils.eps}
-        \caption{Grep}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=1.8in]{graph/kmeans_cpuutils.eps}
-        \caption{K-means}
-    \end{subfigure}%
-        \centering
-    \caption{CPU utilization on 120 core.}
-    \label{fig:cpuutilization}
-\end{figure*}
-
 \section{Scale-up Server Scalalbility}
 
 
@@ -105,20 +58,18 @@ Spark may has a substantial performance when dataset can fit in memory.
 \ifkor
 \noindent
 \textbf{Test-bed. }
-Our Intel platform is composed of Xeon E5 Each CPU exploits the Iby Brige
-technoloy and consists in a multi-core architecture.
 We use a machine to evaluate on real hardware: an 120-core (8 sockets × 15
-cores) Intel Xeon E7-8870 (the same machine used for evaluation in chapter 9)
+cores) Intel Xeon E7-8870 (the same machine used for evaluation in chapter X)
 and, to show that our conclusions generalize.
+Hyper-Threading is disabled, and we used Linux kernel 4.5-rc6.
 
 \begin{figure}[h]
   \begin{center}
-     \includegraphics[width=0.4\textwidth]{fig/xeon}
+     \includegraphics[width=0.3\textwidth]{fig/xeon}
   \end{center}
-  \caption{test-bed intel xeon archtecture.}
+  \caption{Test-bed intel xeon archtecture.}
   \label{fig:basic}
 \end{figure}
-Hyper-Threading is disabled, and Linux kernel 4.5-rc6.
 \else
 
 \fi
@@ -129,7 +80,7 @@ Hyper-Threading is disabled, and Linux kernel 4.5-rc6.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
 \noindent
-\textbf{Benchmark.} 벤치마크와 워크로드에 대한 BigData Benchmark를 사용하였다.
+\textbf{Benchmark.} We used BigData Benchmark.
 \begin{itemize}
 \item \textbf{Word Count. }We have developed a novel lightweight log-based
 structures with efficient log management implementation.
@@ -219,8 +170,8 @@ that means
 Spark and Hadoop ramework use JAVA and it needs java virtual machine, so
 understanding the partitioning effect on JVM is importance.
 To preliminarily analysis the JVM partitioning effect, we conducted
-benchamrk using SPECjbb2013, which a state of the art benchmark for
-JVM performance.
+benchamrking by using SPECjbb2013~\cite{PPogue2014SO}, which a state of the art
+benchmark for JVM performance.
 We used two different experiment settings. First, we used per-socket
 JVM partitioning using the numa control application(numactl).
 Second, we set maxium available memory to JVM heap size and

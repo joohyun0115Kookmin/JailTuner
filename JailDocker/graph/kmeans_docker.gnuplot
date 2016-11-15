@@ -3,7 +3,7 @@ call "common.gnuplot"
 set zeroaxis
 set yrange [0:]
 set xlabel "cores" font "arial,20"
-set ylabel "Throughput(jobs/min)" font "arial,20"
+set ylabel "Throughput(MB/sec)" font "arial,20"
 set ytics format " %.0s%c" font "arial,20"
 set xtics  font "arial,20"
 set title font "arial,20"

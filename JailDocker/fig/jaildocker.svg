@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="136.24082"
-     inkscape:cy="150.11548"
+     inkscape:cx="-460.27479"
+     inkscape:cy="271.13858"
      inkscape:document-units="px"
-     inkscape:current-layer="g5660"
+     inkscape:current-layer="g6190"
      showgrid="false"
      inkscape:window-width="2880"
      inkscape:window-height="1577"
@@ -89,1713 +89,2741 @@
            y="664.51398"
            x="964.02802" />
       </text>
+      <text
+         font-size="12.8"
+         style="font-style:normal;font-weight:normal;font-size:13.1069746px;font-family:sans-serif;text-anchor:start;fill:#000000"
+         x="761.5658"
+         y="543.20117"
+         id="text5167">
+        <tspan
+           x="761.5658"
+           y="543.20117"
+           id="tspan5169" />
+      </text>
+      <text
+         font-size="12.8"
+         style="font-style:normal;font-weight:normal;font-size:13.1069746px;font-family:sans-serif;text-anchor:start;fill:#000000"
+         x="760.25916"
+         y="650.7337"
+         id="text5211">
+        <tspan
+           x="760.25916"
+           y="650.7337"
+           id="tspan5213" />
+      </text>
+      <text
+         font-size="10.16"
+         style="font-style:normal;font-weight:normal;font-size:10.40366077px;font-family:sans-serif;text-anchor:start;fill:#000000"
+         x="431.93558"
+         y="620.43402"
+         id="text5763">
+        <tspan
+           x="431.93558"
+           y="620.43402"
+           id="tspan5765" />
+      </text>
       <g
-         id="g5797"
-         transform="matrix(1.0239824,0,0,1.0239824,-5.7841881,-14.230893)">
-        <g
-           id="g5133">
-          <rect
-             id="rect5135"
-             height="258.79199"
-             width="47.4062"
-             y="436.57599"
-             x="912.83398"
-             style="fill:#c1dfdf" />
-          <rect
-             id="rect5137"
-             height="258.79199"
-             width="47.4062"
-             y="436.57599"
-             x="912.83398"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5139"
-             y="569.87201"
-             x="936.53699"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5141"
-               y="569.87201"
-               x="936.53699" />
-          </text>
-        </g>
-        <g
-           id="g5143">
-          <rect
-             id="rect5145"
-             height="55.372898"
-             width="33.8834"
-             y="438.754"
-             x="975.646"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5147"
-             height="55.372898"
-             width="33.8834"
-             y="438.754"
-             x="975.646"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
-        </g>
-        <g
-           id="g5149">
-          <rect
-             id="rect5151"
-             height="55.372898"
-             width="33.8834"
-             y="505.29599"
-             x="975.646"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5153"
-             height="55.372898"
-             width="33.8834"
-             y="505.29599"
-             x="975.646"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
-        </g>
-        <g
-           id="g5155">
-          <rect
-             id="rect5157"
-             height="55.372898"
-             width="33.8834"
-             y="571.836"
-             x="975.646"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5159"
-             height="55.372898"
-             width="33.8834"
-             y="571.836"
-             x="975.646"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
-        </g>
-        <g
-           id="g5161">
-          <rect
-             id="rect5163"
-             height="55.372898"
-             width="33.8834"
-             y="641.83197"
-             x="975.646"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5165"
-             height="55.372898"
-             width="33.8834"
-             y="641.83197"
-             x="975.646"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
-        </g>
+         id="g6190"
+         transform="matrix(0.91358784,0,0,0.88797122,51.365299,47.215017)">
         <text
-           id="text5167"
-           y="565.97198"
-           x="936.53802"
+           id="text5186"
+           y="562.802"
+           x="1016.8"
            style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:start;fill:#000000"
            font-size="12.8">
           <tspan
-             id="tspan5169"
-             y="565.97198"
-             x="936.53802" />
+             id="tspan5188"
+             y="562.802"
+             x="1016.8" />
         </text>
-        <g
-           id="g5171">
-          <rect
-             id="rect5173"
-             height="59.199501"
-             width="47.4062"
-             y="435.26999"
-             x="832.25403"
-             style="fill:#e5e5e5" />
-          <rect
-             id="rect5175"
-             height="59.199501"
-             width="47.4062"
-             y="435.26999"
-             x="832.25403"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5177"
-             y="468.76999"
-             x="855.95697"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5179"
-               y="468.76999"
-               x="855.95697" />
-          </text>
-        </g>
-        <g
-           id="g5181">
-          <rect
-             id="rect5183"
-             height="59.199501"
-             width="47.4062"
-             y="503.94601"
-             x="833.32202"
-             style="fill:#e5e5e5" />
-          <rect
-             id="rect5185"
-             height="59.199501"
-             width="47.4062"
-             y="503.94601"
-             x="833.32202"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5187"
-             y="537.44598"
-             x="857.02502"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5189"
-               y="537.44598"
-               x="857.02502" />
-          </text>
-        </g>
-        <g
-           id="g5191">
-          <rect
-             id="rect5193"
-             height="59.199501"
-             width="47.4062"
-             y="574.82001"
-             x="835.33002"
-             style="fill:#e5e5e5" />
-          <rect
-             id="rect5195"
-             height="59.199501"
-             width="47.4062"
-             y="574.82001"
-             x="835.33002"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5197"
-             y="608.32001"
-             x="859.03302"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5199"
-               y="608.32001"
-               x="859.03302" />
-          </text>
-        </g>
-        <g
-           id="g5201">
-          <rect
-             id="rect5203"
-             height="59.199501"
-             width="47.4062"
-             y="640.04199"
-             x="833.57202"
-             style="fill:#e5e5e5" />
-          <rect
-             id="rect5205"
-             height="59.199501"
-             width="47.4062"
-             y="640.04199"
-             x="833.57202"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5207"
-             y="673.54199"
-             x="857.27502"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5209"
-               y="673.54199"
-               x="857.27502" />
-          </text>
-        </g>
         <text
-           id="text5211"
-           y="670.98602"
-           x="935.26202"
+           id="text5230"
+           y="667.81598"
+           x="1015.52"
            style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:start;fill:#000000"
            font-size="12.8">
           <tspan
-             id="tspan5213"
-             y="670.98602"
-             x="935.26202" />
+             id="tspan5232"
+             y="667.81598"
+             x="1015.52" />
+        </text>
+        <text
+           id="text5706"
+           y="743.54602"
+           x="725.81403"
+           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+           font-size="10.16">
+          <tspan
+             id="tspan5708"
+             y="743.54602"
+             x="725.81403" />
         </text>
         <g
-           id="g5215">
+           id="g10438"
+           transform="matrix(0.97741788,0,0,1.0056148,17.400746,-5.2749969)">
           <g
-             id="g5217">
-            <circle
-               id="ellipse5219"
-               cy="453.02701"
-               cx="937.58301"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5221"
-               cy="453.02701"
-               cx="937.58301"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5223"
-               cy="453.02701"
-               cx="937.58301"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
+             id="g9388">
+            <rect
+               id="rect9390"
+               height="258.79199"
+               width="47.4062"
+               y="431.57001"
+               x="993.09399"
+               style="fill:#c1dfdf" />
+            <rect
+               id="rect9392"
+               height="258.79199"
+               width="47.4062"
+               y="431.57001"
+               x="993.09399"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9394"
+               y="564.86603"
+               x="1016.8"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9396"
+                 y="564.86603"
+                 x="1016.8" />
+            </text>
+          </g>
+          <g
+             id="g9398">
+            <rect
+               id="rect9400"
+               height="55.372898"
+               width="33.8834"
+               y="433.74799"
+               x="1055.91"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9402"
+               height="55.372898"
+               width="33.8834"
+               y="433.74799"
+               x="1055.91"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
+          </g>
+          <g
+             id="g9404">
+            <rect
+               id="rect9406"
+               height="55.372898"
+               width="33.8834"
+               y="500.29001"
+               x="1055.91"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9408"
+               height="55.372898"
+               width="33.8834"
+               y="500.29001"
+               x="1055.91"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
+          </g>
+          <g
+             id="g9410">
+            <rect
+               id="rect9412"
+               height="55.372898"
+               width="33.8834"
+               y="566.83002"
+               x="1055.91"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9414"
+               height="55.372898"
+               width="33.8834"
+               y="566.83002"
+               x="1055.91"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
+          </g>
+          <g
+             id="g9416">
+            <rect
+               id="rect9418"
+               height="55.372898"
+               width="33.8834"
+               y="636.82599"
+               x="1055.91"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9420"
+               height="55.372898"
+               width="33.8834"
+               y="636.82599"
+               x="1055.91"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1" />
           </g>
           <text
-             id="text5225"
-             y="456.15799"
-             x="930.06"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5227"
-               y="456.15799"
-               x="930.06">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5229">
-          <g
-             id="g5231">
-            <circle
-               id="ellipse5233"
-               cy="463.539"
-               cx="938.33698"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5235"
-               cy="463.539"
-               cx="938.33698"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5237"
-               cy="463.539"
-               cx="938.33698"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5239"
-             y="466.67001"
-             x="930.81201"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5241"
-               y="466.67001"
-               x="930.81201">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5243">
-          <g
-             id="g5245">
-            <circle
-               id="ellipse5247"
-               cy="475.935"
-               cx="938.12299"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5249"
-               cy="475.935"
-               cx="938.12299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5251"
-               cy="475.935"
-               cx="938.12299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5253"
-             y="479.06601"
-             x="930.59802"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5255"
-               y="479.06601"
-               x="930.59802">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5257">
-          <g
-             id="g5259">
-            <circle
-               id="ellipse5261"
-               cy="518.349"
-               cx="936.599"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5263"
-               cy="518.349"
-               cx="936.599"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5265"
-               cy="518.349"
-               cx="936.599"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5267"
-             y="521.47998"
-             x="929.07397"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5269"
-               y="521.47998"
-               x="929.07397">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5271">
-          <g
-             id="g5273">
-            <circle
-               id="ellipse5275"
-               cy="530.117"
-               cx="936.60699"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5277"
-               cy="530.117"
-               cx="936.60699"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5279"
-               cy="530.117"
-               cx="936.60699"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5281"
-             y="533.24799"
-             x="929.08197"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5283"
-               y="533.24799"
-               x="929.08197">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5285">
-          <g
-             id="g5287">
-            <circle
-               id="ellipse5289"
-               cy="541.74103"
-               cx="937.89697"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5291"
-               cy="541.74103"
-               cx="937.89697"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5293"
-               cy="541.74103"
-               cx="937.89697"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5295"
-             y="544.87201"
-             x="930.37402"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5297"
-               y="544.87201"
-               x="930.37402">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5299">
-          <g
-             id="g5301">
-            <circle
-               id="ellipse5303"
-               cy="446.69699"
-               cx="856.68903"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5305"
-               cy="446.69699"
-               cx="856.68903"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5307"
-               cy="446.69699"
-               cx="856.68903"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5309"
-             y="449.828"
-             x="849.164"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5311"
-               y="449.828"
-               x="849.164">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5313">
-          <g
-             id="g5315">
-            <circle
-               id="ellipse5317"
-               cy="454.78101"
-               cx="857.12903"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5319"
-               cy="454.78101"
-               cx="857.12903"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5321"
-               cy="454.78101"
-               cx="857.12903"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5323"
-             y="457.91199"
-             x="849.604"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5325"
-               y="457.91199"
-               x="849.604">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5327">
-          <g
-             id="g5329">
-            <circle
-               id="ellipse5331"
-               cy="461.60901"
-               cx="856.94098"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5333"
-               cy="461.60901"
-               cx="856.94098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5335"
-               cy="461.60901"
-               cx="856.94098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5337"
-             y="464.73999"
-             x="849.41602"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5339"
-               y="464.73999"
-               x="849.41602">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5341">
-          <g
-             id="g5343">
-            <circle
-               id="ellipse5345"
-               cy="470.00699"
-               cx="857.06702"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5347"
-               cy="470.00699"
-               cx="857.06702"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5349"
-               cy="470.00699"
-               cx="857.06702"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5351"
-             y="473.138"
-             x="849.54199"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5353"
-               y="473.138"
-               x="849.54199">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5355">
-          <g
-             id="g5357">
-            <circle
-               id="ellipse5359"
-               cy="477.465"
-               cx="857.19098"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5361"
-               cy="477.465"
-               cx="857.19098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5363"
-               cy="477.465"
-               cx="857.19098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5365"
-             y="480.59601"
-             x="849.66803"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5367"
-               y="480.59601"
-               x="849.66803">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5369">
-          <g
-             id="g5371">
-            <circle
-               id="ellipse5373"
-               cy="519.76898"
-               cx="856.50098"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5375"
-               cy="519.76898"
-               cx="856.50098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5377"
-               cy="519.76898"
-               cx="856.50098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5379"
-             y="522.90002"
-             x="848.97601"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5381"
-               y="522.90002"
-               x="848.97601">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5383">
-          <g
-             id="g5385">
-            <circle
-               id="ellipse5387"
-               cy="527.85303"
-               cx="856.94098"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5389"
-               cy="527.85303"
-               cx="856.94098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5391"
-               cy="527.85303"
-               cx="856.94098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5393"
-             y="530.98401"
-             x="849.41602"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5395"
-               y="530.98401"
-               x="849.41602">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5397">
-          <g
-             id="g5399">
-            <circle
-               id="ellipse5401"
-               cy="534.68103"
-               cx="856.75299"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5403"
-               cy="534.68103"
-               cx="856.75299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5405"
-               cy="534.68103"
-               cx="856.75299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5407"
-             y="537.81201"
-             x="849.22803"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5409"
-               y="537.81201"
-               x="849.22803">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5411">
-          <g
-             id="g5413">
-            <circle
-               id="ellipse5415"
-               cy="543.07898"
-               cx="856.87701"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5417"
-               cy="543.07898"
-               cx="856.87701"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5419"
-               cy="543.07898"
-               cx="856.87701"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5421"
-             y="546.21002"
-             x="849.354"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5423"
-               y="546.21002"
-               x="849.354">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5425">
-          <g
-             id="g5427">
-            <circle
-               id="ellipse5429"
-               cy="592.21301"
-               cx="857.56897"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5431"
-               cy="592.21301"
-               cx="857.56897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5433"
-               cy="592.21301"
-               cx="857.56897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5435"
-             y="595.34399"
-             x="850.04401"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5437"
-               y="595.34399"
-               x="850.04401">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5439">
-          <g
-             id="g5441">
-            <circle
-               id="ellipse5443"
-               cy="600.297"
-               cx="858.00897"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5445"
-               cy="600.297"
-               cx="858.00897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5447"
-               cy="600.297"
-               cx="858.00897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5449"
-             y="603.42798"
-             x="850.48401"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5451"
-               y="603.42798"
-               x="850.48401">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5453">
-          <g
-             id="g5455">
-            <circle
-               id="ellipse5457"
-               cy="607.125"
-               cx="857.81897"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5459"
-               cy="607.125"
-               cx="857.81897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5461"
-               cy="607.125"
-               cx="857.81897"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5463"
-             y="610.25598"
-             x="850.29401"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5465"
-               y="610.25598"
-               x="850.29401">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5467">
-          <g
-             id="g5469">
-            <circle
-               id="ellipse5471"
-               cy="615.52301"
-               cx="857.94501"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5473"
-               cy="615.52301"
-               cx="857.94501"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5475"
-               cy="615.52301"
-               cx="857.94501"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5477"
-             y="618.65399"
-             x="850.41998"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5479"
-               y="618.65399"
-               x="850.41998">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5481">
-          <g
-             id="g5483">
-            <circle
-               id="ellipse5485"
-               cy="659.31897"
-               cx="856.125"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5487"
-               cy="659.31897"
-               cx="856.125"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5489"
-               cy="659.31897"
-               cx="856.125"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5491"
-             y="662.45001"
-             x="848.59998"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5493"
-               y="662.45001"
-               x="848.59998">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5495">
-          <g
-             id="g5497">
-            <circle
-               id="ellipse5499"
-               cy="667.40302"
-               cx="856.56299"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5501"
-               cy="667.40302"
-               cx="856.56299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5503"
-               cy="667.40302"
-               cx="856.56299"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5505"
-             y="670.534"
-             x="849.03998"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5507"
-               y="670.534"
-               x="849.03998">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5509">
-          <g
-             id="g5511">
-            <circle
-               id="ellipse5513"
-               cy="674.23102"
-               cx="856.375"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5515"
-               cy="674.23102"
-               cx="856.375"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5517"
-               cy="674.23102"
-               cx="856.375"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5519"
-             y="677.362"
-             x="848.84998"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5521"
-               y="677.362"
-               x="848.84998">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5523">
-          <g
-             id="g5525">
-            <circle
-               id="ellipse5527"
-               cy="682.62903"
-               cx="856.50098"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5529"
-               cy="682.62903"
-               cx="856.50098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5531"
-               cy="682.62903"
-               cx="856.50098"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
-          <text
-             id="text5533"
-             y="685.76001"
-             x="848.97601"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
-            <tspan
-               id="tspan5535"
-               y="685.76001"
-               x="848.97601">CPU</tspan>
-          </text>
-        </g>
-        <g
-           id="g5537">
-          <rect
-             id="rect5539"
-             height="260.65399"
-             width="259.71201"
-             y="424.73801"
-             x="518.40997"
-             style="fill:#82bef9" />
-          <rect
-             id="rect5541"
-             height="260.65399"
-             width="259.71201"
-             y="424.73801"
-             x="518.40997"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5543"
-             y="558.96503"
-             x="648.26599"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+             id="text9422"
+             y="562.802"
+             x="1016.8"
+             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:start;fill:#000000"
              font-size="12.8">
             <tspan
-               id="tspan5545"
-               y="558.96503"
-               x="648.26599" />
+               id="tspan9424"
+               y="562.802"
+               x="1016.8" />
           </text>
-        </g>
-        <g
-           id="g5547">
-          <rect
-             id="rect5549"
-             height="91.6147"
-             width="47.787498"
-             y="433.34"
-             x="715.29401"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5551"
-             height="91.6147"
-             width="47.787498"
-             y="433.34"
-             x="715.29401"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          <g
+             id="g9426">
+            <rect
+               id="rect9428"
+               height="59.199501"
+               width="47.4062"
+               y="430.26401"
+               x="912.51398"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect9430"
+               height="59.199501"
+               width="47.4062"
+               y="430.26401"
+               x="912.51398"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9432"
+               y="463.76401"
+               x="936.21698"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9434"
+                 y="463.76401"
+                 x="936.21698" />
+            </text>
+          </g>
+          <g
+             id="g9436">
+            <rect
+               id="rect9438"
+               height="59.199501"
+               width="47.4062"
+               y="498.94"
+               x="913.58197"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect9440"
+               height="59.199501"
+               width="47.4062"
+               y="498.94"
+               x="913.58197"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9442"
+               y="532.44"
+               x="937.28497"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9444"
+                 y="532.44"
+                 x="937.28497" />
+            </text>
+          </g>
+          <g
+             id="g9446">
+            <rect
+               id="rect9448"
+               height="59.199501"
+               width="47.4062"
+               y="569.81403"
+               x="915.59003"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect9450"
+               height="59.199501"
+               width="47.4062"
+               y="569.81403"
+               x="915.59003"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9452"
+               y="603.31403"
+               x="939.29303"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9454"
+                 y="603.31403"
+                 x="939.29303" />
+            </text>
+          </g>
+          <g
+             id="g9456">
+            <rect
+               id="rect9458"
+               height="59.199501"
+               width="47.4062"
+               y="635.03601"
+               x="913.83197"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect9460"
+               height="59.199501"
+               width="47.4062"
+               y="635.03601"
+               x="913.83197"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9462"
+               y="668.53601"
+               x="937.53497"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9464"
+                 y="668.53601"
+                 x="937.53497" />
+            </text>
+          </g>
           <text
-             id="text5553"
-             y="483.047"
-             x="739.18799"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+             id="text9466"
+             y="667.81598"
+             x="1015.52"
+             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:start;fill:#000000"
              font-size="12.8">
             <tspan
-               id="tspan5555"
-               y="483.047"
-               x="739.18799" />
+               id="tspan9468"
+               y="667.81598"
+               x="1015.52" />
           </text>
-        </g>
-        <text
-           id="text5557"
-           y="475.104"
-           x="723.84998"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5559"
-             y="475.104"
-             x="723.84998">SPARK</tspan>
-          <tspan
-             id="tspan5561"
-             y="487.80399"
-             x="723.84998">Driver</tspan>
-        </text>
-        <g
-           id="g5563">
-          <rect
-             id="rect5565"
-             height="133.04201"
-             width="217.097"
-             y="539.76599"
-             x="536.93402"
-             style="fill:#ffffff" />
-          <rect
-             id="rect5567"
-             height="133.04201"
-             width="217.097"
-             y="539.76599"
-             x="536.93402"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <text
-             id="text5569"
-             y="610.18701"
-             x="645.48199"
-             style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
-             font-size="12.8">
-            <tspan
-               id="tspan5571"
-               y="610.18701"
-               x="645.48199" />
-          </text>
-        </g>
-        <text
-           id="text5573"
-           y="562.05402"
-           x="584.62"
-           style="font-style:normal;font-weight:normal;font-size:12.41779995px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="12.4178">
-          <tspan
-             id="tspan5575"
-             y="562.05402"
-             x="584.62">Decision Engine</tspan>
-        </text>
-        <g
-           id="g5577">
-          <circle
-             id="ellipse5579"
-             cy="473.56601"
-             cx="559.30402"
-             style="fill:#ffffff"
-             r="23.5476" />
-          <circle
-             id="ellipse5581"
-             cy="473.56601"
-             cx="559.30402"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-          <circle
-             id="ellipse5583"
-             cy="473.56601"
-             cx="559.30402"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-        </g>
-        <g
-           id="g5585">
-          <circle
-             id="ellipse5587"
-             cy="472.40601"
-             cx="617.56598"
-             style="fill:#ffffff"
-             r="23.5476" />
-          <circle
-             id="ellipse5589"
-             cy="472.40601"
-             cx="617.56598"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-          <circle
-             id="ellipse5591"
-             cy="472.40601"
-             cx="617.56598"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-        </g>
-        <g
-           id="g5593">
-          <circle
-             id="ellipse5595"
-             cy="473.58401"
-             cx="677.35797"
-             style="fill:#ffffff"
-             r="23.5476" />
-          <circle
-             id="ellipse5597"
-             cy="473.58401"
-             cx="677.35797"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-          <circle
-             id="ellipse5599"
-             cy="473.58401"
-             cx="677.35797"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-             r="23.5476" />
-        </g>
-        <text
-           id="text5601"
-           y="424.72198"
-           x="807.22803"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5603"
-             y="424.72198"
-             x="807.22803">Docker Container</tspan>
-        </text>
-        <text
-           id="text5605"
-           y="469.87399"
-           x="977.65802"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5607"
-             y="469.87399"
-             x="977.65802">DRAM</tspan>
-        </text>
-        <text
-           id="text5609"
-           y="537.922"
-           x="977.65802"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5611"
-             y="537.922"
-             x="977.65802">DRAM</tspan>
-        </text>
-        <text
-           id="text5613"
-           y="600.15198"
-           x="977.65802"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5615"
-             y="600.15198"
-             x="977.65802">DRAM</tspan>
-        </text>
-        <text
-           id="text5617"
-           y="672.28003"
-           x="977.65802"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5619"
-             y="672.28003"
-             x="977.65802">DRAM</tspan>
-        </text>
-        <line
-           id="line5621"
-           y2="733.57599"
-           x2="588.26801"
-           y1="674.60602"
-           x1="588.62799"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
-        <line
-           id="line5623"
-           y2="714.854"
-           x2="818.57001"
-           y1="715.93402"
-           x1="561.59802"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
-        <line
-           id="line5625"
-           y2="714.68201"
-           x2="818.05603"
-           y1="457.32999"
-           x1="817.81799"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
-        <line
-           id="line5627"
-           y2="458.41"
-           x2="829.86603"
-           y1="458.37"
-           x1="818.45203"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
-        <line
-           id="line5629"
-           y2="529.578"
-           x2="830.276"
-           y1="529.53802"
-           x1="818.862"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
-        <line
-           id="line5631"
-           y2="599.71997"
-           x2="830.51599"
-           y1="599.67798"
-           x1="819.10199"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
-        <line
-           id="line5633"
-           y2="663.526"
-           x2="830.75598"
-           y1="663.48602"
-           x1="819.34198"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
-        <line
-           id="line5635"
-           y2="736.25"
-           x2="897.92401"
-           y1="738.25"
-           x1="558.78198"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
-        <line
-           id="line5637"
-           y2="737.36401"
-           x2="898.10199"
-           y1="545.92603"
-           x1="898.47803"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
-        <line
-           id="line5639"
-           y2="547.40601"
-           x2="911.81598"
-           y1="547.36603"
-           x1="900.40198"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
-        <line
-           id="line5641"
-           y2="499.258"
-           x2="1014.22"
-           y1="496.97601"
-           x1="796.09998"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
-        <line
-           id="line5643"
-           y2="567.85999"
-           x2="1018.84"
-           y1="567.45203"
-           x1="796.46002"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
-        <line
-           id="line5645"
-           y2="638.328"
-           x2="1020.86"
-           y1="637.21002"
-           x1="799.69598"
-           style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
-        <g
-           id="g5647">
           <g
-             id="g5649">
-            <circle
-               id="ellipse5651"
-               cy="589.401"
-               cx="937.27698"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5653"
-               cy="589.401"
-               cx="937.27698"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5655"
-               cy="589.401"
-               cx="937.27698"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
+             id="g9470">
+            <g
+               id="g9472">
+              <circle
+                 id="ellipse9474"
+                 cy="449.85699"
+                 cx="1017.84"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9476"
+                 cy="449.85699"
+                 cx="1017.84"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9478"
+                 cy="449.85699"
+                 cx="1017.84"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9480"
+               y="452.98801"
+               x="1010.32"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9482"
+                 y="452.98801"
+                 x="1010.32">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9484">
+            <g
+               id="g9486">
+              <circle
+                 id="ellipse9488"
+                 cy="460.36899"
+                 cx="1018.6"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9490"
+                 cy="460.36899"
+                 cx="1018.6"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9492"
+                 cy="460.36899"
+                 cx="1018.6"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9494"
+               y="463.5"
+               x="1011.07"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9496"
+                 y="463.5"
+                 x="1011.07">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9498">
+            <g
+               id="g9500">
+              <circle
+                 id="ellipse9502"
+                 cy="472.76501"
+                 cx="1018.38"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9504"
+                 cy="472.76501"
+                 cx="1018.38"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9506"
+                 cy="472.76501"
+                 cx="1018.38"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9508"
+               y="475.896"
+               x="1010.86"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9510"
+                 y="475.896"
+                 x="1010.86">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9512">
+            <g
+               id="g9514">
+              <circle
+                 id="ellipse9516"
+                 cy="515.17902"
+                 cx="1016.86"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9518"
+                 cy="515.17902"
+                 cx="1016.86"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9520"
+                 cy="515.17902"
+                 cx="1016.86"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9522"
+               y="518.31"
+               x="1009.33"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9524"
+                 y="518.31"
+                 x="1009.33">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9526">
+            <g
+               id="g9528">
+              <circle
+                 id="ellipse9530"
+                 cy="526.94702"
+                 cx="1016.87"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9532"
+                 cy="526.94702"
+                 cx="1016.87"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9534"
+                 cy="526.94702"
+                 cx="1016.87"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9536"
+               y="530.078"
+               x="1009.34"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9538"
+                 y="530.078"
+                 x="1009.34">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9540">
+            <g
+               id="g9542">
+              <circle
+                 id="ellipse9544"
+                 cy="538.57098"
+                 cx="1018.16"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9546"
+                 cy="538.57098"
+                 cx="1018.16"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9548"
+                 cy="538.57098"
+                 cx="1018.16"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9550"
+               y="541.70203"
+               x="1010.63"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9552"
+                 y="541.70203"
+                 x="1010.63">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9554">
+            <g
+               id="g9556">
+              <circle
+                 id="ellipse9558"
+                 cy="449.77499"
+                 cx="937.38898"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9560"
+                 cy="449.77499"
+                 cx="937.38898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9562"
+                 cy="449.77499"
+                 cx="937.38898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9564"
+               y="452.90601"
+               x="929.86401"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9566"
+                 y="452.90601"
+                 x="929.86401">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9568">
+            <g
+               id="g9570">
+              <circle
+                 id="ellipse9572"
+                 cy="456.603"
+                 cx="937.20099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9574"
+                 cy="456.603"
+                 cx="937.20099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9576"
+                 cy="456.603"
+                 cx="937.20099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9578"
+               y="459.73401"
+               x="929.67603"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9580"
+                 y="459.73401"
+                 x="929.67603">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9582">
+            <g
+               id="g9584">
+              <circle
+                 id="ellipse9586"
+                 cy="465.00101"
+                 cx="937.32703"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9588"
+                 cy="465.00101"
+                 cx="937.32703"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9590"
+                 cy="465.00101"
+                 cx="937.32703"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9592"
+               y="468.13199"
+               x="929.802"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9594"
+                 y="468.13199"
+                 x="929.802">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9596">
+            <g
+               id="g9598">
+              <circle
+                 id="ellipse9600"
+                 cy="472.45901"
+                 cx="937.45099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9602"
+                 cy="472.45901"
+                 cx="937.45099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9604"
+                 cy="472.45901"
+                 cx="937.45099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9606"
+               y="475.59"
+               x="929.92798"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9608"
+                 y="475.59"
+                 x="929.92798">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9610">
+            <g
+               id="g9612">
+              <circle
+                 id="ellipse9614"
+                 cy="522.84698"
+                 cx="937.20099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9616"
+                 cy="522.84698"
+                 cx="937.20099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9618"
+                 cy="522.84698"
+                 cx="937.20099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9620"
+               y="525.97803"
+               x="929.67603"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9622"
+                 y="525.97803"
+                 x="929.67603">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9624">
+            <g
+               id="g9626">
+              <circle
+                 id="ellipse9628"
+                 cy="529.67499"
+                 cx="937.013"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9630"
+                 cy="529.67499"
+                 cx="937.013"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9632"
+                 cy="529.67499"
+                 cx="937.013"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9634"
+               y="532.80603"
+               x="929.48798"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9636"
+                 y="532.80603"
+                 x="929.48798">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9638">
+            <g
+               id="g9640">
+              <circle
+                 id="ellipse9642"
+                 cy="538.073"
+                 cx="937.13702"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9644"
+                 cy="538.073"
+                 cx="937.13702"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9646"
+                 cy="538.073"
+                 cx="937.13702"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9648"
+               y="541.20398"
+               x="929.61401"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9650"
+                 y="541.20398"
+                 x="929.61401">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9652">
+            <g
+               id="g9654">
+              <circle
+                 id="ellipse9656"
+                 cy="595.29102"
+                 cx="938.26898"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9658"
+                 cy="595.29102"
+                 cx="938.26898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9660"
+                 cy="595.29102"
+                 cx="938.26898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9662"
+               y="598.422"
+               x="930.74402"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9664"
+                 y="598.422"
+                 x="930.74402">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9666">
+            <g
+               id="g9668">
+              <circle
+                 id="ellipse9670"
+                 cy="602.11902"
+                 cx="938.07898"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9672"
+                 cy="602.11902"
+                 cx="938.07898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9674"
+                 cy="602.11902"
+                 cx="938.07898"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9676"
+               y="605.25"
+               x="930.55402"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9678"
+                 y="605.25"
+                 x="930.55402">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9680">
+            <g
+               id="g9682">
+              <circle
+                 id="ellipse9684"
+                 cy="610.51703"
+                 cx="938.20502"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9686"
+                 cy="610.51703"
+                 cx="938.20502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9688"
+                 cy="610.51703"
+                 cx="938.20502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9690"
+               y="613.64801"
+               x="930.67999"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9692"
+                 y="613.64801"
+                 x="930.67999">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9694">
+            <g
+               id="g9696">
+              <circle
+                 id="ellipse9698"
+                 cy="662.39697"
+                 cx="936.823"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9700"
+                 cy="662.39697"
+                 cx="936.823"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9702"
+                 cy="662.39697"
+                 cx="936.823"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9704"
+               y="665.52802"
+               x="929.29999"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9706"
+                 y="665.52802"
+                 x="929.29999">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9708">
+            <g
+               id="g9710">
+              <circle
+                 id="ellipse9712"
+                 cy="669.22498"
+                 cx="936.63501"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9714"
+                 cy="669.22498"
+                 cx="936.63501"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9716"
+                 cy="669.22498"
+                 cx="936.63501"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9718"
+               y="672.35602"
+               x="929.10999"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9720"
+                 y="672.35602"
+                 x="929.10999">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9722">
+            <g
+               id="g9724">
+              <circle
+                 id="ellipse9726"
+                 cy="677.62299"
+                 cx="936.76099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9728"
+                 cy="677.62299"
+                 cx="936.76099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9730"
+                 cy="677.62299"
+                 cx="936.76099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9732"
+               y="680.75403"
+               x="929.23602"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9734"
+                 y="680.75403"
+                 x="929.23602">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9736">
+            <rect
+               id="rect9738"
+               height="222.159"
+               width="276.27499"
+               y="444.21799"
+               x="502.05399"
+               style="fill:#82bef9" />
+            <rect
+               id="rect9740"
+               height="222.159"
+               width="276.27499"
+               y="444.21799"
+               x="502.05399"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9742"
+               y="559.198"
+               x="640.19098"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9744"
+                 y="559.198"
+                 x="640.19098" />
+            </text>
+          </g>
+          <g
+             id="g9746">
+            <rect
+               id="rect9748"
+               height="48.3297"
+               width="61.368"
+               y="730.59399"
+               x="719.83801"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9750"
+               height="48.3297"
+               width="61.368"
+               y="730.59399"
+               x="719.83801"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9752"
+               y="758.659"
+               x="750.52197"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9754"
+                 y="758.659"
+                 x="750.52197" />
+            </text>
           </g>
           <text
-             id="text5657"
-             y="592.53198"
-             x="929.75201"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9756"
+             y="751.69397"
+             x="732.04797"
+             style="font-style:normal;font-weight:normal;font-size:12.41779995px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="12.4178">
             <tspan
-               id="tspan5659"
-               y="592.53198"
-               x="929.75201">CPU</tspan>
+               id="tspan9758"
+               y="751.69397"
+               x="732.04797">SPARK</tspan>
+            <tspan
+               id="tspan9760"
+               y="767.216"
+               x="732.04797">Driver</tspan>
           </text>
-        </g>
-        <g
-           id="g5661">
           <g
-             id="g5663">
-            <circle
-               id="ellipse5665"
-               cy="601.16901"
-               cx="937.28497"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5667"
-               cy="601.16901"
-               cx="937.28497"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5669"
-               cy="601.16901"
-               cx="937.28497"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
+             id="g9762">
+            <rect
+               id="rect9764"
+               height="38"
+               width="141.57899"
+               y="540.362"
+               x="564.44"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9766"
+               height="38"
+               width="141.57899"
+               y="540.362"
+               x="564.44"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9768"
+               y="563.26202"
+               x="635.22998"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9770"
+                 y="563.26202"
+                 x="635.22998" />
+            </text>
           </g>
           <text
-             id="text5671"
-             y="604.29999"
-             x="929.76001"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9772"
+             y="564.41998"
+             x="587.224"
+             style="font-style:normal;font-weight:normal;font-size:12.41779995px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="12.4178">
             <tspan
-               id="tspan5673"
-               y="604.29999"
-               x="929.76001">CPU</tspan>
+               id="tspan9774"
+               y="564.41998"
+               x="587.224">Decision Engine</tspan>
           </text>
-        </g>
-        <g
-           id="g5675">
           <g
-             id="g5677">
+             id="g9776">
             <circle
-               id="ellipse5679"
-               cy="612.79303"
-               cx="938.57501"
+               id="ellipse9778"
+               cy="482.43399"
+               cx="610.60797"
                style="fill:#ffffff"
-               r="9.4874096" />
+               r="23.5476" />
             <circle
-               id="ellipse5681"
-               cy="612.79303"
-               cx="938.57501"
+               id="ellipse9780"
+               cy="482.43399"
+               cx="610.60797"
                style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
+               r="23.5476" />
             <circle
-               id="ellipse5683"
-               cy="612.79303"
-               cx="938.57501"
+               id="ellipse9782"
+               cy="482.43399"
+               cx="610.60797"
                style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
+               r="23.5476" />
+          </g>
+          <g
+             id="g9784">
+            <circle
+               id="ellipse9786"
+               cy="483.01199"
+               cx="669.64203"
+               style="fill:#ffffff"
+               r="23.5476" />
+            <circle
+               id="ellipse9788"
+               cy="483.01199"
+               cx="669.64203"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
+            <circle
+               id="ellipse9790"
+               cy="483.01199"
+               cx="669.64203"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
+          </g>
+          <g
+             id="g9792">
+            <circle
+               id="ellipse9794"
+               cy="482.452"
+               cx="728.66199"
+               style="fill:#ffffff"
+               r="23.5476" />
+            <circle
+               id="ellipse9796"
+               cy="482.452"
+               cx="728.66199"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
+            <circle
+               id="ellipse9798"
+               cy="482.452"
+               cx="728.66199"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
           </g>
           <text
-             id="text5685"
-             y="615.92401"
-             x="931.04999"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9800"
+             y="419.14401"
+             x="853.25"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
             <tspan
-               id="tspan5687"
-               y="615.92401"
-               x="931.04999">CPU</tspan>
+               id="tspan9802"
+               y="419.14401"
+               x="853.25">Docker Container</tspan>
           </text>
-        </g>
-        <g
-           id="g5689">
-          <g
-             id="g5691">
-            <circle
-               id="ellipse5693"
-               cy="653.67499"
-               cx="936.987"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5695"
-               cy="653.67499"
-               cx="936.987"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5697"
-               cy="653.67499"
-               cx="936.987"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
           <text
-             id="text5699"
-             y="656.80603"
-             x="929.46198"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9804"
+             y="464.86801"
+             x="1057.92"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
             <tspan
-               id="tspan5701"
-               y="656.80603"
-               x="929.46198">CPU</tspan>
+               id="tspan9806"
+               y="464.86801"
+               x="1057.92">DRAM</tspan>
           </text>
-        </g>
-        <g
-           id="g5703">
-          <g
-             id="g5705">
-            <circle
-               id="ellipse5707"
-               cy="665.44299"
-               cx="936.995"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5709"
-               cy="665.44299"
-               cx="936.995"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5711"
-               cy="665.44299"
-               cx="936.995"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
           <text
-             id="text5713"
-             y="668.57397"
-             x="929.46997"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9808"
+             y="532.91602"
+             x="1057.92"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
             <tspan
-               id="tspan5715"
-               y="668.57397"
-               x="929.46997">CPU</tspan>
+               id="tspan9810"
+               y="532.91602"
+               x="1057.92">DRAM</tspan>
           </text>
-        </g>
-        <g
-           id="g5717">
-          <g
-             id="g5719">
-            <circle
-               id="ellipse5721"
-               cy="677.06702"
-               cx="938.28497"
-               style="fill:#ffffff"
-               r="9.4874096" />
-            <circle
-               id="ellipse5723"
-               cy="677.06702"
-               cx="938.28497"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-            <circle
-               id="ellipse5725"
-               cy="677.06702"
-               cx="938.28497"
-               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
-               r="9.4874096" />
-          </g>
           <text
-             id="text5727"
-             y="680.198"
-             x="930.76001"
-             style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
-             font-size="7.90222">
+             id="text9812"
+             y="595.146"
+             x="1057.92"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
             <tspan
-               id="tspan5729"
-               y="680.198"
-               x="930.76001">CPU</tspan>
+               id="tspan9814"
+               y="595.146"
+               x="1057.92">DRAM</tspan>
           </text>
-        </g>
-        <text
-           id="text5731"
-           y="476.008"
-           x="538.948"
-           style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="9.03111">
-          <tspan
-             id="tspan5733"
-             y="476.008"
-             x="538.948">Workload</tspan>
-        </text>
-        <text
-           id="text5735"
-           y="472.79001"
-           x="597.42999"
-           style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="9.03111">
-          <tspan
-             id="tspan5737"
-             y="472.79001"
-             x="597.42999">Available</tspan>
-          <tspan
-             id="tspan5739"
-             y="484.07901"
-             x="597.42999">Cores</tspan>
-        </text>
-        <text
-           id="text5741"
-           y="468.61801"
-           x="665.40002"
-           style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="9.03111">
-          <tspan
-             id="tspan5743"
-             y="468.61801"
-             x="665.40002">Input</tspan>
-          <tspan
-             id="tspan5745"
-             y="479.90701"
-             x="665.40002">Data</tspan>
-          <tspan
-             id="tspan5747"
-             y="491.19601"
-             x="665.40002">Size</tspan>
-        </text>
-        <text
-           id="text5749"
-           y="587.37"
-           x="554.43597"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5751"
-             y="587.37"
-             x="554.43597">If available core &lt; threshhold</tspan>
-          <tspan
-             id="tspan5753"
-             y="600.07001"
-             x="554.43597">goto native worker</tspan>
-          <tspan
-             id="tspan5755"
-             y="612.77002"
-             x="554.43597">else If heap size &lt; input data size</tspan>
-          <tspan
-             id="tspan5757"
-             y="625.46997"
-             x="554.43597">goto partitioning(docker container)</tspan>
-          <tspan
-             id="tspan5759"
-             y="638.16998"
-             x="554.43597">else</tspan>
-          <tspan
-             id="tspan5761"
-             y="650.87"
-             x="554.43597">goto native worker</tspan>
-        </text>
-        <text
-           id="text5763"
-           y="641.396"
-           x="614.62799"
-           style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
-           font-size="10.16">
-          <tspan
-             id="tspan5765"
-             y="641.396"
-             x="614.62799" />
-        </text>
-        <g
-           id="g5767">
+          <text
+             id="text9816"
+             y="667.27399"
+             x="1057.92"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan9818"
+               y="667.27399"
+               x="1057.92">DRAM</tspan>
+          </text>
           <line
-             id="line5769"
-             y2="530.659"
-             x2="596.375"
-             y1="493.728"
-             x1="572.396"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <polygon
-             id="polygon5771"
-             points="599.208,525.839 600.46,536.949 590.82,531.285 596.375,530.659 "
-             style="fill:#000000" />
-          <polygon
-             id="polygon5773"
-             points="599.208,525.839 600.46,536.949 590.82,531.285 596.375,530.659 "
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-        </g>
-        <g
-           id="g5775">
+             id="line9820"
+             y2="709.67603"
+             x2="898.31598"
+             y1="452.32401"
+             x1="898.078"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
           <line
-             id="line5777"
-             y2="529.26001"
-             x2="629.42102"
-             y1="495.948"
-             x1="622.47498"
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <polygon
-             id="polygon5779"
-             points="633.805,525.792 630.952,536.602 624.016,527.833 629.421,529.26 "
-             style="fill:#000000" />
-          <polygon
-             id="polygon5781"
-             points="633.805,525.792 630.952,536.602 624.016,527.833 629.421,529.26 "
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-        </g>
-        <g
-           id="g5783">
+             id="line9822"
+             y2="453.40399"
+             x2="910.12598"
+             y1="453.36401"
+             x1="898.71198"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
           <line
-             id="line5785"
-             y2="529.43903"
-             x2="667.92401"
-             y1="497.13199"
-             x1="677.35797"
+             id="line9824"
+             y2="524.57202"
+             x2="910.53601"
+             y1="524.53198"
+             x1="899.12201"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line9826"
+             y2="594.71399"
+             x2="910.776"
+             y1="594.672"
+             x1="899.362"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line9828"
+             y2="658.52002"
+             x2="911.01599"
+             y1="658.47998"
+             x1="899.60199"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line9830"
+             y2="732.35797"
+             x2="978.362"
+             y1="540.91998"
+             x1="978.73798"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
+          <line
+             id="line9832"
+             y2="542.40002"
+             x2="992.07599"
+             y1="542.35999"
+             x1="980.66199"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line9834"
+             y2="494.25201"
+             x2="1094.48"
+             y1="491.97"
+             x1="876.35999"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
+          <line
+             id="line9836"
+             y2="562.854"
+             x2="1099.1"
+             y1="562.44598"
+             x1="876.71997"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
+          <line
+             id="line9838"
+             y2="633.32202"
+             x2="1101.12"
+             y1="632.20398"
+             x1="879.95599"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:10, 4, 2, 4" />
+          <g
+             id="g9840">
+            <g
+               id="g9842">
+              <circle
+                 id="ellipse9844"
+                 cy="586.23102"
+                 cx="1017.54"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9846"
+                 cy="586.23102"
+                 cx="1017.54"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9848"
+                 cy="586.23102"
+                 cx="1017.54"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9850"
+               y="589.362"
+               x="1010.01"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9852"
+                 y="589.362"
+                 x="1010.01">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9854">
+            <g
+               id="g9856">
+              <circle
+                 id="ellipse9858"
+                 cy="597.99902"
+                 cx="1017.55"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9860"
+                 cy="597.99902"
+                 cx="1017.55"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9862"
+                 cy="597.99902"
+                 cx="1017.55"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9864"
+               y="601.13"
+               x="1010.02"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9866"
+                 y="601.13"
+                 x="1010.02">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9868">
+            <g
+               id="g9870">
+              <circle
+                 id="ellipse9872"
+                 cy="609.62299"
+                 cx="1018.84"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9874"
+                 cy="609.62299"
+                 cx="1018.84"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9876"
+                 cy="609.62299"
+                 cx="1018.84"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9878"
+               y="612.75403"
+               x="1011.31"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9880"
+                 y="612.75403"
+                 x="1011.31">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9882">
+            <g
+               id="g9884">
+              <circle
+                 id="ellipse9886"
+                 cy="650.505"
+                 cx="1017.25"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9888"
+                 cy="650.505"
+                 cx="1017.25"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9890"
+                 cy="650.505"
+                 cx="1017.25"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9892"
+               y="653.63599"
+               x="1009.72"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9894"
+                 y="653.63599"
+                 x="1009.72">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9896">
+            <g
+               id="g9898">
+              <circle
+                 id="ellipse9900"
+                 cy="662.27301"
+                 cx="1017.26"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9902"
+                 cy="662.27301"
+                 cx="1017.26"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9904"
+                 cy="662.27301"
+                 cx="1017.26"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9906"
+               y="665.40399"
+               x="1009.73"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9908"
+                 y="665.40399"
+                 x="1009.73">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g9910">
+            <g
+               id="g9912">
+              <circle
+                 id="ellipse9914"
+                 cy="673.89697"
+                 cx="1018.55"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9916"
+                 cy="673.89697"
+                 cx="1018.55"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse9918"
+                 cy="673.89697"
+                 cx="1018.55"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text9920"
+               y="677.02802"
+               x="1011.02"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan9922"
+                 y="677.02802"
+                 x="1011.02">CPU</tspan>
+            </text>
+          </g>
+          <text
+             id="text9924"
+             y="484.87601"
+             x="590.25201"
+             style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="9.03111">
+            <tspan
+               id="tspan9926"
+               y="484.87601"
+               x="590.25201">Workload</tspan>
+          </text>
+          <text
+             id="text9928"
+             y="481.65799"
+             x="648.73401"
+             style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="9.03111">
+            <tspan
+               id="tspan9930"
+               y="481.65799"
+               x="648.73401">Available</tspan>
+            <tspan
+               id="tspan9932"
+               y="492.94699"
+               x="648.73401">Cores</tspan>
+          </text>
+          <text
+             id="text9934"
+             y="477.48599"
+             x="716.70398"
+             style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="9.03111">
+            <tspan
+               id="tspan9936"
+               y="477.48599"
+               x="716.70398">Input</tspan>
+            <tspan
+               id="tspan9938"
+               y="488.77499"
+               x="716.70398">Data</tspan>
+            <tspan
+               id="tspan9940"
+               y="500.064"
+               x="716.70398">Size</tspan>
+          </text>
+          <text
+             id="text9942"
+             y="743.54602"
+             x="725.81403"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan9944"
+               y="743.54602"
+               x="725.81403" />
+          </text>
+          <g
+             id="g9946">
+            <line
+               id="line9948"
+               y2="530.09698"
+               x2="625.86298"
+               y1="505.30899"
+               x1="617.92902"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <polygon
+               id="polygon9950"
+               points="629.863,526.191 628.149,537.24 620.339,529.24 625.863,530.097 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon9952"
+               points="629.863,526.191 628.149,537.24 620.339,529.24 625.863,530.097 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g9954">
+            <line
+               id="line9956"
+               y2="530.48499"
+               x2="648.245"
+               y1="504.94199"
+               x1="659.75702"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <polygon
+               id="polygon9958"
+               points="653.83,530.26 645.163,537.322 644.714,526.151 648.245,530.485 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon9960"
+               points="653.83,530.26 645.163,537.322 644.714,526.151 648.245,530.485 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g9962">
+            <line
+               id="line9964"
+               y2="537.85797"
+               x2="672.88202"
+               y1="506"
+               x1="728.66199"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <polygon
+               id="polygon9966"
+               points="677.532,540.96 666.369,541.577 672.573,532.276 672.882,537.858 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon9968"
+               points="677.532,540.96 666.369,541.577 672.573,532.276 672.882,537.858 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g9970">
+            <rect
+               id="rect9972"
+               height="50.044601"
+               width="95.052597"
+               y="594.29999"
+               x="544.70203"
+               style="fill:#ffffff" />
+            <rect
+               id="rect9974"
+               height="50.044601"
+               width="95.052597"
+               y="594.29999"
+               x="544.70203"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text9976"
+               y="623.22198"
+               x="592.22803"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan9978"
+                 y="623.22198"
+                 x="592.22803" />
+            </text>
+          </g>
+          <text
+             id="text9980"
+             y="614.72803"
+             x="555.77802"
+             style="font-style:normal;font-weight:normal;font-size:12.41779995px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="12.4178">
+            <tspan
+               id="tspan9982"
+               y="614.72803"
+               x="555.77802">Auto-tune</tspan>
+            <tspan
+               id="tspan9984"
+               y="630.25"
+               x="555.77802">(Partitioning)</tspan>
+          </text>
+          <g
+             id="g9986">
+            <circle
+               id="ellipse9988"
+               cy="492.45001"
+               cx="556.724"
+               style="fill:#ffffff"
+               r="23.5476" />
+            <circle
+               id="ellipse9990"
+               cy="492.45001"
+               cx="556.724"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
+            <circle
+               id="ellipse9992"
+               cy="492.45001"
+               cx="556.724"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+               r="23.5476" />
+          </g>
+          <text
+             id="text9994"
+             y="491.418"
+             x="537.91199"
+             style="font-style:normal;font-weight:normal;font-size:9.03110981px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="9.03111">
+            <tspan
+               id="tspan9996"
+               y="491.418"
+               x="537.91199">Decision</tspan>
+            <tspan
+               id="tspan9998"
+               y="502.707"
+               x="537.91199">Hint</tspan>
+          </text>
+          <g
+             id="g10000">
+            <rect
+               id="rect10002"
+               height="127.806"
+               width="47.4062"
+               y="430.73999"
+               x="832.12402"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect10004"
+               height="127.806"
+               width="47.4062"
+               y="430.73999"
+               x="832.12402"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text10006"
+               y="498.543"
+               x="855.82703"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan10008"
+                 y="498.543"
+                 x="855.82703" />
+            </text>
+          </g>
+          <g
+             id="g10010">
+            <g
+               id="g10012">
+              <circle
+                 id="ellipse10014"
+                 cy="456.85501"
+                 cx="856.55902"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10016"
+                 cy="456.85501"
+                 cx="856.55902"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10018"
+                 cy="456.85501"
+                 cx="856.55902"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10020"
+               y="459.98599"
+               x="849.034"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10022"
+                 y="459.98599"
+                 x="849.034">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10024">
+            <g
+               id="g10026">
+              <circle
+                 id="ellipse10028"
+                 cy="467.23499"
+                 cx="856.99902"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10030"
+                 cy="467.23499"
+                 cx="856.99902"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10032"
+                 cy="467.23499"
+                 cx="856.99902"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10034"
+               y="470.366"
+               x="849.474"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10036"
+                 y="470.366"
+                 x="849.474">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10038">
+            <g
+               id="g10040">
+              <circle
+                 id="ellipse10042"
+                 cy="474.06299"
+                 cx="856.81097"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10044"
+                 cy="474.06299"
+                 cx="856.81097"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10046"
+                 cy="474.06299"
+                 cx="856.81097"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10048"
+               y="477.194"
+               x="849.28601"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10050"
+                 y="477.194"
+                 x="849.28601">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10052">
+            <g
+               id="g10054">
+              <circle
+                 id="ellipse10056"
+                 cy="482.461"
+                 cx="856.93701"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10058"
+                 cy="482.461"
+                 cx="856.93701"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10060"
+                 cy="482.461"
+                 cx="856.93701"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10062"
+               y="485.59201"
+               x="849.41199"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10064"
+                 y="485.59201"
+                 x="849.41199">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10066">
+            <g
+               id="g10068">
+              <circle
+                 id="ellipse10070"
+                 cy="489.91901"
+                 cx="857.06097"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10072"
+                 cy="489.91901"
+                 cx="857.06097"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10074"
+                 cy="489.91901"
+                 cx="857.06097"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10076"
+               y="493.04999"
+               x="849.53802"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10078"
+                 y="493.04999"
+                 x="849.53802">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10080">
+            <g
+               id="g10082">
+              <circle
+                 id="ellipse10084"
+                 cy="511.01099"
+                 cx="857.25897"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10086"
+                 cy="511.01099"
+                 cx="857.25897"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10088"
+                 cy="511.01099"
+                 cx="857.25897"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10090"
+               y="514.14203"
+               x="849.73401"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10092"
+                 y="514.14203"
+                 x="849.73401">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10094">
+            <g
+               id="g10096">
+              <circle
+                 id="ellipse10098"
+                 cy="519.09497"
+                 cx="857.69897"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10100"
+                 cy="519.09497"
+                 cx="857.69897"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10102"
+                 cy="519.09497"
+                 cx="857.69897"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10104"
+               y="522.22601"
+               x="850.17401"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10106"
+                 y="522.22601"
+                 x="850.17401">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10108">
+            <g
+               id="g10110">
+              <circle
+                 id="ellipse10112"
+                 cy="525.92297"
+                 cx="857.51099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10114"
+                 cy="525.92297"
+                 cx="857.51099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10116"
+                 cy="525.92297"
+                 cx="857.51099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10118"
+               y="529.05402"
+               x="849.98602"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10120"
+                 y="529.05402"
+                 x="849.98602">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10122">
+            <g
+               id="g10124">
+              <circle
+                 id="ellipse10126"
+                 cy="534.32098"
+                 cx="857.63702"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10128"
+                 cy="534.32098"
+                 cx="857.63702"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10130"
+                 cy="534.32098"
+                 cx="857.63702"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10132"
+               y="537.45203"
+               x="850.112"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10134"
+                 y="537.45203"
+                 x="850.112">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10136">
+            <g
+               id="g10138">
+              <circle
+                 id="ellipse10140"
+                 cy="541.77899"
+                 cx="857.76099"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10142"
+                 cy="541.77899"
+                 cx="857.76099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10144"
+                 cy="541.77899"
+                 cx="857.76099"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10146"
+               y="544.90997"
+               x="850.23798"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10148"
+                 y="544.90997"
+                 x="850.23798">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10150">
+            <rect
+               id="rect10152"
+               height="127.806"
+               width="47.4062"
+               y="567.28601"
+               x="833.33801"
+               style="fill:#e5e5e5" />
+            <rect
+               id="rect10154"
+               height="127.806"
+               width="47.4062"
+               y="567.28601"
+               x="833.33801"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text10156"
+               y="635.08899"
+               x="857.04102"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan10158"
+                 y="635.08899"
+                 x="857.04102" />
+            </text>
+          </g>
+          <g
+             id="g10160">
+            <g
+               id="g10162">
+              <circle
+                 id="ellipse10164"
+                 cy="590.18903"
+                 cx="857.77301"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10166"
+                 cy="590.18903"
+                 cx="857.77301"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10168"
+                 cy="590.18903"
+                 cx="857.77301"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10170"
+               y="593.32001"
+               x="850.24799"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10172"
+                 y="593.32001"
+                 x="850.24799">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10174">
+            <g
+               id="g10176">
+              <circle
+                 id="ellipse10178"
+                 cy="598.27301"
+                 cx="858.21301"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10180"
+                 cy="598.27301"
+                 cx="858.21301"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10182"
+                 cy="598.27301"
+                 cx="858.21301"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10184"
+               y="601.40399"
+               x="850.68799"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10186"
+                 y="601.40399"
+                 x="850.68799">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10188">
+            <g
+               id="g10190">
+              <circle
+                 id="ellipse10192"
+                 cy="605.10101"
+                 cx="858.02502"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10194"
+                 cy="605.10101"
+                 cx="858.02502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10196"
+                 cy="605.10101"
+                 cx="858.02502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10198"
+               y="608.23199"
+               x="850.5"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10200"
+                 y="608.23199"
+                 x="850.5">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10202">
+            <g
+               id="g10204">
+              <circle
+                 id="ellipse10206"
+                 cy="613.49902"
+                 cx="858.151"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10208"
+                 cy="613.49902"
+                 cx="858.151"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10210"
+                 cy="613.49902"
+                 cx="858.151"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10212"
+               y="616.63"
+               x="850.62598"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10214"
+                 y="616.63"
+                 x="850.62598">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10216">
+            <g
+               id="g10218">
+              <circle
+                 id="ellipse10220"
+                 cy="620.95697"
+                 cx="858.27502"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10222"
+                 cy="620.95697"
+                 cx="858.27502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10224"
+                 cy="620.95697"
+                 cx="858.27502"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10226"
+               y="624.08801"
+               x="850.75201"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10228"
+                 y="624.08801"
+                 x="850.75201">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10230">
+            <g
+               id="g10232">
+              <circle
+                 id="ellipse10234"
+                 cy="645.263"
+                 cx="858.47498"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10236"
+                 cy="645.263"
+                 cx="858.47498"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10238"
+                 cy="645.263"
+                 cx="858.47498"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10240"
+               y="648.39398"
+               x="850.95001"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10242"
+                 y="648.39398"
+                 x="850.95001">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10244">
+            <g
+               id="g10246">
+              <circle
+                 id="ellipse10248"
+                 cy="653.34698"
+                 cx="858.91498"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10250"
+                 cy="653.34698"
+                 cx="858.91498"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10252"
+                 cy="653.34698"
+                 cx="858.91498"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10254"
+               y="656.47803"
+               x="851.39001"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10256"
+                 y="656.47803"
+                 x="851.39001">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10258">
+            <g
+               id="g10260">
+              <circle
+                 id="ellipse10262"
+                 cy="660.17499"
+                 cx="858.72699"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10264"
+                 cy="660.17499"
+                 cx="858.72699"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10266"
+                 cy="660.17499"
+                 cx="858.72699"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10268"
+               y="663.30603"
+               x="851.20203"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10270"
+                 y="663.30603"
+                 x="851.20203">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10272">
+            <g
+               id="g10274">
+              <circle
+                 id="ellipse10276"
+                 cy="668.573"
+                 cx="858.85303"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10278"
+                 cy="668.573"
+                 cx="858.85303"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10280"
+                 cy="668.573"
+                 cx="858.85303"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10282"
+               y="671.70398"
+               x="851.328"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10284"
+                 y="671.70398"
+                 x="851.328">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10286">
+            <g
+               id="g10288">
+              <circle
+                 id="ellipse10290"
+                 cy="676.03101"
+                 cx="858.97699"
+                 style="fill:#ffffff"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10292"
+                 cy="676.03101"
+                 cx="858.97699"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+              <circle
+                 id="ellipse10294"
+                 cy="676.03101"
+                 cx="858.97699"
+                 style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1"
+                 r="9.4874096" />
+            </g>
+            <text
+               id="text10296"
+               y="679.16199"
+               x="851.45398"
+               style="font-style:normal;font-weight:normal;font-size:7.90221977px;font-family:sans-serif;text-anchor:start;fill:#000000"
+               font-size="7.90222">
+              <tspan
+                 id="tspan10298"
+                 y="679.16199"
+                 x="851.45398">CPU</tspan>
+            </text>
+          </g>
+          <g
+             id="g10300">
+            <line
+               id="line10302"
+               y2="533.04303"
+               x2="604.34998"
+               y1="508.04199"
+               x1="575.01801"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <polygon
+               id="polygon10304"
+               points="605.691,527.616 610.058,537.908 599.204,535.227 604.35,533.043 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10306"
+               points="605.691,527.616 610.058,537.908 599.204,535.227 604.35,533.043 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g10308">
+            <rect
+               id="rect10310"
+               height="89.7771"
+               width="61.312901"
+               y="540.33801"
+               x="710.13"
+               style="fill:#ffffff" />
+            <rect
+               id="rect10312"
+               height="89.7771"
+               width="61.312901"
+               y="540.33801"
+               x="710.13"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <text
+               id="text10314"
+               y="589.12701"
+               x="740.78601"
+               style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:sans-serif;text-anchor:middle;fill:#000000"
+               font-size="12.8">
+              <tspan
+                 id="tspan10316"
+                 y="589.12701"
+                 x="740.78601" />
+            </text>
+          </g>
+          <text
+             id="text10318"
+             y="568.98602"
+             x="713.17603"
+             style="font-style:normal;font-weight:normal;font-size:11.85330009px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="11.8533">
+            <tspan
+               id="tspan10320"
+               y="568.98602"
+               x="713.17603">Straggler</tspan>
+            <tspan
+               id="tspan10322"
+               y="583.80298"
+               x="713.17603">Monitor</tspan>
+            <tspan
+               id="tspan10324"
+               y="598.61902"
+               x="713.17603">&amp; core</tspan>
+            <tspan
+               id="tspan10326"
+               y="613.43597"
+               x="713.17603">Injector</tspan>
+          </text>
+          <text
+             id="text10328"
+             y="442.64401"
+             x="839.474"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10330"
+               y="442.64401"
+               x="839.474">Worker</tspan>
+          </text>
+          <text
+             id="text10332"
+             y="440.30399"
+             x="1000.04"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10334"
+               y="440.30399"
+               x="1000.04">Worker</tspan>
+          </text>
+          <text
+             id="text10336"
+             y="577.57202"
+             x="839.65802"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10338"
+               y="577.57202"
+               x="839.65802">Worker</tspan>
+          </text>
+          <text
+             id="text10340"
+             y="441.24399"
+             x="919.06799"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10342"
+               y="441.24399"
+               x="919.06799">Worker</tspan>
+          </text>
+          <text
+             id="text10344"
+             y="510.992"
+             x="922.00598"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10346"
+               y="510.992"
+               x="922.00598">Worker</tspan>
+          </text>
+          <text
+             id="text10348"
+             y="581.65601"
+             x="919.89398"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10350"
+               y="581.65601"
+               x="919.89398">Worker</tspan>
+          </text>
+          <text
+             id="text10352"
+             y="648.19"
+             x="918.70001"
+             style="font-style:normal;font-weight:normal;font-size:10.15999985px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.16">
+            <tspan
+               id="tspan10354"
+               y="648.19"
+               x="918.70001">Worker</tspan>
+          </text>
+          <line
+             id="line10356"
+             y2="473.578"
+             x2="828.604"
+             y1="473.53799"
+             x1="817.19"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line10358"
+             y2="665.38202"
+             x2="829.95398"
+             y1="665.34198"
+             x1="818.53998"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:20, 4, 4, 4, 4, 4" />
+          <line
+             id="line10360"
+             y2="665.74402"
+             x2="817.04797"
+             y1="473.20401"
+             x1="816.84198"
+             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-dasharray:4" />
+          <g
+             id="g10362">
+            <path
+               id="path10364"
+               d="m 782.209,754.76 c 22.488,0 13.561,-90.708 26.311,-90.708"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10366"
+               points="806.02,659.052 816.02,664.052 806.02,669.052 808.52,664.052 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10368"
+               points="806.02,659.052 816.02,664.052 806.02,669.052 808.52,664.052 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g10370">
+            <path
+               id="path10372"
+               d="m 782.199,754.76 c 49.598,0 68.117,-47.774 107.979,-47.774"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10374"
+               points="887.678,701.986 897.678,706.986 887.678,711.986 890.178,706.986 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10376"
+               points="887.678,701.986 897.678,706.986 887.678,711.986 890.178,706.986 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g10378">
+            <path
+               id="path10380"
+               d="m 781.206,754.76 c 65.964,0 132.72,-22.94 188.946,-22.94"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10382"
+               points="967.652,726.82 977.652,731.82 967.652,736.82 970.152,731.82 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10384"
+               points="967.652,726.82 977.652,731.82 967.652,736.82 970.152,731.82 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <line
+             id="line10386"
+             y2="755.52197"
+             x2="648.53198"
+             y1="580.078"
+             x1="647.09003"
              style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
-          <polygon
-             id="polygon5787"
-             points="673.424,528.441 665.821,536.638 663.825,525.638 667.924,529.439 "
-             style="fill:#000000" />
-          <polygon
-             id="polygon5789"
-             points="673.424,528.441 665.821,536.638 663.825,525.638 667.924,529.439 "
-             style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          <g
+             id="g10388">
+            <polyline
+               id="polyline10390"
+               points="648.278,754.984 683.554,754.984 683.554,754.759 709.094,754.759 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+            <polygon
+               id="polygon10392"
+               points="706.594,749.759 716.594,754.759 706.594,759.759 709.094,754.759 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10394"
+               points="706.594,749.759 716.594,754.759 706.594,759.759 709.094,754.759 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
+          <g
+             id="g10396">
+            <path
+               id="path10398"
+               d="m 772.423,585.226 c 38.194,0 20.501,-90.582 50.745,-90.582"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.40000001;stroke-dasharray:4"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10400"
+               points="820.668,489.644 830.668,494.644 820.668,499.644 823.168,494.644 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10402"
+               points="820.668,489.644 830.668,494.644 820.668,499.644 823.168,494.644 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.40000001" />
+          </g>
+          <g
+             id="g10404">
+            <path
+               id="path10406"
+               d="m 772.444,585.226 c 38.598,0 21.311,45.964 51.96,45.964"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.40000001;stroke-dasharray:4"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10408"
+               points="821.904,626.19 831.904,631.19 821.904,636.19 824.404,631.19 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10410"
+               points="821.904,626.19 831.904,631.19 821.904,636.19 824.404,631.19 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:0.40000001" />
+          </g>
+          <text
+             id="text10412"
+             y="540.45801"
+             x="786.40802"
+             style="font-style:normal;font-weight:normal;font-size:10.54380035px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.5438">
+            <tspan
+               id="tspan10414"
+               y="540.45801"
+               x="786.40802">Inject</tspan>
+            <tspan
+               id="tspan10416"
+               y="553.638"
+               x="786.40802">core</tspan>
+          </text>
+          <text
+             id="text10418"
+             y="596.59601"
+             x="785.15198"
+             style="font-style:normal;font-weight:normal;font-size:10.54380035px;font-family:sans-serif;text-anchor:start;fill:#000000"
+             font-size="10.5438">
+            <tspan
+               id="tspan10420"
+               y="596.59601"
+               x="785.15198">Inject</tspan>
+            <tspan
+               id="tspan10422"
+               y="609.776"
+               x="785.15198">core</tspan>
+          </text>
+          <g
+             id="g10424">
+            <path
+               id="path10426"
+               d="m 543.71,619.322 c -13.76,0 -20.476,-40.268 0.848,-95.411"
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2"
+               inkscape:connector-curvature="0" />
+            <polygon
+               id="polygon10428"
+               points="538.993,524.439 547.263,516.915 548.32,528.046 544.558,523.911 "
+               style="fill:#000000" />
+            <polygon
+               id="polygon10430"
+               points="538.993,524.439 547.263,516.915 548.32,528.046 544.558,523.911 "
+               style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2" />
+          </g>
         </g>
       </g>
     </g>

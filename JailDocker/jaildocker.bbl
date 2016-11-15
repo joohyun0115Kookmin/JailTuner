@@ -1,131 +1,157 @@
 \begin{thebibliography}{10}
 
-\bibitem{Arbel2014ConcurrentRCU}
-Maya Arbel and Hagit Attiya.
-\newblock {Concurrent Updates with RCU: Search Tree As an Example}.
-\newblock In {\em Proceedings of the 2014 ACM Symposium on Principles of
-  Distributed Computing}, PODC '14, pages 196--205, 2014.
+\bibitem{Kubernetes}
+Kubernetes.
+\newblock http://kubernetes.io/.
+
+\bibitem{Ahsan2016SVS}
+{\sc Ahsan Javed~Awan, Mats~Brorsson, V. V. E.~A.}
+\newblock How data volume affects spark based data analytics on a scale-up
+  server.
+\newblock In {\em Big Data Benchmarks, Performance Optimization, and Emerging
+  Hardware\/} (2016), Springer, Lecture Notes in Computer Science.
+
+\bibitem{Appuswamy2013SVS}
+{\sc Appuswamy, R., Gkantsidis, C., Narayanan, D., Hodson, O., and Rowstron,
+  A.}
+\newblock Scale-up vs scale-out for hadoop: Time to rethink?
+\newblock In {\em Proceedings of the 4th Annual Symposium on Cloud Computing\/}
+  (2013), SOCC '13.
+
+\bibitem{Baumann2009Barrelfish}
+{\sc Baumann, A., Barham, P., Dagand, P.-E., Harris, T., Isaacs, R., Peter, S.,
+  Roscoe, T., Sch\"{u}pbach, A., and Singhania, A.}
+\newblock {The Multikernel: A New OS Architecture for Scalable Multicore
+  Systems}.
+\newblock In {\em Proceedings of the ACM SIGOPS 22Nd Symposium on Operating
+  Systems Principles\/} (2009), SOSP '09, pp.~29--44.
 
 \bibitem{Boyd-WickizerCorey}
-Silas Boyd-Wickizer, Haibo Chen, Rong Chen, Yandong Mao, Frans Kaashoek, Robert
-  Morris, Aleksey Pesterev, Lex Stein, Ming Wu, Yuehua Dai, Yang Zhang, and
-  Zheng Zhang.
+{\sc Boyd-Wickizer, S., Chen, H., Chen, R., Mao, Y., Kaashoek, F., Morris, R.,
+  Pesterev, A., Stein, L., Wu, M., Dai, Y., Zhang, Y., and Zhang, Z.}
 \newblock {Corey: An Operating System for Many Cores}.
 \newblock In {\em Proceedings of the 8th USENIX Conference on Operating Systems
-  Design and Implementation}, OSDI'08, pages 43--57, 2008.
+  Design and Implementation\/} (2008), OSDI'08, pp.~43--57.
 
 \bibitem{SilasBoydWickizer2010LinuxScales48}
-Silas Boyd-Wickizer, Austin~T. Clements, Yandong Mao, Aleksey Pesterev,
-  M.~Frans Kaashoek, Robert Morris, and Nickolai Zeldovich.
+{\sc Boyd-Wickizer, S., Clements, A.~T., Mao, Y., Pesterev, A., Kaashoek,
+  M.~F., Morris, R., and Zeldovich, N.}
 \newblock {An Analysis of Linux Scalability to Many Cores}.
 \newblock In {\em Proceedings of the 9th USENIX Conference on Operating Systems
-  Design and Implementation}, OSDI'10, pages 1--16, 2010.
+  Design and Implementation\/} (2010), OSDI'10, pp.~1--16.
 
 \bibitem{SilasBoydWickizerPth}
-Silas Boyd-Wickizer, M.~Frans Kaashoek, Robert Morris, and Nickolai Zeldovich.
+{\sc Boyd-Wickizer, S., Kaashoek, M.~F., Morris, R., and Zeldovich, N.}
 \newblock {OpLog: a library for scaling update-heavy data structures}.
-\newblock In {\em Technical Report MIT-CSAIL-TR2014-019}, 2014.
+\newblock In {\em Technical Report MIT-CSAIL-TR2014-019\/} (2014).
 
-\bibitem{Chabbi2016CLL}
-Milind Chabbi and John Mellor-Crummey.
-\newblock {Contention-conscious, Locality-preserving Locks}.
-\newblock In {\em Proceedings of the 21st ACM SIGPLAN Symposium on Principles
-  and Practice of Parallel Programming}, PPoPP '16, pages 22:1--22:14, 2016.
+\bibitem{Cao2016ADS}
+{\sc Cao, X., Panchputre, K.~K., and Du, D. H.-C.}
+\newblock Accelerating data shuffling in mapreduce framework with a scale-up
+  numa computing architecture.
+\newblock In {\em Proceedings of the 24th High Performance Computing
+  Symposium\/} (2016), HPC '16, pp.~17:1--17:8.
+
+\bibitem{Chaimov2016SSH}
+{\sc Chaimov, N., Malony, A., Canon, S., Iancu, C., Ibrahim, K.~Z., and
+  Srinivasan, J.}
+\newblock Scaling spark on hpc systems.
+\newblock In {\em Proceedings of the 25th ACM International Symposium on
+  High-Performance Parallel and Distributed Computing\/} (2016), HPDC '16,
+  pp.~97--110.
 
 \bibitem{AustinTClements2012RCUBalancedTrees}
-Austin~T. Clements, M.~Frans Kaashoek, and Nickolai Zeldovich.
+{\sc Clements, A.~T., Kaashoek, M.~F., and Zeldovich, N.}
 \newblock {Scalable Address Spaces Using RCU Balanced Trees}.
 \newblock In {\em Proceedings of the Seventeenth International Conference on
-  Architectural Support for Programming Languages and Operating Systems},
-  ASPLOS XVII, pages 199--210, 2012.
+  Architectural Support for Programming Languages and Operating Systems\/}
+  (2012), ASPLOS XVII, pp.~199--210.
 
 \bibitem{Clements2013RadixVM}
-Austin~T. Clements, M.~Frans Kaashoek, and Nickolai~and Zeldovich.
+{\sc Clements, A.~T., Kaashoek, M.~F., and Zeldovich, N.~a.}
 \newblock {RadixVM: Scalable Address Spaces for Multithreaded Applications}.
 \newblock In {\em Proceedings of the 8th ACM European Conference on Computer
-  Systems}, EuroSys '13, pages 211--224, 2013.
+  Systems\/} (2013), EuroSys '13, pp.~211--224.
 
-\bibitem{Dodds2015SCT}
-Mike Dodds, Andreas Haas, and Christoph~M. Kirsch.
-\newblock {A Scalable, Correct Time-Stamped Stack}.
-\newblock In {\em Proceedings of the 42Nd Annual ACM SIGPLAN-SIGACT Symposium
-  on Principles of Programming Languages}, POPL '15, pages 233--246, 2015.
-
-\bibitem{Fatourou2012RCS}
-Panagiota Fatourou and Nikolaos~D. Kallimanis.
-\newblock {Revisiting the Combining Synchronization Technique}.
-\newblock {\em SIGPLAN Not.}, 47(8):257--266, February 2012.
-
-\bibitem{Harris2001Lockfree}
-Timothy~L. Harris.
-\newblock {A Pragmatic Implementation of Non-blocking Linked-Lists}.
-\newblock In {\em Proceedings of the 15th International Conference on
-  Distributed Computing}, DISC '01, pages 300--314, 2001.
+\bibitem{Dashti2013TMH}
+{\sc Dashti, M., Fedorova, A., Funston, J., Gaud, F., Lachaize, R., Lepers, B.,
+  Quema, V., and Roth, M.}
+\newblock Traffic management: A holistic approach to memory placement on numa
+  systems.
+\newblock In {\em Proceedings of the Eighteenth International Conference on
+  Architectural Support for Programming Languages and Operating Systems\/}
+  (2013), ASPLOS '13.
 
 \bibitem{Hendler2010FC}
-Danny Hendler, Itai Incze, Nir Shavit, and Moran Tzafrir.
+{\sc Hendler, D., Incze, I., Shavit, N., and Tzafrir, M.}
 \newblock {Flat Combining and the Synchronization-parallelism Tradeoff}.
-\newblock SPAA '10, pages 355--364, 2010.
+\newblock SPAA '10, pp.~355--364.
 
-\bibitem{Delegation2014}
-David Klaftenegger, Konstantinos Sagonas, and Kjell Winblad.
-\newblock {Delegation Locking Libraries for Improved Performance of
-  Multithreaded Program}.
-\newblock In {\em Euro-Par 2014 Parallel Processing}, pages 572--583, 2014.
+\bibitem{Maas2016THL}
+{\sc Maas, M., Asanovi\'{c}, K., Harris, T., and Kubiatowicz, J.}
+\newblock {Taurus: A Holistic Language Runtime System for Coordinating
+  Distributed Managed-Language Applications}.
+\newblock In {\em Proceedings of the Twenty-First International Conference on
+  Architectural Support for Programming Languages and Operating Systems\/}
+  (2016), ASPLOS '16, pp.~457--471.
 
-\bibitem{Kyong2016LDU}
-Joohyun Kyong and Sung-Soo Lim.
-\newblock {LDU: A Lightweight Concurrent Update Method with Deferred Processing
-  for Linux Kernel Scalability}.
-\newblock In {\em Proceedings of the IASTED International Conference, Parallel
-  and Distributed Computing and Networks (PDCN 2016)}, 2016.
+\bibitem{Merkel2014DLL}
+{\sc Merkel, D.}
+\newblock Docker: Lightweight linux containers for consistent development and
+  deployment.
+\newblock {\em Linux J. 2014\/} (2014).
 
-\bibitem{Magnusson1994QLC}
-Peter~S. Magnusson, Anders Landin, and Erik Hagersten.
-\newblock {Queue Locks on Cache Coherent Multiprocessors}.
-\newblock In {\em Proceedings of the 8th International Symposium on Parallel
-  Processing}, pages 165--171. IEEE Computer Society, 1994.
+\bibitem{Ousterhout2015MSP}
+{\sc Ousterhout, K., Rasti, R., Ratnasamy, S., Shenker, S., and Chun, B.-G.}
+\newblock Making sense of performance in data analytics frameworks.
+\newblock In {\em Proceedings of the 12th USENIX Conference on Networked
+  Systems Design and Implementation\/} (2015), NSDI'15.
 
-\bibitem{Matveev2015RLU}
-Alexander Matveev, Nir Shavit, Pascal Felber, and Patrick Marlier.
-\newblock {Read-log-update: A Lightweight Synchronization Mechanism for
-  Concurrent Programming}.
-\newblock In {\em Proceedings of the 25th Symposium on Operating Systems
-  Principles}, SOSP '15, pages 168--183, 2015.
+\bibitem{Qureshi2006UCP}
+{\sc Qureshi, M.~K., and Patt, Y.~N.}
+\newblock Utility-based cache partitioning: A low-overhead, high-performance,
+  runtime mechanism to partition shared caches.
+\newblock In {\em Proceedings of the 39th Annual IEEE/ACM International
+  Symposium on Microarchitecture\/} (2006), MICRO 39, pp.~423--432.
 
-\bibitem{McKenney98}
-Paul~E. McKenney and John~D. Slingwine.
-\newblock {Read-Copy Update: Using Execution History to Solve Concurrency
-  Problems}.
-\newblock In {\em {Parallel and Distributed Computing and Systems}}, pages
-  509--518, October 1998.
+\bibitem{Ren2015HDS}
+{\sc Ren, X., Ananthanarayanan, G., Wierman, A., and Yu, M.}
+\newblock {Hopper: Decentralized Speculation-aware Cluster Scheduling at
+  Scale}.
+\newblock In {\em Proceedings of the 2015 ACM Conference on Special Interest
+  Group on Data Communication\/} (2015), SIGCOMM '15, pp.~379--392.
 
-\bibitem{MellorCrummey1991MCS}
-John~M. Mellor-Crummey and Michael~L. Scott.
-\newblock {Algorithms for Scalable Synchronization on Shared-memory
-  Multiprocessors}.
-\newblock {\em ACM Trans. Comput. Syst.}, 9(1):21--65, February 1991.
+\bibitem{AutoNUMA}
+{\sc Rik~van Riel, V.~C.}
+\newblock Automatic numa balancing.
+\newblock https://www.linux-kvm.org/images/7/75/01x07b-NumaAutobalancing.pdf.
 
-\bibitem{petrank2013lock}
-Erez Petrank and Shahar Timnat.
-\newblock {Lock-free data-structure iterators}.
-\newblock In {\em DISC '13 Proceedings of the 27th International Conference on
-  Distributed Computing, Jerusalem, Israel}. 2013.
+\bibitem{Shvachko2010HDF}
+{\sc Shvachko, K., Kuang, H., Radia, S., and Chansler, R.}
+\newblock The hadoop distributed file system.
+\newblock In {\em Proceedings of the 2010 IEEE 26th Symposium on Mass Storage
+  Systems and Technologies (MSST)\/} (2010), MSST '10.
 
-\bibitem{Radovic2003HBL}
-Zoran Radovic and Erik Hagersten.
-\newblock {Hierarchical Backoff Locks for Nonuniform Communication
-  Architectures}.
-\newblock In {\em Proceedings of the 9th International Symposium on
-  High-Performance Computer Architecture}, HPCA '03, pages 241--. IEEE Computer
-  Society, 2003.
+\bibitem{Borg}
+{\sc Verma, A., Pedrosa, L., Korupolu, M.~R., Oppenheimer, D., Tune, E., and
+  Wilkes, J.}
+\newblock Large-scale cluster management at {Google} with {Borg}.
+\newblock In {\em Proceedings of the European Conference on Computer Systems
+  (EuroSys)\/} (Bordeaux, France, 2015).
 
-\bibitem{Wentzlaff2010fOS}
-David Wentzlaff, Charles Gruenwald, III, Nathan Beckmann, Kevin Modzelewski,
-  Adam Belay, Lamia Youseff, Jason Miller, and Anant Agarwal.
-\newblock {An Operating System for Multicore and Clouds: Mechanisms and
-  Implementation}.
-\newblock In {\em Proceedings of the 1st ACM Symposium on Cloud Computing},
-  SoCC '10, pages 3--14, 2010.
+\bibitem{wang2014bigdatabench}
+{\sc Wang, L., Zhan, J., Luo, C., Zhu, Y., Yang, Q., He, Y., Gao, W., Jia, Z.,
+  Shi, Y., Zhang, S., et~al.}
+\newblock Bigdatabench: A big data benchmark suite from internet services.
+\newblock In {\em 2014 IEEE 20th International Symposium on High Performance
+  Computer Architecture (HPCA)\/} (2014), IEEE, pp.~488--499.
+
+\bibitem{Zaharia2012RDD}
+{\sc Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M.,
+  Franklin, M.~J., Shenker, S., and Stoica, I.}
+\newblock Resilient distributed datasets: A fault-tolerant abstraction for
+  in-memory cluster computing.
+\newblock In {\em Proceedings of the 9th USENIX Conference on Networked Systems
+  Design and Implementation\/} (2012), NSDI'12.
 
 \end{thebibliography}
