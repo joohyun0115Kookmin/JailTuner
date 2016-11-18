@@ -4,16 +4,16 @@
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 일반적인 매니코어 또는 Scale-server의 scalability 대한 설명과 이번장에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-The reason for requiring partitioning method is that
-spark library and runtime engine can be bottlenect by GC and memory latency
-because Spark have not been considers scale-up environment.
+The reason for using partitioning method is that
+Spark library and run-time engine can be bottleneck by GC and remote memory access 
+because Spark have not focused on scale-up environment.
 %However, modification of the spark internals library and the runtime engine is
 %difficult.
-Thus, we use the docker container-based partitioning method to eliminate GC and
-memory latency overheads. 
+To achieve Spark performance scalability, we use the Docker container-based
+partitioning method to eliminate the GC and remote memory access overheads. 
 %The fundamental solution for scaling spark make a new designed spark
 %libary and runtime engine scale for scale-up server.
-This section explains design aspects of our docker container-based
+This section explains design aspects of our Docker container-based
 partitioning method to solve GC and memory latency.
 
 \subsection{Design Consideration}
@@ -22,13 +22,13 @@ partitioning method to solve GC and memory latency.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 파티션닝의 장점 1: GC의 serialization 되는 부분을 줄인다.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-The major problem of Spark scalability is GC, so partitioning approch is needed.
-Indeed, GC leads to many of the advantages of high-level languages becuase of
+As noted earlier, the major problem of Spark scalability is
+GC, so partitioning approach is needed.
+Indeed, GC leads to many of the advantages of high-level languages because of
 an increase in productivity, while it is a double-edged sword because
-GC pauses can cause serilizaed operation and requests to take unacceptable long
+GC pauses may lead a serialized operation and requests to take unacceptable long
 times.
-Thus, reducing GC pause time may lead to high performance scalability,
-and minialized CPU counts can mitigate GC pause time[].
+In order to reduce the GC pause time, a simple method is minimizing the CPU counts.
 Therefore, the first design consideration of scale partitioning is to minimize GC
 pause times.
 
@@ -36,15 +36,15 @@ pause times.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 파티션닝의 장점 2: DRAM access latency를 최대화 한다.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-The second design consideration is locality issues because of NUMA archtecture
+The second design consideration is locality issues because of NUMA architecture
 DRAM access latency.
-For example, threads are scheduled by the OS to execute on any core. When
-the thread is migrated to different memory area, the thread may accesse
+Due to the fact that threads are scheduled by the OS to execute on any core, the
+thread is migrated to different memory area, so the migrated thread may access
 remote memory.
-Partitioning aprroach can prevent to migrate other socket's core.
+Partitioning approach can prevent to migrate other socket.
 Indeed, the modern operating systems(Linux) has a NUMA balancing feature for
-enhancement of memory locality, but partitioning method can more superial
-performance regarding the large scale-up server(8 socket)[](see section 2).
+enhancement of memory locality, but partitioning method can more superior
+performance regarding the large scale-up server(8 socket)~\cite{AutoNUMA}.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -52,42 +52,42 @@ performance regarding the large scale-up server(8 socket)[](see section 2).
 % Linux kernel scalability (lock, cache cohearnci, scheduler)등등 OS 노이즈에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 In addition to GC and NUMA effect, operating systems noise can pose scalability
-bottlenct because it designed for shared-memory system;therefore, the next
-design consideration is to avoid operating system noise.
-For example, Single address sapce sharing problem[][][][] between multi-thread
-applications on JVM, scheduer bottlenct by load balancer[][], and cache
-comunication bottlenct[][] are major problems in manycore scale-up server
-operating system.
-This problem cause by sharing resource, so our approach can solve from these
-resource contention by using partitiong approch.
+bottleneck because modern operating systems have been designed for shared-memory
+systems;therefore, the next design consideration is to avoid operating systems noise.
+For example, Single address space sharing problem~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM} between multi-threaded
+applications, scheduler bottlenecks~\cite{Lozi2016LSD}, and cache
+communication bottlenecks~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC} are major problems in manycore scale-up server
+operating systems.
+This problem cause by sharing resource, so our approach can solve these
+resource contention problem by using partitioning approach.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 스파크는 결국 : shared memory system -> distributed system 처럼해야한다. 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 To satisfy these factors such as GC, NUMA and operating system
-bottlenct cause by shared-memory system, Spark on scale-up server should work
-as distributed system concept. 
-Therefore, we use partitioning approch for shared-memory system and it is dealt
-with as the distributed-system big data analytics frameworks thereby eliminating
-GC and memory access overheads.
-We make shared resource to small size group as much as possible; as result of,
-the small size cpu groups can mitigate the thread serialized problem cased by GC
-pause time, and these group may only accees to local NUMA memory.
-
-
+bottlenecks cause by shared-memory system, Spark on scale-up server should work
+as distributed system concept.
+Therefore, we use partitioning approach that treats the partitioned cores as a cluster
+node and moves shared-memory system workers to a distributed system workers that communicate
+via message-passing thereby eliminating GC and remote memory access overheads.
+We identify two design principles: (1) make shared resource to small size group
+as much as possible, (2) make Spark infrastructure hardware-neutral.
+As result of, the small size CPU groups can mitigate the thread
+serialized problem cased by GC pause time, and these group may only access to local NUMA memory.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 스파크는 적당한 파티션닝이 중요하다. 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-The final design consideration is straggler tasks problem. 
-If too small size partitioning may reduce GC and NUMA remote access, its benefit
+The final design consideration is straggler tasks(i.e, tasks take
+significantly longer than expected to complete) problem.
+Even though too small size partitioning may reduce GC and NUMA remote access, its benefit
 does not come for free because it may cause straggler tasks
 problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
-Thus, in order to scale Spark performance scalability,  depending on
-partitioning size.
+Thus, in order to scale Spark performance scalability, a straggler monitor and a
+run-time core injector are needed.
 \else
 
 \fi
@@ -110,23 +110,22 @@ partitioning size.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 This section describes our vision that will accommodate the previous
 mentioned design consideration.
-Our proposed scaleble partitiong framework is figure~\ref{fig:basic} with the
+Our proposed scalable partitioning framework is figure~\ref{fig:basic} with the
 necessary features.
 The left side of figure shows our proposed framework, and the right side of
-figure shows isolated docker containers and per-socket cpu with memory.
+figure shows isolated Docker containers and per-socket CPU with memory.
 
 %The main components of the framwork are the decistion engine.
 Decision engine is one of the most important features
 since every partitioning regarding Spark system workers are based
-on our decision engine compnent.
-Our simplified algorithm of the decision engine is that if available cores are
-less than pre-defined thrashhold, then a job works on the native CPUs because
-Spark system scales leanerly up to low cores(see section 2).
-If not, the decision engine compares heap size with input data size, then
-it decides whether or not running on the partitioned docker.
-If heap size is bigger than input data size, then a job works on the native CPUs 
-since the Spark has a substantial performance scalability when the dataset can
-fit in memory(see section 2).
+on our decision engine component.
+The basic function of the decision engine chooses whether or not the job
+run on the Docker container.
+The necessity of the auto-tuner is that performance scalability depending on partitioning
+size commonly differs from each server architecture.
+To maximized CPU utilization, the straggler monitor and core injector are needed
+because straggler tasks prolong job completion times, so the
+early finished CPUs can inject to other Docker containers involved the straggler tasks.
 
 \begin{figure*}[tb]
     \centering

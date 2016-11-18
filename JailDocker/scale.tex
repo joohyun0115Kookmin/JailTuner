@@ -1,5 +1,6 @@
 
-\section{Scale-up Server Scalalbility}
+\section{Scale-up Server Scalability}
+\label{sec:scale}
 
 
 
@@ -27,8 +28,8 @@
 Apache Spark is a framework for large scale distributed computation.
 RDD(Resilient Distributed Datasets) is a collection of partitions of records, 
 and the RDD is managed as LRU(Least Recently Used), so when there is not enough
-memory, Spark evits the least recently used RDD.
-Spark may has a substantial performance when dataset can fit in memory.
+memory, Spark evicts the least recently used RDD.
+Spark may has a substantial performance when data-set can fit in memory.
 
 %\begin{figure}[h]
 %    \centering
@@ -104,40 +105,26 @@ Our design improved throughput and execution time from 1.5x through 2.7x on 120 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Scalability 결과에 대한 대략 적인 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-Figure 1 shows the spark scalability of five workloads with G1 and Parallel
-Scavenge GC(PS).
-Up to 60 core, The five workloads scales linealy and then GC pause become
-bottlenecks.
-The word count flattens out after 60 core, but other benchmarks slightly go
-down because not only GC overhead but also NUMA effects. 
-To evalute state of the art GC, we used G1 and PS GC.
-The result of impact of chainging the GC are PS GC results in 3.3x better
-performance than G1 GC on 120 core.
-However, although we used the scalable GC, the Spark performance scalabiliy is
-still limited by GC and NUMA effects.
-\else
-
-\fi
-
+Figure 1 shows the Spark scalability of five workloads with two state of the art garbage
+collection, G1 and Parallel Scavenge(PS).
+Up to 60 core, the five workloads scales lineally and then GC pause becomes bottlenecks.
+The Word Count workload flattens out after 60 core, and other benchmarks slightly go
+down because not only the GC but also the remote memory access overheads. 
+To evaluate state of the art GC, we compared the G1 and PS GC.
+The effect of changing to the GC is the PS outperforms G1 by 3.3x on 120 core.
+However, although we used the state of the art scalable GC,
+the Spark performance scalability still suffers from GC and NUMA locality problem.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %CPU utilization에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-\ifkor
-Figure ~\ref{fig:cpuutilization} shows the job's CPU utilization.
-Our goal is high cpu utilization, 
+Our goal is to maximize CPU utilization, so we profiled the CPU utilization of five workloads.
+Figure ~\ref{fig:cpuutilization} shows the CPU utilization.
 Th y-axis is the percentage of time spent in kernel-space code(sys), user-space
 code(user), and idle time(idle).
-When core counts increase, all benchmarks increase idle time due to GC pasue
-that means 
-
-\else
-
-\fi
-
+All benchmarks increase the idle time due to the GC pause as core counts increase.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -166,33 +153,26 @@ that means
 %NUMA 영향에 대한 대략 적인 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-\ifkor
-Spark and Hadoop ramework use JAVA and it needs java virtual machine, so
-understanding the partitioning effect on JVM is importance.
-To preliminarily analysis the JVM partitioning effect, we conducted
-benchamrking by using SPECjbb2013~\cite{PPogue2014SO}, which a state of the art
+Spark and Hadoop frameworks use JAVA, and it needs java virtual machine(JVM), so
+understanding the partitioning is important.
+To preliminarily analyse the JVM partitioning effect, we conducted
+benchmarking by using SPECjbb2013~\cite{Pogue2014SO}, which is a state of the art
 benchmark for JVM performance.
-We used two different experiment settings. First, we used per-socket
-JVM partitioning using the numa control application(numactl).
-Second, we set maxium available memory to JVM heap size and
-threads are scheduled by the OS in order to migrate any core, and we
-enable automatic NUMA balancing feature in the Linux kernel.
-\else
-\fi
+We used two different experimental settings. 
+First, we used per-socket JVM partitioning by using the NUMA control application(numactl).
+Second, we set maximum JVM heap size, which is system
+available memory size, and threads are scheduled by the OS
+in order to migrate any core, and we enable automatic NUMA balancing feature
+in the Linux kernel.
 
 \begin{figure}[h]
   \begin{center}
      \includegraphics[width=0.4\textwidth]{graph/SPECjbb2013}
   \end{center}
-  \caption{Test-bed Intel xeon archtecture.}
+  \caption{Test-bed Intel xeon architecture.}
   \label{fig:basic}
 \end{figure}
 
-\ifkor
-
-The results all core shows that partitioning approach outperforms than
-non-partitioning approach by Xx on 120 core.
-In manycore scale-up server, partiting approach has best performance
-scalability.
-\else
-\fi
+The results shows that partitioning approach outperforms non-partitioning approach by Xx on 120 core.
+Therefore, in manycore scale-up server, partitioning approach has many
+advantages over non-partitioning approach in terms of performance scalability.

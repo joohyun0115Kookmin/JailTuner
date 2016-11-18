@@ -3,92 +3,67 @@
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1: 실험 환경 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 In this section we discuss the docker container-based partitioning on the
 scale-up server described in Section 3.
 We ran the four benchmarks on Linux 4.5-rc4 with stock Linux. 
-All experiments were performed on a 120 core machine with 8-socket, 15-core
-Intel E7-8870 chips equipped with 792 GB DDR3 DRAM.
-We used ram file system for HDFS due to the eliminating the HDFS bottlenect.
-\else
-
-\fi
-
-
-
+We used ram file system for HDFS due to the eliminating the HDFS bottleneck.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 2: 비교 대상 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 %기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고, input 데이터는 10G 이상으로 설정하였다.
 We used four different experiment settings.
 First, we used non-partitioning method as Figure~ section 2 graph and we set
 heap size(4G).
-Second we used fine-grained partitiong that is per-socket(15 core) partitiong
+Second we used fine-grained partitioning that is per-socket(15 core) partitioning
 because it can make maximize locality.
-We allocated heap size by modifing heap size is that we divide 4G of number of
-partitining.
-Finaly, we used corese-grained partitiong that is per-socket(30 core) partitiong
-since it can mitegrate the straggler tasks problem.
-\else
-
-\fi
-
+We allocated heap size by modifying heap size is that we divide 4G of number of
+partitioning.
+Finally, we used coarse-grained partitioning that is per-socket(30 core) partitioning
+since it can mitigate the straggler tasks problem.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 2: WC, NB 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 The results for Word Count are shown in Figure~\ref{fig:docker}(a), and the
-result shows the thoughput of BigDataBench with our four different settings.
-Up to 60 core, the PS GC version of non-partiting approach scales linearly and
+result shows the throughput of BigDataBench with our four different settings.
+Up to 60 core, the PS GC version of non-partitioning approach scales linearly and
 then it flattens out.
 However, up to 60 core, our per-socket partitioning outperform non-partitioning
 since it can remove GC and NUMA latency overheads, and then the straggler tasks
 problem become bottlenecks.
-our corese-grained partitiong outperforms non-partitioning by 1.5x and
-per-socket partiting by 1.5x on 120 core.
-The results(Figure~\ref{docker}(b)) for Naive Basian is similar to Word Count
-workload.
-Our per-socket partitining outperform non-partitioning by 1.5x and per-socket
-partidfa by 1.5. on 120 core.
-Furthermore, the non-partitiong approach has the highest idle time(xx\%) since
-GC becomes bottlenect(see figure~\ref{fig:utilization2}). 
-\else 
-
-\fi
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and
+per-socket partiting by 1.1x on 120 core.
+Furthermore, the non-partitioning approach has the highest idle time(64\%) since
+GC becomes bottleneck(see figure~\ref{fig:utilization2}). 
+The results(Figure~\ref{docker}(b)) for Naive Bayesian is similar to Word Count
+workload, so our best-fit partitioning outperforms non-partitioning by 1.5x and per-socket
+by 1.2x on 120 core.
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 3: Grep 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 The results for Grep are shown in Figure~\ref{fig:docker}(c).
 After to 60 core, the 30 core partitioning approach scales linearly, but
-the others throughput goes down after to 60 core because non-partiting
+the others throughput goes down after to 60 core because non-partitioning
 version suffers from GC.
-The per-socet partintining approach suffers from the straggler tasks problem.
-Therefore, although the per-socet partintining approach eliminate the GC and
-NUMA latency, its cpu utilization is low than 30 core partitining.
-\else 
-
-\fi
+The per-socket partitioning approach suffers from the straggler tasks problem.
+Therefore, although the per-socket partitioning approach eliminates the GC overhead and
+the remote memory access, its CPU utilization(23\%) is low than 30 core partitioning(38\%).
+Our best-fit partitioning outperforms non-partitioning by 1.5x and per-socket
+by 1.3x on 120 core.
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % Paragraph 4: K-means 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 The results for K-means are shown in Figure~\ref{fig:docker}(d),
-The K-means workload extremly suffers from GC~\cite{Ahsan2016SVS};therefore,
-per-socket partiting apporach extremly better performance scalability up to 60 core.
-However, then it collaps after 60 core since it extremly suffers frome the
-straggler tasks problem.
-Thus, per-socket partitiong approach has low(XX\%) idle time.
-On the other hand, 30 core partiting relativey less suffers from the straggler
+The K-means workload extremely suffers from GC~\cite{Ahsan2016SVS};therefore,
+per-socket partitioning approach has better performance scalability up to 60 core.
+However, then it collapses after 60 core since it extremely suffers from the
+straggler tasks problem that extends job completion times.
+Our best-fit partitioning outperforms non-partitioning by 1.1x on 120 core.
+Thus, per-socket partitioning approach has the lowest(72\%) idle time.
+On the other hand, 30 core partitioning approach relatively less suffers from the straggler
 tasks problem.
-\else 
-
-\fi
-

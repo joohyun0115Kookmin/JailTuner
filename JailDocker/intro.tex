@@ -26,17 +26,17 @@ also important.
 % 2. HPC(100이상) 으로 분석하였으나 flie system 관점으로 분석하였음.:메인 병목지점은 파일 시스템
 % 3. Scalable한 파일 시스템을 사용한 후 Scalability에 대한 분석한 결과와 해결방법은 없음.
 Spark is one of widely used big data analytics framework.
-However, Saprk has been reported that it does
+However, Spark has been reported that it does
 not scale on the single node scale-up server because of garbage
 collection(GC)
 overhead~\cite{Ahsan2016SVS}~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} and
 locality of memory accesses on Non-Uniform Memory Access(NUMA)
 architecture~\cite{Cao2016ADS}.
-A.J. Awan et al. analysed GC time and compared state of the art
+Therefore, A.J. Awan \textit{et al.} analysed GC time and compared state of the art
 garbage collectors by changing the GC.
-Moreover, in order to avoid high costs of remote memory access, researchs have
-attempt to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA}, but
-these method also can not satisfactory compared to partitioning approch(see section 2).
+Moreover, in order to avoid high costs of remote memory access, researchers have
+attempted to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA}, but
+these methods also can not satisfactory compared to partitioning approch(see section~\ref{sec:scale}).
 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -44,15 +44,15 @@ these method also can not satisfactory compared to partitioning approch(see sect
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Our goals is to reduce the GC and the memory access latency overheads that
-have been a major problem of spark scalability.
+have been a major problem of Spark scalability.
 To achieve our goal, this paper presents a new partitioning method that
 eliminates the GC and remote access overheads by applying
-docker container-based efficieny partitioning for Spark on scale-up
+Docker container-based efficient partitioning for Spark on scale-up
 server.
 Our basic key idea is that shared-memory system is dealt with as the
-distributed-system using partitioning approch in order to eliminate GC and
+distributed-system using partitioning approach in order to eliminate GC and
 memory access overheads.
-We used docker containers since the overhead of a Docker
+We use Docker containers since the overhead of a Docker
 container is much smaller than a traditional virtual
 machine~\cite{Merkel2014DLL} and the container-based approach can easily combine
 existing container management solutions such as Google Borg~\cite{Borg} and
@@ -63,9 +63,9 @@ possible(minimal partition value is per-socket) because prior work have showed
 that shared resource contention should be minimized by partitioning shared
 resource accesses~\cite{Qureshi2006UCP}.
 Small size cpu groups can mitigate the thread serialized problem cased by GC
-pause time, and these group may only accees to local NUMA memory.
-Moreover, partiting method can somewhat reduce the operating systems
-scalalbility problems(e.g, address space
+pause time, and these group may only access to local NUMA memory.
+Moreover, partitioning method can somewhat reduce the operating systems
+scalability problems(e.g, address space
 problem ~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM},
 cache communication overhead~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC})
 
@@ -73,7 +73,7 @@ cache communication overhead~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC})
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-To evaluate our approach, we applied our paritioning method on 120 core
+To evaluate our approach, we applied our partitioning method on 120 core
 scale-up server.
 A too small size partitioning may reduce GC overhead and remote memory access,
 but the benefits do not come for free because it may cause straggler tasks
@@ -81,9 +81,8 @@ problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
 Thus, this paper additionally describes performance scalability
 depending on partitioning size.
 Evaluation of the proposed best-fit partitioning on a 120 core system
- reveals that the execution times could be improved by 1.7x, 1.6x, 1.1x and 2.2x
- for Word Count, Naive Basian, Grep and K-means in
-BigDataBenchmark~\cite{wang2014bigdatabench}, respectively.
+ reveals that the execution times could be improved by 1.6x, 1.7x, 1.5x and 1.1x
+ for Word Count, Naive Basian, Grep and K-means, respectively.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 기여한 것 : 
@@ -95,13 +94,13 @@ BigDataBenchmark~\cite{wang2014bigdatabench}, respectively.
 \begin{itemize}
 \item 
 We analyzed Apache Spark performance scalability on 120 core scale-up server.
-The results of scalability was that parrlel GC can improve performance
+The results of scalability was that parallel GC can improve performance
 scalability up to 60 core, but then the GC flattens out after 60 core.
 \item 
 We evaluated proposal partitioning approach on a manycore scale-up
 server thereby mitigating scale-up server scalability problems in BigDataBench.
-Our approach improved throughput and execution time from 1.5x through
-2.7x on 120 core.
+Our approach improved throughput and execution time from 1.1x through
+1.7x on 120 core.
 \end{itemize}
 
 
@@ -157,7 +156,7 @@ Our approach improved throughput and execution time from 1.5x through
 %Mapping
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 The rest of this paper is organized as follows.
-Section 2 describes the test-bed and spark scalability problem.
+Section 2 describes the test-bed and Spark scalability problem.
 Section 3 describes the our partitioning approach and 
 Section 4 shows the results of the experimental evaluation. 
 Section 5 describes related works. 
