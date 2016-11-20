@@ -15,6 +15,6 @@ set font  "arial,20"
 
 
 plot \
-"./data/nb_default.data" every :::0::0 with lp title "naive bayes PS GC", \
-"./data/nb_15.data" every :::0::0 with lp title "naive bayes partitioning(per-socket)", \
-"./data/nb_30.data" every :::0::0 with lp title "naive bayes partitioning(best-fit)"
+"./data/nb_default.data" every :::0::0 with lp title "Naive Basian PS GC", \
+"./data/nb_15.data" every :::0::0 with lp title "Naive Basian fine-grained(15core)", \
+"./data/nb_30.data" every :::0::0 with lp title "Naive Basian coarse-grained(30core)"

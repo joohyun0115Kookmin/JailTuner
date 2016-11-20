@@ -79,25 +79,48 @@ Hyper-Threading is disabled, and we used Linux kernel 4.5-rc6.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Benchamrk에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 \noindent
 \textbf{Benchmark.} We used BigData Benchmark.
-\begin{itemize}
-\item \textbf{Word Count. }We have developed a novel lightweight log-based
-structures with efficient log management implementation.
-\item \textbf{Grep. }
-We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
-\item \textbf{Naive Basian. }
-We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
-\item \textbf{K-means.}
-We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-Our design improved throughput and execution time from 1.5x through 2.7x on 120 core.
-\end{itemize}
-\else
 
-\fi
+\begin{table}[h!]
+  \centering
+  \small
+  \begin{tabular}{l r r r r} \toprule
+    workload & input data size & heap size & configuration \\
+    \midrule
+    Word Count & 2487 s & 1993 s & 4647 s(51\%)\\ 
+    Naive Basian & 1123 s & 3631 s & 2186 s(31\%)\\
+    Grep & 3630 s & 2511 s & 1466 s(19\%)\\
+    K-means & 3630 s & 1903 s & 1662 s(23\%)\\
+    \bottomrule
+  \end{tabular}
+  \begin{tabular}{l r r r r} \toprule
+    JVM & BigDataBench & Spark & Hadoop & OS \\
+    \midrule
+    Jvm 1.8 & BigDataBench & Spark 1.2 & Hadoop & Linux 4.5rc6 \\ 
+    \bottomrule
+  \end{tabular}
+
+  \caption{Comparison of user, system and idle time at 120 cores.}
+  \label{tab:memuse}
+\end{table}
+
+%\begin{itemize}
+%\item \textbf{Word Count. }We have developed a novel lightweight log-based
+%structures with efficient log management implementation.
+%\item \textbf{Grep. }
+%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
+%Our design improved throughput and execution time from 1.5x through 2.7x on 120
+% core.
+%\item \textbf{Naive Basian. }
+%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
+%Our design improved throughput and execution time from 1.5x through 2.7x on 120
+% core.
+%\item \textbf{K-means.}
+%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
+%Our design improved throughput and execution time from 1.5x through 2.7x on 120
+% core.
+%\end{itemize}
 
 
 \subsection{Spark Scalability Problem}

@@ -15,6 +15,6 @@ set font  "arial,20"
 
 
 plot \
-"./data/wc_default.data" every :::0::0 with lp title "word count PS GC",\
-"./data/wc_15.data" every :::0::0 with lp title "word count per-socket", \
-"./data/wc_30.data" every :::0::0 with lp title "word count partition"
+"./data/wc_default.data" every :::0::0 with lp title "Word Count PS GC",\
+"./data/wc_15.data" every :::0::0 with lp title "Word Count fine-grained(15core)", \
+"./data/wc_30.data" every :::0::0 with lp title "Word Count coarse-grained(30core)"

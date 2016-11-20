@@ -15,6 +15,6 @@ set font  "arial,20"
 
 
 plot \
-"./data/grep_default.data" every :::0::0 with lp title "grep PS GC", \
-"./data/grep_15.data" every :::0::0 with lp title "grep per-socket", \
-"./data/grep_30.data" every :::0::0 with lp title "grep partiotioning"
+"./data/grep_default.data" every :::0::0 with lp title "Grep PS GC", \
+"./data/grep_15.data" every :::0::0 with lp title "Grep fine-grained(15core)", \
+"./data/grep_30.data" every :::0::0 with lp title "Grep coarse-grained(30core)"

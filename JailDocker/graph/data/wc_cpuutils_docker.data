@@ -1,4 +1,4 @@
-Region                  non-partition   per-socket      30-core 
+Region                  non-partition   fine-grained      coarse-grained 
 user                    34.86831122     44.50948256     45.18119032
 system                  1.005264212     1.383108889     1.871916006
 idle                    64.12642456     54.10740855     52.94689368

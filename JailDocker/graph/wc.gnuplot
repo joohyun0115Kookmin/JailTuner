@@ -15,6 +15,6 @@ set font  "arial,20"
 
 
 plot \
-"./data/wc_default.data" every :::0::0 with lp title "word count PS GC",\
-"./data/wc_default_g1.data" every :::0::0 with lp title "word count G1 GC"
+"./data/wc_default.data" every :::0::0 with lp title "Word Count PS GC",\
+"./data/wc_default_g1.data" every :::0::0 with lp title "Word Count G1 GC"
 
