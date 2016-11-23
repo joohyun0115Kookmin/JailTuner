@@ -22,7 +22,7 @@ partitioning method to solve GC and memory latency.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 파티션닝의 장점 1: GC의 serialization 되는 부분을 줄인다.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-As noted earlier, the major problem of Spark scalability is
+As noted earlier, the a major problem of Spark scalability is
 GC, so partitioning approach is needed.
 Indeed, GC leads to many of the advantages of high-level languages because of
 an increase in productivity, while it is a double-edged sword because
@@ -36,13 +36,13 @@ pause times.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 파티션닝의 장점 2: DRAM access latency를 최대화 한다.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-The second design consideration is locality issues because of NUMA architecture
-DRAM access latency.
+The second design consideration is locality issues because of
+remote memory access on the NUMA architecture.
 Due to the fact that threads are scheduled by the OS to execute on any core, the
-thread is migrated to different memory area, so the migrated thread may access
+thread is migrated to different memory area, and then the migrated thread may access
 remote memory.
 Partitioning approach can prevent to migrate other socket.
-Indeed, the modern operating systems(Linux) has a NUMA balancing feature for
+Indeed, the modern operating systems have a NUMA balancing feature for
 enhancement of memory locality, but partitioning method can more superior
 performance regarding the large scale-up server(8 socket)~\cite{AutoNUMA}.
 
@@ -51,30 +51,30 @@ performance regarding the large scale-up server(8 socket)~\cite{AutoNUMA}.
 % 파티션닝의 장점 3: DRAM access latency를 최대화 한다.
 % Linux kernel scalability (lock, cache cohearnci, scheduler)등등 OS 노이즈에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-In addition to GC and NUMA effect, operating systems noise can pose scalability
-bottleneck because modern operating systems have been designed for shared-memory
+In addition to GC and NUMA effects, operating systems noise can pose scalability
+bottlenecks because modern operating systems have been designed for shared-memory
 systems;therefore, the next design consideration is to avoid operating systems noise.
-For example, Single address space sharing problem~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM} between multi-threaded
-applications, scheduler bottlenecks~\cite{Lozi2016LSD}, and cache
+For example, single address space sharing problem~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM} between multi-threaded
+applications, scheduler bottlenecks~\cite{Lozi2016LSD} and cache
 communication bottlenecks~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC} are major problems in manycore scale-up server
 operating systems.
-This problem cause by sharing resource, so our approach can solve these
-resource contention problem by using partitioning approach.
+These problems are caused by sharing resource, so our approach can solve these
+resource contention problems by using partitioning approach.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % 스파크는 결국 : shared memory system -> distributed system 처럼해야한다. 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 To satisfy these factors such as GC, NUMA and operating system
-bottlenecks cause by shared-memory system, Spark on scale-up server should work
+bottlenecks, Spark on scale-up server should run
 as distributed system concept.
-Therefore, we use partitioning approach that treats the partitioned cores as a cluster
-node and moves shared-memory system workers to a distributed system workers that communicate
+Therefore, we use the partitioning approach that treats the partitioned cores as a cluster
+node and moves shared-memory system workers to distributed system workers that communicate
 via message-passing thereby eliminating GC and remote memory access overheads.
-We identify two design principles: (1) make shared resource to small size group
-as much as possible, (2) make Spark infrastructure hardware-neutral.
+%We identify two design principles: (1) make shared resource to small size group
+%as much as possible, (2) make Spark infrastructure hardware-neutral.
 As result of, the small size CPU groups can mitigate the thread
-serialized problem cased by GC pause time, and these group may only access to local NUMA memory.
+serialized problem caused by GC pause time, and these partitioned group may only access to local NUMA memory.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -99,7 +99,7 @@ run-time core injector are needed.
   \begin{center}
      \includegraphics[width=0.5\textwidth]{fig/jaildocker}
   \end{center}
-  \caption{Overview of the docker contrainer-based
+  \caption{Overview of towards a docker contrainer-based
   partitioning}
   \label{fig:basic}
 \end{figure}
@@ -125,7 +125,8 @@ The necessity of the auto-tuner is that performance scalability depending on par
 size commonly differs from each server architecture.
 To maximized CPU utilization, the straggler monitor and core injector are needed
 because straggler tasks prolong job completion times, so the
-early finished CPUs can inject to other Docker containers involved the straggler tasks.
+early finished CPUs should inject to other Docker containers which
+contained the straggler tasks.
 
 \begin{figure*}[tb]
     \centering
@@ -145,7 +146,7 @@ early finished CPUs can inject to other Docker containers involved the straggler
         \includegraphics[width=1.8in]{graph/kmeans_docker.eps}
         \caption{K-means}
     \end{subfigure}%
-    \caption{Performance scalability using docker container on 120 core.}
+    \caption{Performance scalability using docker container.}
     \label{fig:docker}
 \end{figure*}
 

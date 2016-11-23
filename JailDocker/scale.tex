@@ -2,20 +2,6 @@
 \section{Scale-up Server Scalability}
 \label{sec:scale}
 
-
-
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-% 이번 장에 대한 설명
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-\else
-
-\fi
-
-
-
 \subsection{Test-bed and Benchmark}
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -28,8 +14,7 @@
 Apache Spark is a framework for large scale distributed computation.
 RDD(Resilient Distributed Datasets) is a collection of partitions of records, 
 and the RDD is managed as LRU(Least Recently Used), so when there is not enough
-memory, Spark evicts the least recently used RDD.
-Spark may has a substantial performance when data-set can fit in memory.
+memory, Spark evicts the least recently used a partition from RDD.
 
 %\begin{figure}[h]
 %    \centering
@@ -59,10 +44,11 @@ Spark may has a substantial performance when data-set can fit in memory.
 \ifkor
 \noindent
 \textbf{Test-bed. }
-We use a machine to evaluate on real hardware: an 120-core (8 sockets × 15
-cores) Intel Xeon E7-8870 (the same machine used for evaluation in chapter X)
+We used a machine to evaluate on real hardware: an 120-core (8 sockets × 15
+cores) Intel Xeon E7-8870 (the same machine used for evaluation in section~\ref{sec:eval})
 and, to show that our conclusions generalize.
-Hyper-Threading is disabled, and we used Linux kernel 4.5-rc6.
+Hyper-Threading was disabled, and we used Linux kernel 4.5-rc6.
+
 
 \begin{figure}[h]
   \begin{center}
@@ -79,72 +65,68 @@ Hyper-Threading is disabled, and we used Linux kernel 4.5-rc6.
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Benchamrk에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+\ifkor
 \noindent
-\textbf{Benchmark.} We used BigData Benchmark.
+\textbf{Benchmark.} We used the BigDataBench.
 
 \begin{table}[h!]
   \centering
   \small
-  \begin{tabular}{l r r r r} \toprule
-    workload & input data size & heap size & configuration \\
+  \begin{tabular}{l c c c c} \toprule
+    Workload & Input data size & Heap size & Configuration & Data type\\
     \midrule
-    Word Count & 2487 s & 1993 s & 4647 s(51\%)\\ 
-    Naive Basian & 1123 s & 3631 s & 2186 s(31\%)\\
-    Grep & 3630 s & 2511 s & 1466 s(19\%)\\
-    K-means & 3630 s & 1903 s & 1662 s(23\%)\\
+    Word Count & 10G & 4G & none & text \\ 
+    Naive Basian & 10G & 4G & none & text\\
+    Grep & 30G & 4G & \code{"the"} & text\\
+    K-means & 4G & 4G & k=8 & graph\\
     \bottomrule
   \end{tabular}
-  \begin{tabular}{l r r r r} \toprule
-    JVM & BigDataBench & Spark & Hadoop & OS \\
+  \begin{tabular}{l l l l l} \toprule
+    JVM & Spark & Hadoop & OS & Distribution\\
     \midrule
-    Jvm 1.8 & BigDataBench & Spark 1.2 & Hadoop & Linux 4.5rc6 \\ 
+    Openjdk 1.8.0\_91 & 1.3.1 & 1.2.1 & Linux 4.5-rc6 & Ubuntu 14.04\\ 
     \bottomrule
   \end{tabular}
-
-  \caption{Comparison of user, system and idle time at 120 cores.}
+  \caption{System information and configuration values.}
   \label{tab:memuse}
 \end{table}
 
-%\begin{itemize}
-%\item \textbf{Word Count. }We have developed a novel lightweight log-based
-%structures with efficient log management implementation.
-%\item \textbf{Grep. }
-%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-%Our design improved throughput and execution time from 1.5x through 2.7x on 120
-% core.
-%\item \textbf{Naive Basian. }
-%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-%Our design improved throughput and execution time from 1.5x through 2.7x on 120
-% core.
-%\item \textbf{K-means.}
-%We applied the in Linux kernel to two reverse mapping(anonymous, file) on
-%Our design improved throughput and execution time from 1.5x through 2.7x on 120
-% core.
-%\end{itemize}
+Table~\ref{tab:memuse} shows our configurations. we used four
+workloads(Word Count, Naive Basian, Grep and K-means).
+For the simplicity of experiment, we used input data as the table~\ref{tab:memuse}.
+Of course, large Spark heap size can eliminate the GC overhead, but commonly the
+input data size is larger than the heap size in big data analytics area; we
+used the smaller heap size than the input data size.
 
+\else
+
+\fi
 
 \subsection{Spark Scalability Problem}
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Scalability 결과에 대한 대략 적인 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Figure 1 shows the Spark scalability of five workloads with two state of the art garbage
-collection, G1 and Parallel Scavenge(PS).
-Up to 60 core, the five workloads scales lineally and then GC pause becomes bottlenecks.
+Figure~\ref{fig:scalability} shows the Spark scalability of four workloads with
+two state of the art garbage collections, G1 and Parallel Scavenge(PS).
+Up to 60 core, the four workloads scale lineally and then GC pause becomes bottlenecks.
 The Word Count workload flattens out after 60 core, and other benchmarks slightly go
-down because not only the GC but also the remote memory access overheads. 
-To evaluate state of the art GC, we compared the G1 and PS GC.
-The effect of changing to the GC is the PS outperforms G1 by 3.3x on 120 core.
-However, although we used the state of the art scalable GC,
-the Spark performance scalability still suffers from GC and NUMA locality problem.
+down because not only the GC overhead but also the remote memory access. 
+To evaluate state of the art GC, we compared the G1 with PS GC.
+The effect of changing to the GC is the PS outperforms G1 up to 2.0x on 120 core.
+Although we used the state of the art scalable GC,
+the Spark performance scalability still suffers from GC and NUMA locality problems, and
+we could not see any significant differences when increasing the size
+of executors.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %CPU utilization에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-Our goal is to maximize CPU utilization, so we profiled the CPU utilization of five workloads.
-Figure ~\ref{fig:cpuutilization} shows the CPU utilization.
+Our goal is to maximize CPU utilization, so we profiled the CPU utilization
+on the four workloads.
+Figure ~\ref{fig:cpuutilization} shows the CPU utilizations.
 Th y-axis is the percentage of time spent in kernel-space code(sys), user-space
 code(user), and idle time(idle).
 All benchmarks increase the idle time due to the GC pause as core counts increase.
@@ -176,26 +158,28 @@ All benchmarks increase the idle time due to the GC pause as core counts increas
 %NUMA 영향에 대한 대략 적인 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-Spark and Hadoop frameworks use JAVA, and it needs java virtual machine(JVM), so
-understanding the partitioning is important.
+Spark and Hadoop frameworks use JAVA, and they need java virtual machine(JVM), so
+understanding the JVM partitioning is important.
 To preliminarily analyse the JVM partitioning effect, we conducted
 benchmarking by using SPECjbb2013~\cite{Pogue2014SO}, which is a state of the art
 benchmark for JVM performance.
 We used two different experimental settings. 
 First, we used per-socket JVM partitioning by using the NUMA control application(numactl).
-Second, we set maximum JVM heap size, which is system
-available memory size, and threads are scheduled by the OS
-in order to migrate any core, and we enable automatic NUMA balancing feature
-in the Linux kernel.
+Second, we set maximum JVM heap size, an available system
+memory size, and threads are scheduled by the OS to
+migrate any core, and we enable automatic NUMA
+balancing feature in the Linux kernel.
 
 \begin{figure}[h]
   \begin{center}
      \includegraphics[width=0.4\textwidth]{graph/SPECjbb2013}
   \end{center}
-  \caption{Test-bed Intel xeon architecture.}
-  \label{fig:basic}
+  \caption{Effect on JVM partitioning.}
+  \label{fig:SPECJBB}
 \end{figure}
 
-The results shows that partitioning approach outperforms non-partitioning approach by Xx on 120 core.
+The results shows that partitioning approach outperforms non-partitioning approach
+by 1.4x on 120 core(figure~\ref{fig:SPECJBB}).
 Therefore, in manycore scale-up server, partitioning approach has many
 advantages over non-partitioning approach in terms of performance scalability.
+

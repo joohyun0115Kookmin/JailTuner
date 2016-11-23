@@ -3,42 +3,26 @@
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1:Linux Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
-\noindent
+\noindent 
 \textbf{Apache Spark Scalability.}
-To improve the Spark scalability, Scale out Vs Scale Up
-researchers have attempted to create new operating
-or have attempted to optimize existing operating
-Our research belongs to optimizing existing operating systems in order to
-solve the Linux fork scalability problem.
-However, previous research did not deal with the anonymous reverse mapping,
-which is one of the fork scalability bottleneck.
-
-\else
-
-\fi
+To improve the Spark scalability, researchers have attempted to optimize for
+scale-out server~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} or to optimize scale-up server~\cite{Ahsan2016SVS}~\cite{Chaimov2016SSH}.
+Our research belongs to optimizing for scale-up server to eliminate GC overheads
+and to enhance the locality on NUMA architecture.
+However, previous studies did not considered Docker container-based partitioning,
+which can clearly reduce memory contention, and it can maximize locality of memory access.
+Furthermore, it can easily combine other container management solutions.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1:Manycore Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-\ifkor
 \noindent
-\textbf{Manycore Scale-up Server Scalability.}
-To improve the scalability, researchers have attempted to create new
-operating
-systems~\cite{Boyd-WickizerCorey}~\cite{Baumann2009Barrelfish}
-%~\cite{Wentzlaff2010fOS}
-%~\cite{Baumann2009Barrelfish}~\cite{Zellweger2014Multikernel}
-%~\cite{Liu2009Tessellation}~\cite{Farrington2010Helios}
-or have
-attempted to optimize existing operating
-systems~\cite{SilasBoydWickizer2010LinuxScales48}~\cite{AustinTClements2012RCUBalancedTrees}
-%~\cite{Changwoo2016UMSF}.
-Our research belongs to optimizing existing operating systems in order to
-solve the Linux fork scalability problem.
-However, previous research did not deal with the anonymous reverse mapping,
-which is one of the fork scalability bottleneck.
-
-\else
-
-\fi
+\textbf{Scale-up Server Scalability.}
+To improve the Spark scalability, researchers have attempted to apply distributed
+system concepts to shared
+memory systems~\cite{Baumann2009Barrelfish}~\cite{SilasBoydWickizerPth}.
+Barrelfish~\cite{Baumann2009Barrelfish} creates a new operating system for efficient cache-coherent
+shared memory system by building an OS using message-based architecture.
+Our research also brings about distributed system concepts, but our approach applies
+to user level Spark framework instead of OS because OS can achieves 
+performance scalability by commuting interface~\cite{Clements2013SCR}.

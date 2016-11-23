@@ -7,10 +7,10 @@
 Popular big data analytics infrastructures(e.g, Spark~\cite{Zaharia2012RDD},
 Hadoop~\cite{Shvachko2010HDF}) have been developed for a cluster scale-out
 environment, which adds nodes to a cluster system.
-On the other hand, scale-up environment, which adds resources(e.g, cpu, memory)
+On the other hand, for scale-up environment, which adds resources(e.g, CPU, memory)
 to a single node system, only special-purpose techniques exist.
 In science and machine learning fields, researchers
-commonly used scale-up server environments, and they now need big data analytics
+commonly use scale-up server environments, and they now need big data analytics
 frameworks~\cite{Chaimov2016SSH}.
 Moreover, hardware trends are beginning to change for the scale-up
 server; a scale-up server can now have substantial CPU, memory,
@@ -32,9 +32,9 @@ collection(GC)
 overhead~\cite{Ahsan2016SVS}~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} and
 locality of memory accesses on Non-Uniform Memory Access(NUMA)
 architecture~\cite{Cao2016ADS}.
-Therefore, A.J. Awan \textit{et al.} analysed GC time and compared state of the art
+A.J. Awan \textit{et al.} analysed GC time and compared state of the art
 garbage collectors by changing the GC.
-Moreover, in order to avoid high costs of remote memory access, researchers have
+In order to avoid high costs of remote memory access, researchers have
 attempted to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA}, but
 these methods also can not satisfactory compared to partitioning approch(see section~\ref{sec:scale}).
 
@@ -43,27 +43,27 @@ these methods also can not satisfactory compared to partitioning approch(see sec
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Our goals is to reduce the GC and the memory access latency overheads that
-have been a major problem of Spark scalability.
+Our goals is to reduce the GC and the remote memory access overheads that
+have been major problems of Spark scalability.
 To achieve our goal, this paper presents a new partitioning method that
 eliminates the GC and remote access overheads by applying
 Docker container-based efficient partitioning for Spark on scale-up
 server.
-Our basic key idea is that shared-memory system is dealt with as the
-distributed-system using partitioning approach in order to eliminate GC and
+Our basic key idea is that a shared-memory system is dealt with as the
+distributed system using partitioning approach in order to eliminate GC and
 memory access overheads.
-We use Docker containers since the overhead of a Docker
-container is much smaller than a traditional virtual
+We use Docker containers since the overheads of Docker container are much smaller
+than a traditional virtual
 machine~\cite{Merkel2014DLL} and the container-based approach can easily combine
-existing container management solutions such as Google Borg~\cite{Borg} and
+the existing container management solutions such as Google Borg~\cite{Borg} and
 Kubernets~\cite{Kubernetes}.
 
-Our method make shared resource to small size group as much as
+Our method makes shared resource to small size group as much as
 possible(minimal partition value is per-socket) because prior work have showed
 that shared resource contention should be minimized by partitioning shared
 resource accesses~\cite{Qureshi2006UCP}.
-Small size cpu groups can mitigate the thread serialized problem cased by GC
-pause time, and these group may only access to local NUMA memory.
+Small size CPU groups can mitigate the thread serialized problem cased by GC
+pause time, and these group may only access the local NUMA memory.
 Moreover, partitioning method can somewhat reduce the operating systems
 scalability problems(e.g, address space
 problem ~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM},
@@ -73,9 +73,9 @@ cache communication overhead~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC})
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-To evaluate our approach, we applied our partitioning method on 120 core
+To evaluate our approach, we manually applied our partitioning method on 120 core
 scale-up server.
-A too small size partitioning may reduce GC overhead and remote memory access,
+Though a too small size partitioning may reduce GC overhead and remote memory access,
 but the benefits do not come for free because it may cause straggler tasks
 problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
 Thus, this paper additionally describes performance scalability
@@ -94,11 +94,11 @@ Evaluation of the proposed best-fit partitioning on a 120 core system
 \begin{itemize}
 \item 
 We analyzed Apache Spark performance scalability on 120 core scale-up server.
-The results of scalability was that parallel GC can improve performance
+The results of scalability were that parallel GC can improve performance
 scalability up to 60 core, but then the GC flattens out after 60 core.
 \item 
-We evaluated proposal partitioning approach on a manycore scale-up
-server thereby mitigating scale-up server scalability problems in BigDataBench.
+We evaluated proposal partitioning approach on a large scale-up server
+thereby mitigating the scale-up server scalability problems in BigDataBench~\cite{wang2014bigdatabench}.
 Our approach improved throughput and execution time from 1.1x through
 1.7x on 120 core.
 \end{itemize}
@@ -122,8 +122,8 @@ Our approach improved throughput and execution time from 1.1x through
         \includegraphics[width=1.8in]{graph/kmeans.eps}
         \caption{K-means}
     \end{subfigure}%
-    \caption{Performance scalability on 120 core.}
-    \label{fig:utilization}
+    \caption{Performance scalability.}
+    \label{fig:scalability}
 \end{figure*}
 
 
@@ -147,7 +147,7 @@ Our approach improved throughput and execution time from 1.1x through
         \caption{K-means}
     \end{subfigure}%
         \centering
-    \caption{CPU utilization on 120 core.}
+    \caption{CPU utilization.}
     \label{fig:cpuutilization}
 \end{figure*}
 

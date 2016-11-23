@@ -1,43 +1,66 @@
 \section{Evaluation}
+\label{sec:eval}
+
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 1: 실험 환경 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 In this section we discuss the docker container-based partitioning on the
-scale-up server described in Section 3.
-We ran the four benchmarks on Linux 4.5-rc4 with stock Linux. 
+scale-up server described as section~\ref{sec:scale}.
 We used ram file system for HDFS due to the eliminating the HDFS bottleneck.
+
+
+\begin{table}[h!]
+  \centering
+  \small
+  \begin{tabular}{l r r} \toprule
+    method & executor heap size & number of partitions\\
+    \midrule
+    non-partition & 4G & 1  \\ 
+    coarse-grained(30 core) & 1G & 4\\
+    fine-grained(15 core) & 512M & 8\\
+    \bottomrule
+  \end{tabular}
+  \caption{Partitioning values.}
+  \label{tab:memusepart}
+\end{table}
+
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 2: 비교 대상 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고, input 데이터는 10G 이상으로 설정하였다.
-We used four different experiment settings.
-First, we used non-partitioning method as Figure~ section 2 graph and we set
+We used three different experiment settings.
+First, we used the non-partitioning method as section~\ref{sec:scale} and we set
 heap size(4G).
-Second we used fine-grained partitioning that is per-socket(15 core) partitioning
+Second we used the fine-grained partitioning(15 core) partitioning
 because it can make maximize locality.
-We allocated heap size by modifying heap size is that we divide 4G of number of
-partitioning.
-Finally, we used coarse-grained partitioning that is per-socket(30 core) partitioning
+%We allocated heap size by modifying heap size is that we divide 4G of number of
+%partitioning.
+%우리는 모든 파티션된 도커들의 executor에 대한 heap 메모리 사이즈는 non-partitioning에 method에서 사용한 힙사이즈(4)를 피티션 수로 나누어 사용하였다.
+Table~\ref{tab:memusepart} shows our partitioning values.
+The heap size of executor in the partitioned Docker is divided
+by number of partitions.
+Finally, we used the coarse-grained partitioning(30 core) partitioning
 since it can mitigate the straggler tasks problem.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Paragraph 2: WC, NB 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 The results for Word Count are shown in Figure~\ref{fig:docker}(a), and the
-result shows the throughput of BigDataBench with our four different settings.
+result shows the throughput with our three different settings.
 Up to 60 core, the PS GC version of non-partitioning approach scales linearly and
 then it flattens out.
-However, up to 60 core, our per-socket partitioning outperform non-partitioning
+However, up to 60 core, our fine-grained partitioning outperforms non-partitioning
 since it can remove GC and NUMA latency overheads, and then the straggler tasks
 problem become bottlenecks.
 Our coarse-grained partitioning outperforms non-partitioning by 1.5x and
-per-socket partiting by 1.1x on 120 core.
+fine-grained partitioning by 1.1x on 120 core.
 Furthermore, the non-partitioning approach has the highest idle time(64\%) since
 GC becomes bottleneck(see figure~\ref{fig:utilization2}). 
-The results(Figure~\ref{docker}(b)) for Naive Bayesian is similar to Word Count
-workload, so our best-fit partitioning outperforms non-partitioning by 1.5x and per-socket
+The results(Figure~\ref{fig:docker}(b)) for Naive Bayesian is similar to Word Count
+workload.
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and fine-grained
 by 1.2x on 120 core.
 
 
@@ -45,25 +68,24 @@ by 1.2x on 120 core.
 %Paragraph 3: Grep 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 The results for Grep are shown in Figure~\ref{fig:docker}(c).
-After to 60 core, the 30 core partitioning approach scales linearly, but
-the others throughput goes down after to 60 core because non-partitioning
+After to 60 core, the coarse-grained partitioning approach scales linearly, but
+the others throughput go down after to 60 core because non-partitioning
 version suffers from GC.
-The per-socket partitioning approach suffers from the straggler tasks problem.
-Therefore, although the per-socket partitioning approach eliminates the GC overhead and
-the remote memory access, its CPU utilization(23\%) is low than 30 core partitioning(38\%).
-Our best-fit partitioning outperforms non-partitioning by 1.5x and per-socket
+The fine-grained partitioning approach suffers from the straggler tasks problem.
+Therefore, although the fine-grained partitioning approach eliminates the GC overhead and
+the remote memory access, its CPU utilization(23\%) is low than coarse-grained partitioning(38\%).
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and fine-grained
 by 1.3x on 120 core.
-
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 % Paragraph 4: K-means 결과 설명 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 The results for K-means are shown in Figure~\ref{fig:docker}(d),
-The K-means workload extremely suffers from GC~\cite{Ahsan2016SVS};therefore,
-per-socket partitioning approach has better performance scalability up to 60 core.
+The K-means workload suffers from GC~\cite{Ahsan2016SVS};therefore,
+fine-grained partitioning approach has substantial performance scalability up to 60 core.
 However, then it collapses after 60 core since it extremely suffers from the
 straggler tasks problem that extends job completion times.
-Our best-fit partitioning outperforms non-partitioning by 1.1x on 120 core.
-Thus, per-socket partitioning approach has the lowest(72\%) idle time.
-On the other hand, 30 core partitioning approach relatively less suffers from the straggler
+Our coarse-grained partitioning outperforms non-partitioning by 1.1x on 120 core.
+Thus, fine-grained partitioning approach has the lowest(72\%) idle time.
+On the other hand, coarse-grained partitioning approach relatively less suffers from the straggler
 tasks problem.

@@ -4,29 +4,26 @@
 %Paragraph 1:Spark Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-We propose a docker container-based partitioning method for Apache
+We proposed a docker container-based partitioning method for Apache
 Spark scalability on scale-up server.
-To eliminate GC and NUMA effect, we divide per-socket and best-fit partitioning
+To eliminate GC and remote memory access, we divided per-socket and best-fit partitioning
 using the docker container.
-Evaluation results using the wordcount, navi-basian, grep and k-means reveal
-that our method better performance up to 1.5 times compared to existing
+Evaluation results(Word Count, Naive Basian, Grep and K-means) reveal
+that our method has substantial performance up to 1.7 times compared to existing
 solutions.
 \newline\\
 \noindent
-\textbf{Future Directions.} 
-To achieve our goal, this paper only focused on the manual docker
-container-based partitioning, and our future directions are:
+\textbf{Future Directions.} Our future directions are:
 \begin{itemize}
 \item \textbf{Solving the straggler tasks problem.} straggler tasks
 significantly extend job completion times.
 To mitigate this problem, we may use dynamic resource allocation solution in
 dockers to maximized cpu utilization for the straggler tasks by using our new
 resource hand-over solution.
-\item \textbf{Auto-tuned partitioning.} In this paper, only support manualy
-partition using docker container. However, many of sicent or big data acaldld
-may reuse similar workload, so training phase for finding the best-fit
-partitioning can be superior solution than manually partition similar way of
-compiler-based auto-tuner[].
+\item \textbf{Implementing the auto-tuner.} In this paper, only support manually
+partitioning method. However, many of science applications or big data analytics 
+may reuse similar workloads, so training phase for finding the best-fit
+partitioning can be a superior solution in a way similar to compiler-based auto-tuner~\cite{Ansel2014OEF}.
 
 \end{itemize}
 
