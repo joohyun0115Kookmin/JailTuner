@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: jaildocker.aux
+The style file: abbrv.bst
+Database file #1: ref.bib
+Too many commas in name 1 of "Ahsan Javed Awan, Mats Brorsson, Vladimir Vlassov, Eduard Ayguade" for entry Ahsan2016SVS
+while executing---line 1049 of file abbrv.bst
+Warning--to sort, need author or key in Kubernetes
+Warning--empty author in Kubernetes
+Warning--empty booktitle in Kubernetes
+Warning--empty year in Kubernetes
+Too many commas in name 1 of "Ahsan Javed Awan, Mats Brorsson, Vladimir Vlassov, Eduard Ayguade" for entry Ahsan2016SVS
+while executing---line 1090 of file abbrv.bst
+Warning--empty year in Clements2013SCR
+Warning--empty booktitle in Hendler2010FC
+Warning--empty year in Pogue2014SO
+Warning--empty booktitle in AutoNUMA
+Warning--empty year in AutoNUMA
+You've used 25 entries,
+            2118 wiz_defined-function locations,
+            657 strings with 10413 characters,
+and the built_in function-call counts, 10619 in all, are:
+= -- 958
+> -- 645
+< -- 10
++ -- 255
+- -- 230
+* -- 750
+:= -- 1693
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 189
+chr.to.int$ -- 0
+cite$ -- 34
+duplicate$ -- 431
+empty$ -- 811
+format.name$ -- 230
+if$ -- 2259
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 25
+newline$ -- 127
+num.names$ -- 48
+pop$ -- 245
+preamble$ -- 1
+purify$ -- 164
+quote$ -- 0
+skip$ -- 315
+stack$ -- 0
+substring$ -- 440
+swap$ -- 133
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 9
+while$ -- 78
+width$ -- 27
+write$ -- 277
+(There were 2 error messages)
