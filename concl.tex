@@ -4,28 +4,32 @@
 %Paragraph 1:Spark Scalability의 연구에 대한 설명
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \ifkor
-We proposed a docker container-based partitioning method for Apache
+We proposed a Docker container-based partitioning method for Apache
 Spark scalability on scale-up server.
-To eliminate GC and remote memory access, we divided per-socket and best-fit partitioning
-using the docker container.
+To eliminate GC and remote memory access, we divided per-socket and best-fit partitioning.
 Evaluation results(Word Count, Naive Basian, Grep and K-means) reveal
-that our method has substantial performance up to 1.7 times compared to existing
-solutions.
+that Docker-container method has substantial performance up to 1.7 times
+compared to existing solutions.
 \newline\\
 \noindent
 \textbf{Future Directions.} Our future directions are:
 \begin{itemize}
+\item \textbf{Implementing the proof-of-concept architecture.} This paper shows manually
+partitioning method, so we will implement the Docker-container-based
+partitioning method.
+%However, many of science applications or big data analytics 
+%may reuse similar workloads, so training phase for finding the best-fit
+%partitioning can be a superior solution in a way similar to compiler-based
+% auto-tuner~\cite{Ansel2014OEF}.
 \item \textbf{Solving the straggler tasks problem.} straggler tasks
 significantly extend job completion times.
 To mitigate this problem, we may use dynamic resource allocation solution in
-dockers to maximized cpu utilization for the straggler tasks by using our new
-resource hand-over solution.
-\item \textbf{Implementing the auto-tuner.} In this paper, only support manually
-partitioning method. However, many of science applications or big data analytics 
-may reuse similar workloads, so training phase for finding the best-fit
-partitioning can be a superior solution in a way similar to compiler-based auto-tuner~\cite{Ansel2014OEF}.
-
+Docker to maximized CPU utilization.
 \end{itemize}
+
+\section{Acknowledgments}
+This work was supported by Institute for Information \& communications Technology 
+Promotion (IITP) grant funded by the Korea government (MSIP) (No. B010-16-0644)
 
 \else
 

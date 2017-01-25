@@ -12,8 +12,8 @@
 \noindent
 \textbf{Apache Spark. }
 Apache Spark is a framework for large scale distributed computation.
-RDD(Resilient Distributed Datasets) is a collection of partitions of records, 
-and the RDD is managed as LRU(Least Recently Used), so when there is not enough
+Resilient Distributed Datasets(RDD) is a collection of partitions of records, 
+and the RDD is managed as Least Recently Used(LRU), so when there is not enough
 memory, Spark evicts the least recently used a partition from RDD.
 
 %\begin{figure}[h]
@@ -45,16 +45,15 @@ memory, Spark evicts the least recently used a partition from RDD.
 \noindent
 \textbf{Test-bed. }
 We used a machine to evaluate on real hardware: an 120-core (8 sockets × 15
-cores) Intel Xeon E7-8870 (the same machine used for evaluation in section~\ref{sec:eval})
-and, to show that our conclusions generalize.
-Hyper-Threading was disabled, and we used Linux kernel 4.5-rc6.
+cores) Intel Xeon E7-8870.
+Hyper-Threading was disabled.
 
 
 \begin{figure}[h]
   \begin{center}
      \includegraphics[width=0.3\textwidth]{fig/xeon}
   \end{center}
-  \caption{Test-bed intel xeon archtecture.}
+  \caption{Test-bed Intel Xeon architecture.}
   \label{fig:basic}
 \end{figure}
 \else
@@ -93,7 +92,7 @@ Hyper-Threading was disabled, and we used Linux kernel 4.5-rc6.
 
 Table~\ref{tab:memuse} shows our configurations. we used four
 workloads(Word Count, Naive Basian, Grep and K-means).
-For the simplicity of experiment, we used input data as the table~\ref{tab:memuse}.
+For the simplicity of experiment, we used input data size as the table~\ref{tab:memuse}.
 Of course, large Spark heap size can eliminate the GC overhead, but commonly the
 input data size is larger than the heap size in big data analytics area; we
 used the smaller heap size than the input data size.
@@ -101,6 +100,57 @@ used the smaller heap size than the input data size.
 \else
 
 \fi
+
+
+
+
+\begin{figure*}[tb]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc_docker.eps}
+        \caption{Word Count}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb_docker.eps}
+        \caption{Naive Basian}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep_docker.eps}
+        \caption{Grep}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans_docker.eps}
+        \caption{K-means}
+    \end{subfigure}%
+    \caption{Performance scalability using docker container.}
+    \label{fig:docker}
+\end{figure*}
+
+
+\begin{figure*}[tb]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/wc_cpuutils_docker.eps}
+        \caption{Word Count}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/nb_cpuutils_docker.eps}
+        \caption{Naive Basian}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/grep_cpuutils_docker.eps}
+        \caption{Grep}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=1.8in]{graph/kmeans_cpuutils_docker.eps}
+        \caption{K-means}
+    \end{subfigure}%
+        \centering
+    \caption{CPU utilization on 120 core.}
+    \label{fig:utilization2}
+\end{figure*}
+
+
 
 \subsection{Spark Scalability Problem}
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -115,9 +165,9 @@ down because not only the GC overhead but also the remote memory access.
 To evaluate state of the art GC, we compared the G1 with PS GC.
 The effect of changing to the GC is the PS outperforms G1 up to 2.0x on 120 core.
 Although we used the state of the art scalable GC,
-the Spark performance scalability still suffers from GC and NUMA locality problems, and
-we could not see any significant differences when increasing the size
-of executors.
+the Spark performance scalability still suffers from GC.
+Furthermore, we could not see any significant differences when increasing the size
+of Spark executors.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -129,7 +179,7 @@ on the four workloads.
 Figure ~\ref{fig:cpuutilization} shows the CPU utilizations.
 Th y-axis is the percentage of time spent in kernel-space code(sys), user-space
 code(user), and idle time(idle).
-All benchmarks increase the idle time due to the GC pause as core counts increase.
+All benchmarks increase the idle time due to the GC pause.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -148,27 +198,8 @@ All benchmarks increase the idle time due to the GC pause as core counts increas
 
 \fi
 
-
-
 \subsection{Benefit of JVM Partitioning}
 %\subsection{NUMA}
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%NUMA 영향에 대한 대략 적인 설명
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-Spark and Hadoop frameworks use JAVA, and they need java virtual machine(JVM), so
-understanding the JVM partitioning is important.
-To preliminarily analyse the JVM partitioning effect, we conducted
-benchmarking by using SPECjbb2013~\cite{Pogue2014SO}, which is a state of the art
-benchmark for JVM performance.
-We used two different experimental settings. 
-First, we used per-socket JVM partitioning by using the NUMA control application(numactl).
-Second, we set maximum JVM heap size, an available system
-memory size, and threads are scheduled by the OS to
-migrate any core, and we enable automatic NUMA
-balancing feature in the Linux kernel.
 
 \begin{figure}[h]
   \begin{center}
@@ -178,8 +209,116 @@ balancing feature in the Linux kernel.
   \label{fig:SPECJBB}
 \end{figure}
 
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%NUMA 영향에 대한 대략 적인 설명
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Spark and Hadoop frameworks use JAVA, and they need java virtual machine(JVM), so
+understanding the JVM partitioning is important.
+To preliminary evaluate the JVM partitioning effect, we conducted experiments
+by using SPECjbb2013~\cite{Pogue2014SO}, which is a state of the art
+benchmark for JVM performance.
+We used two different experimental settings. 
+First, we used per-socket JVM partitioning by using the NUMA control application(numactl).
+Second, we set maximum JVM heap size, an available system
+memory size, and all threads are scheduled by the OS to
+migrate any core, and we enable automatic NUMA
+balancing feature in the Linux kernel.
+
 The results shows that partitioning approach outperforms non-partitioning approach
 by 1.4x on 120 core(figure~\ref{fig:SPECJBB}).
 Therefore, in manycore scale-up server, partitioning approach has many
 advantages over non-partitioning approach in terms of performance scalability.
+
+\subsection{Benefit of Container-based Partitioning}
+\label{sec:eval}
+
+
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%Paragraph 1: 실험 환경 설명
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+In this section we discuss the docker container-based partitioning on the
+scale-up server described as section~\ref{sec:scale}.
+We used ram file system for HDFS due to eliminating the HDFS bottleneck.
+
+
+\begin{table}[h!]
+  \centering
+  \small
+  \begin{tabular}{l r r} \toprule
+    method & executor heap size & number of partitions\\
+    \midrule
+    non-partition & 4G & 1  \\ 
+    coarse-grained(30 core) & 1G & 4\\
+    fine-grained(15 core) & 512M & 8\\
+    \bottomrule
+  \end{tabular}
+  \caption{Partitioning values.}
+  \label{tab:memusepart}
+\end{table}
+
+
+
+
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%Paragraph 2: 비교 대상 설명
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%기본으로 4G의 메모리를 heap 메모리 사이즈로 설정하였고, input 데이터는 10G 이상으로 설정하였다.
+We used three different experiment settings.
+First, we used the non-partitioning method as section~\ref{sec:scale}(heap size is 4G).
+Second, we used a fine-grained partitioning(15 core) 
+because it can maximize the NUMA locality.
+%We allocated heap size by modifying heap size is that we divide 4G of number of
+%partitioning.
+%우리는 모든 파티션된 도커들의 executor에 대한 heap 메모리 사이즈는 non-partitioning에 method에서 사용한 힙사이즈(4)를 피티션 수로 나누어 사용하였다.
+Table~\ref{tab:memusepart} shows our partitioning values.
+The heap size of executor in the partitioned Docker is divided
+by number of partitions.
+Finally, we used the coarse-grained partitioning(30 core) 
+since it can mitigate a straggler tasks problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
+
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%Paragraph 2: WC, NB 결과 설명 
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+The results for Word Count are shown in Figure~\ref{fig:docker}(a).
+Up to 60 core, the PS GC version of non-partitioning approach scales linearly and
+then it flattens out.
+However, up to 60 core, our fine-grained partitioning outperforms non-partitioning
+since it can remove GC and NUMA latency overheads, and then a straggler tasks
+problem become bottlenecks.
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and
+fine-grained partitioning by 1.1x on 120 core.
+Furthermore, the non-partitioning approach has the highest idle time(64\%) since
+GC becomes bottleneck(see figure~\ref{fig:utilization2}). 
+The results(Figure~\ref{fig:docker}(b)) for Naive Bayesian is similar to Word Count
+workload.
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and fine-grained
+by 1.2x on 120 core.
+
+
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+%Paragraph 3: Grep 결과 설명 
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+The results for Grep are shown in Figure~\ref{fig:docker}(c).
+After to 60 core, the coarse-grained partitioning approach scales linearly, but
+the others throughput go down after to 60 core because non-partitioning
+version suffers from GC.
+The fine-grained partitioning approach suffers from the straggler tasks problem.
+Although the fine-grained partitioning approach eliminates the GC overhead and
+the remote memory access, its CPU utilization(23\%) is low than coarse-grained partitioning(38\%).
+Our coarse-grained partitioning outperforms non-partitioning by 1.5x and fine-grained
+by 1.3x on 120 core.
+
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+% Paragraph 4: K-means 결과 설명 
+%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+The results for K-means are shown in Figure~\ref{fig:docker}(d),
+The K-means workload suffers from GC~\cite{Ahsan2016SVS}; therefore,
+fine-grained partitioning approach has substantial performance scalability up to 60 core.
+However, then it collapses since it extremely suffers from the
+straggler tasks problem that extends job completion times.
+Our coarse-grained partitioning outperforms non-partitioning by 1.1x on 120 core.
+Fine-grained partitioning approach has the lowest(72\%) idle time because the coarse-grained 
+partitioning approach relatively less suffers from the straggler tasks problem.
 

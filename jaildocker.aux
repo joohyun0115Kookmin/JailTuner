@@ -9,19 +9,13 @@
 \citation{Cao2016ADS}
 \citation{Dashti2013TMH}
 \citation{AutoNUMA}
-\citation{Merkel2014DLL}
-\citation{Borg}
-\citation{Kubernetes}
-\citation{Qureshi2006UCP}
-\citation{AustinTClements2012RCUBalancedTrees}
-\citation{Clements2013RadixVM}
-\citation{SilasBoydWickizerPth}
-\citation{Hendler2010FC}
 \citation{Ousterhout2015MSP}
 \citation{Ren2015HDS}
 \citation{wang2014bigdatabench}
 \@LN@col{1}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{\thepage }}
+\newlabel{sec:introduction}{{1}{\thepage }}
+\newlabel{sec:introduction@cref}{{[section][1][]1}{\thepage }}
 \newlabel{sec:introduction}{{1}{\thepage }}
 \newlabel{sec:introduction@cref}{{[section][1][]1}{\thepage }}
 \@LN@col{2}
@@ -38,7 +32,7 @@
 \newlabel{fig:cpuutilization@cref}{{[figure][2][]2}{\thepage }}
 \@LN@col{1}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Test-bed and Benchmark}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Test-bed intel xeon archtecture.\relax }}{\thepage }}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Test-bed Intel Xeon architecture.\relax }}{\thepage }}
 \newlabel{fig:basic}{{3}{\thepage }}
 \newlabel{fig:basic@cref}{{[figure][3][]3}{\thepage }}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces System information and configuration values.\relax }}{\thepage }}
@@ -47,32 +41,33 @@
 \@LN@col{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Spark Scalability Problem}{\thepage }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Benefit of JVM Partitioning}{\thepage }}
-\citation{AutoNUMA}
+\citation{Ousterhout2015MSP}
+\citation{Ren2015HDS}
+\citation{Ahsan2016SVS}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Performance scalability using docker container.\relax }}{\thepage }}
+\newlabel{fig:docker}{{4}{\thepage }}
+\newlabel{fig:docker@cref}{{[figure][4][]4}{\thepage }}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces CPU utilization on 120 core.\relax }}{\thepage }}
+\newlabel{fig:utilization2}{{5}{\thepage }}
+\newlabel{fig:utilization2@cref}{{[figure][5][]5}{\thepage }}
+\@LN@col{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Effect on JVM partitioning.\relax }}{\thepage }}
+\newlabel{fig:SPECJBB}{{6}{\thepage }}
+\newlabel{fig:SPECJBB@cref}{{[figure][6][]6}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Benefit of Container-based Partitioning}{\thepage }}
+\newlabel{sec:eval}{{2.4}{\thepage }}
+\newlabel{sec:eval@cref}{{[subsection][4][2]2.4}{\thepage }}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Partitioning values.\relax }}{\thepage }}
+\newlabel{tab:memusepart}{{2}{\thepage }}
+\newlabel{tab:memusepart@cref}{{[table][2][]2}{\thepage }}
+\@LN@col{2}
+\@writefile{toc}{\contentsline {section}{\numberline {3}proof-of-concept architecture}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Design Consideration}{\thepage }}
 \citation{AustinTClements2012RCUBalancedTrees}
 \citation{Clements2013RadixVM}
 \citation{Lozi2016LSD}
 \citation{SilasBoydWickizerPth}
 \citation{Hendler2010FC}
-\citation{Ousterhout2015MSP}
-\citation{Ren2015HDS}
-\@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Effect on JVM partitioning.\relax }}{\thepage }}
-\newlabel{fig:SPECJBB}{{4}{\thepage }}
-\newlabel{fig:SPECJBB@cref}{{[figure][4][]4}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Partitioning for Spark}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Design Consideration}{\thepage }}
-\@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Towards a Container-based Framework}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Overview of towards a docker contrainer-based partitioning\relax }}{\thepage }}
-\newlabel{fig:basic}{{5}{\thepage }}
-\newlabel{fig:basic@cref}{{[figure][5][]5}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{\thepage }}
-\newlabel{sec:eval}{{4}{\thepage }}
-\newlabel{sec:eval@cref}{{[section][4][]4}{\thepage }}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Partitioning values.\relax }}{\thepage }}
-\newlabel{tab:memusepart}{{2}{\thepage }}
-\newlabel{tab:memusepart@cref}{{[table][2][]2}{\thepage }}
-\citation{Ahsan2016SVS}
 \citation{Ousterhout2015MSP}
 \citation{Maas2016THL}
 \citation{Ahsan2016SVS}
@@ -81,26 +76,25 @@
 \citation{SilasBoydWickizerPth}
 \citation{Baumann2009Barrelfish}
 \citation{Clements2013SCR}
-\citation{Ansel2014OEF}
 \bibstyle{abbrv}
 \bibdata{ref}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance scalability using docker container.\relax }}{\thepage }}
-\newlabel{fig:docker}{{6}{\thepage }}
-\newlabel{fig:docker@cref}{{[figure][6][]6}{\thepage }}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces CPU utilization on 120 core.\relax }}{\thepage }}
-\newlabel{fig:utilization2}{{7}{\thepage }}
-\newlabel{fig:utilization2@cref}{{[figure][7][]7}{\thepage }}
-\@LN@col{1}
-\@LN@col{2}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Related work}{\thepage }}
-\newlabel{sec:RelatedWork}{{5}{\thepage }}
-\newlabel{sec:RelatedWork@cref}{{[section][5][]5}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion and Future Works}{\thepage }}
 \bibcite{Kubernetes}{1}
 \bibcite{Ahsan2016SVS}{2}
 \bibcite{Ansel2014OEF}{3}
 \bibcite{Appuswamy2013SVS}{4}
 \bibcite{Baumann2009Barrelfish}{5}
+\@LN@col{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The proof-of-concept architecture\relax }}{\thepage }}
+\newlabel{fig:basic}{{7}{\thepage }}
+\newlabel{fig:basic@cref}{{[figure][7][]7}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Architecture}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Related work}{\thepage }}
+\newlabel{sec:RelatedWork}{{4}{\thepage }}
+\newlabel{sec:RelatedWork@cref}{{[section][4][]4}{\thepage }}
+\@LN@col{2}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and Future Works}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Acknowledgments}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {7}References}{\thepage }}
 \bibcite{SilasBoydWickizerPth}{6}
 \bibcite{Cao2016ADS}{7}
 \bibcite{Chaimov2016SSH}{8}
@@ -122,7 +116,6 @@
 \bibcite{wang2014bigdatabench}{24}
 \bibcite{Zaharia2012RDD}{25}
 \@LN@col{1}
-\@writefile{toc}{\contentsline {section}{\numberline {7}References}{\thepage }}
 \@LN@col{2}
 \newlabel{LastPage}{{}{\thepage }}
 \xdef\lastpage@lastpage{\thepage }

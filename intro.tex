@@ -1,22 +1,23 @@
 \section{Introduction} \label{sec:introduction}
+\label{sec:introduction}
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %Background : 스파크 -> cloud가 아닌 scale-up server 에서의 scalability에 대한 연구가 필요해짐
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %빅데이터 처리하는데 많이 사용되는 framework 중 하나는 스파크이다.
-Popular big data analytics infrastructures(e.g, Spark~\cite{Zaharia2012RDD},
-Hadoop~\cite{Shvachko2010HDF}) have been developed for a cluster scale-out
-environment, which adds nodes to a cluster system.
-On the other hand, for scale-up environment, which adds resources(e.g, CPU, memory)
-to a single node system, only special-purpose techniques exist.
-In science and machine learning fields, researchers
-commonly use scale-up server environments, and they now need big data analytics
-frameworks~\cite{Chaimov2016SSH}.
-Moreover, hardware trends are beginning to change for the scale-up
-server; a scale-up server can now have substantial CPU, memory,
-and storage I/O resources~\cite{Appuswamy2013SVS}.
-Therefore, the big data analytics infrastructure on scale-up server is
-also important.
+Scale-out and scale-up configurations are two different representative methods to implement 
+big data analytics infrastructures. 
+In scale-out server clusters(e.g, Spark~\cite{Zaharia2012RDD},
+Hadoop~\cite{Shvachko2010HDF}), server upgrades are performed through adding nodes to 
+the existing cluster system. 
+On the other hand, in scale-up environment, server upgrades are performed 
+through adding resources(e.g, CPU, memory) to the existing single node-based system.
+Scale-up servers are mostly used in scientific analytics areas~\cite{Chaimov2016SSH}, 
+and big data analytics frameworks are being increasingly used.
+Another reason that the scale-up servers are becoming more popular is due to 
+significantly increased resources even on single-node based server system~\cite{Appuswamy2013SVS}.
+This naturally requires substantial research on how to improve the performance 
+scalability of scale-up servers.
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -29,60 +30,54 @@ Spark is one of widely used big data analytics framework.
 However, Spark has been reported that it does
 not scale on the single node scale-up server because of garbage
 collection(GC)
-overhead~\cite{Ahsan2016SVS}~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} and
+overheads~\cite{Ahsan2016SVS}~\cite{Ousterhout2015MSP}~\cite{Maas2016THL} and
 locality of memory accesses on Non-Uniform Memory Access(NUMA)
 architecture~\cite{Cao2016ADS}.
-A.J. Awan \textit{et al.} analysed GC time and compared state of the art
-garbage collectors by changing the GC.
-In order to avoid high costs of remote memory access, researchers have
-attempted to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA}, but
-these methods also can not satisfactory compared to partitioning approch(see section~\ref{sec:scale}).
-
+In order to minimize the remote memory access costs, researchers have
+attempted to create a new NUMA balancing~\cite{Dashti2013TMH}~\cite{AutoNUMA} and 
+accomplished considerable level of performance improvement, but not satisfiable in 
+scalability aspects. 
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Our goals is to reduce the GC and the remote memory access overheads that
-have been major problems of Spark scalability.
-To achieve our goal, this paper presents a new partitioning method that
-eliminates the GC and remote access overheads by applying
-Docker container-based efficient partitioning for Spark on scale-up
-server.
-Our basic key idea is that a shared-memory system is dealt with as the
-distributed system using partitioning approach in order to eliminate GC and
-memory access overheads.
-We use Docker containers since the overheads of Docker container are much smaller
-than a traditional virtual
-machine~\cite{Merkel2014DLL} and the container-based approach can easily combine
-the existing container management solutions such as Google Borg~\cite{Borg} and
-Kubernets~\cite{Kubernetes}.
+In order to achieve the performance scalability, we need to devise a framework to avoid 
+the major drawbacks of the Apache Spark regarding GC and remote memory access overheads.
+Our proposed architecture is based on the reasoning that logically partitioning the original 
+servers into small servers could hide the Spark's performance scalability problems. 
+Therefore, we propose a Docker container-based logical partitioning method for Spark-based
+scale-up servers. 
+In this paper, we implemented a proof-of-concept architecture using Docker container-based
+scale-up server while leaving concrete and detailed complete design and implementation of 
+necessary server components to future work.
 
-Our method makes shared resource to small size group as much as
-possible(minimal partition value is per-socket) because prior work have showed
-that shared resource contention should be minimized by partitioning shared
-resource accesses~\cite{Qureshi2006UCP}.
-Small size CPU groups can mitigate the thread serialized problem cased by GC
-pause time, and these group may only access the local NUMA memory.
-Moreover, partitioning method can somewhat reduce the operating systems
-scalability problems(e.g, address space
-problem ~\cite{AustinTClements2012RCUBalancedTrees}~\cite{Clements2013RadixVM},
-cache communication overhead~\cite{SilasBoydWickizerPth}~\cite{Hendler2010FC})
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%본 연구에서 분석한 결과와 제안하는 방법으로 향상된 성능
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-To evaluate our approach, we manually applied our partitioning method on 120 core
-scale-up server.
-Though a too small size partitioning may reduce GC overhead and remote memory access,
-but the benefits do not come for free because it may cause straggler tasks
+%Our goals is to reduce the GC and the remote memory access overheads that
+%have been major problems of Spark scalability.
+%To achieve our goal, this paper evaluate Docker container-based partitioning
+%that eliminates the GC and remote access overheads, and present a towards
+%framework to mitigate the scale-up server scalability problems.
+To evaluate our approach, we manually applied our partitioning method to a 120
+core scale-up server.
+While smaller sized partitioning may further reduce GC overhead and remote memory access,
+this may cause straggler tasks
 problem~\cite{Ousterhout2015MSP}~\cite{Ren2015HDS}.
-Thus, this paper additionally describes performance scalability
-depending on partitioning size.
-Evaluation of the proposed best-fit partitioning on a 120 core system
+Thus, this paper additionally addresses the trade-off relationship between 
+the achieved performance scalability and partitioning sizes.
+Performance evaluation of the proposed best-fit partitioning on a 120 core system
  reveals that the execution times could be improved by 1.6x, 1.7x, 1.5x and 1.1x
  for Word Count, Naive Basian, Grep and K-means, respectively.
+
+%Our basic key idea is that a shared-memory system is dealt with as a 
+%distributed system using the partitioning approach in order to eliminate GC and
+%memory access overheads.
+%We use Docker containers since the overheads of Docker container are much smaller
+%than a traditional virtual
+%machine~\cite{Merkel2014DLL} and the container-based approach can easily combine
+%the existing container management solutions such as Google Borg~\cite{Borg} and
+%Kubernets~\cite{Kubernetes}.
+
+
 
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 %본 연구에서 기여한 것 : 
@@ -90,17 +85,21 @@ Evaluation of the proposed best-fit partitioning on a 120 core system
 % 2. 도커 파티션 기법을 활용한 scalability 향상 방법 제안
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-\textbf{Contributions.} Our research makes the following contributions:
+\textbf{Contributions.} Our research provides the following contributions:
 \begin{itemize}
 \item 
-We analyzed Apache Spark performance scalability on 120 core scale-up server.
-The results of scalability were that parallel GC can improve performance
-scalability up to 60 core, but then the GC flattens out after 60 core.
+We measured Apache Spark performance scalability on a 120 core scale-up server.
+The results show that parallel GC only scales well up to 60 core systems while
+does not show performance improvement on the systems with more than 60 cores.
 \item 
-We evaluated proposal partitioning approach on a large scale-up server
-thereby mitigating the scale-up server scalability problems in BigDataBench~\cite{wang2014bigdatabench}.
-Our approach improved throughput and execution time from 1.1x through
-1.7x on 120 core.
+We evaluated proposed partitioning approach on a large scale-up server
+using 
+BigDataBench~\cite{wang2014bigdatabench} and
+the results revealed that the proposed framework significantly mitigate the 
+performance scalability problems of Apache Spark.
+\item 
+We present a proof-of-concept architecture for Apache Spark-based scale-up servers
+based on Docker-based logical partitioning.
 \end{itemize}
 
 
@@ -156,9 +155,8 @@ Our approach improved throughput and execution time from 1.1x through
 %Mapping
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 The rest of this paper is organized as follows.
-Section 2 describes the test-bed and Spark scalability problem.
-Section 3 describes the our partitioning approach and 
-Section 4 shows the results of the experimental evaluation. 
-Section 5 describes related works. 
-Finally, section 6 concludes the paper.
+Section 2 describes the test-bed, Spark scalability problem and benefits of partitioning.
+Section 3 shows the our proof-of-concept architecture.
+Section 4 describes related works. 
+Finally, section 5 concludes the paper.
 
