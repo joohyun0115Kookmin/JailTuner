@@ -1,0 +1,123 @@
+%Introduce
+Good afternoon, Ladies and gentlemen.
+It's a great pleasure to be with you today.
+My name's Joohyun Kyong and I'm a Phd Student at Kookmin University.
+
+This afternoon I'd like to talk about 'PLDU: A Per-core Lightweight  Deferred
+Update Processing  for Linux kernel Scalability'.
+My talk will last about 10 minutes.
+
+%Outline
+What I intend to do is to break down this presentation into four parts:
+First, I'll describe the history of the Linux scalability, reviewing some of
+the early studies and their technical issues.
+Then I'll talk about what is scalability problem.
+In particular, I'll describe the problem from an academic point of you.
+Then I'll show you our new method, 
+so I'll share with you some of the improved result.
+Finally, I'll make a brief summary and talk about future plan.
+
+There's quite a lot to cover, so I'd be grateful if you'd hold any questions
+until the end of my talk.
+
+%40 Years of Microprocessor Trend Data
+First, I'll describe some of the background research.
+40 years of microprocessor trend data show two interesting charicterastic.
+First, single-thread performance has improved slightly.
+Second, the number of cores is now increasing with the power consumption. 
+
+Let me refresh your memory on the history of the Linux Scalability research,
+published by Dr Wickizer at the MIT University in 2010s.
+He analysed the scalability of various applications such as Exim, Apache, and MapReduce.
+Especially, he ran Linux on a 48 core computer.
+he has succeeded in improving pretty much everything that you
+can think of.
+Similarly, Dr Clements, from the same lab, contributed to the linux scalability
+using RCU in terms of the single address space.
+He succeeded in  solving the read-mostly lock contention problem.
+Thanks to these efforts, the Linux kernel has considerably improved the
+scalability in the read-mostly situation, which were great.
+
+%What about update? In the Linux
+But, What about update? 
+Please turn your attention to the graph.
+AIM7 contains Linux fork-intensive workload.
+The AIM7 multiuser is composed of various workload such as disk-file operations,
+process creation, virtual memory operations, pipe, and arithmetic operations.
+We ran on 120 core system with tmpfs filesystems to minimize IO bottlenecks.
+Here, y axis shows the throughput and the x axis shows the number of cpu.
+The hight y line demonstrates the better performance.
+Up to 60 core, the stock Linux scales up linearly, but then they flattens out.
+Idle operating system shows linear scalability.
+However, real Linux scales flattens out.
+
+%Lock profile on the 120 core
+In order to understand this problem, we profiled the lock on the 120core using
+the Linux lockstat profiler.
+
+%Lockstat
+We found two lock problems, which were both anon_vma->rwsem and  mapping file rwsem.
+Furthermore, both locks are update locks.
+It means that the problem in Linux kernel is serialized update during fork .
+
+%Update serialized
+Updates cannot run on the same time as in an exclusive lock even
+using the reader-writer locks or RCU.
+Here, anon_vma->rwsem and i_mmap are updates.
+
+%Exsistence Solution - 1
+Do you know what is the best solution for update serialization?
+Not doing update is best solution.
+That means moving the update most data structure to read-most data structure.
+But everything can not be applied to move the read-mostly data structure such
+as reverse mapping that is update-mostly data structure.
+An other existing ssolution is using the non-blocking algorithms such as
+lock-free or wait-free data structure based on the compare-and-swap operation.
+However, this data structure incurs additional issues because of inter-core
+communication bottlenecks and cache coherence system's write serialization.
+
+%Existence Solution - 2
+The second solution is the per-CPU approach.
+Basically, Per-CPU processing may gives great scalability about update-heavily
+data structure.
+Readers simply access the value of the global counter.
+Generally, Per-CPU approach gives extremely fast for update-heavily.
+Currently, this method, However, can be just apply to the simple counters.
+If you apply into list operation, per-core approach may need additional
+behavior such as save timestamp and save operation and then merging of the
+update logs in cronozilal order that recorded in multiple per-core data.
+Therefore, it complex reader before operations.
+This is basic background of my research.
+
+%PLDU
+So, for now, we focus on our per-core based lightweight concurrent update
+approach.
+PLDU is similar to Oplog because it defers actual update operations as late
+as possible to reduce serialization problems.
+However, PLDU can eliminates time stamps.
+Time stamps based approach required per-core log managements.
+
+%Summary
+That brings me to the end of my presentation.
+I sincerely hope you'll all go away with a more complete picture of the
+scalability issue of the Linux kernel.
+Let me just run over the key points again and just summarize the main issues as
+I see them.
+
+Firstly, on the history of Linux scalability, what the problem was and how can
+be solved.
+Secondly, the reverse mapping's update lock as the main problem in our research.
+Thirdly, PLDU, a Lightweight concurrent update method with deferred processing
+for the solution of update lock contention and I shared with you evaluation of
+PLDU.
+Actually, the Linux kernel has another update heavy data structures too.
+So, I aim to make a our new method applied to other data structure.
+
+PLDU is implemented on to Linux kernel 4.2 and available as open-source from
+github.
+
+Thank you for listening.
+
+I'd be glad to try and answer any questions.
+
+Questions:
