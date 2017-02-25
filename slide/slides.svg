@@ -27,10 +27,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.80903708"
-     inkscape:cx="359.55123"
-     inkscape:cy="181.34645"
+     inkscape:cx="6.044565"
+     inkscape:cy="178.87438"
      inkscape:document-units="mm"
-     inkscape:current-layer="g18198"
+     inkscape:current-layer="g17772"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="false"
@@ -15164,6 +15164,23 @@
        style="fill:none;stroke:#0000ff;stroke-width:3.45285892;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.79999995;stroke-dasharray:none;stroke-opacity:1"
        id="path18122"
        inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="918.38873"
+       y="415.10889"
+       id="text14226-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan14228-6"
+         x="918.38873"
+         y="415.10889"
+         style="font-weight:bold;fill:#ff0000">Staggler Task</tspan><tspan
+         sodipodi:role="line"
+         x="918.38873"
+         y="465.10889"
+         id="tspan14230-7"
+         style="font-weight:bold;fill:#ff0000">Problem</tspan></text>
   </g>
   <g
      inkscape:label="5_benefit_wc_30"
@@ -17587,6 +17604,7 @@
    id="path21360"
    style="fill:none;stroke:#00dd00;stroke-width:3.63236475;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.79999995;stroke-dasharray:none;stroke-opacity:1"
    d="m 279.82845,650.7107 21.9697,0" />
+
 
 
     path
