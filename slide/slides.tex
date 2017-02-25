@@ -6,7 +6,7 @@
 \makeatletter
 
 \usepackage{listings}
-
+\setbeamertemplate{footline}[frame number]
 \setbeamercovered{transparent}
 
 \usecolortheme{kesl}
@@ -76,9 +76,9 @@ Source:SGI
 
 \begin{frame}{Scale Out Vs. Scale Up}
     \begin{itemize}
+    \item Scale out or scale horizontally: adding more nodes to a system.
     \item Scale up or scale vertically: adding resources to a single node in a
     system.
-    \item Scale out or scale horizontally: adding more nodes to a system.
     \end{itemize}
 \begin{center}
 \includegraphics[scale=0.5]{fig/scale}
@@ -116,9 +116,9 @@ Source:SGI
 \begin{frame}{But, what about Scale-up server?}
 \end{frame}
 
-\begin{frame}{Why Scale Up when you can Scale Out?}
+\begin{frame}{Why scale-up when you can scale-out?}
     \begin{itemize}
-    \item if data fits in memory of multicore then often order of magnitude
+    \item If data fits in memory of multicore then often order of magnitude
     better performance
         \begin{itemize}
             \item GraphLab1 (multicore) is 1000x faster than Hadoop (cluster)
@@ -136,7 +136,7 @@ Spark Big Data Analytics Stack
 \end{center}
 \end{frame}
 
-\begin{frame}{Test-bed : Scale-up server}
+\begin{frame}{Test-bed : our scale-up server}
 \begin{center}
 \includegraphics[scale=0.8]{fig/xeon}
 \end{center}
@@ -169,7 +169,13 @@ Spark Big Data Analytics Stack
 \end{textblock} 
 \end{frame}
 
-\begin{frame}{The General Scalability Problems}
+\begin{frame}{Spark Scale-up Server Scalability Problems}
+\begin{center}
+\includegraphics[scale=0.3]{fig/scale-up-p}
+\end{center}
+\end{frame}
+
+\begin{frame}{The General Scalability Problems - Previous Research}
     \begin{itemize}[<+-| alert@+>]
     \item Garbage Collection(GC) overheads.
     \item Locality of memory accesses on Non-Uniform Memory Access(NUMA)
@@ -239,7 +245,7 @@ Spark Big Data Analytics Stack
 \end{textblock} 
 \end{frame}
 
-\begin{frame}{Straggler Tasks Problem}
+\begin{frame}{What is Straggler Tasks Problem?}
 \begin{center}
 \includegraphics[scale=0.3]{fig/straggler}
 \end{center}

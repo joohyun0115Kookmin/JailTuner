@@ -3,31 +3,32 @@ Good afternoon, Ladies and gentlemen.
 It's a great pleasure to be with you today.
 My name's Joohyun Kyong and I'm a Phd Student at Kookmin University.
 
-This afternoon I'd like to talk about 'PLDU: A Per-core Lightweight  Deferred
-Update Processing  for Linux kernel Scalability'.
+This afternoon I'd like to talk about 'Improving Scalability of Apache
+Spark-based Scale-up Server through Docker Container-based Partitioning'.
 My talk will last about 10 minutes.
 
 %Outline
 What I intend to do is to break down this presentation into four parts:
-First, I'll describe the history of the Linux scalability, reviewing some of
-the early studies and their technical issues.
-Then I'll talk about what is scalability problem.
+First, I'll describe the history of the Apache Spark Scalability, reviewing some
+of the early studies and their technical issues.
+Then I'll talk about what is Spark scalability problem.
 In particular, I'll describe the problem from an academic point of you.
-Then I'll show you our new method, 
+Then I'll show you our new concept, 
 so I'll share with you some of the improved result.
-Finally, I'll make a brief summary and talk about future plan.
+Finally, I'll make a new architecure and talk about future plan.
 
 There's quite a lot to cover, so I'd be grateful if you'd hold any questions
 until the end of my talk.
 
 %40 Years of Microprocessor Trend Data
 First, I'll describe some of the background research.
+
 40 years of microprocessor trend data show two interesting charicterastic.
 First, single-thread performance has improved slightly.
-Second, the number of cores is now increasing with the power consumption. 
+Second, the number of cores is now increasing. 
 
-Let me refresh your memory on the history of the Linux Scalability research,
-published by Dr Wickizer at the MIT University in 2010s.
+Let me refresh your memory on the history of the Apache Spark Scalability
+research, published by Dr Wickizer at the MIT University in 2010s.
 He analysed the scalability of various applications such as Exim, Apache, and MapReduce.
 Especially, he ran Linux on a 48 core computer.
 he has succeeded in improving pretty much everything that you
@@ -40,7 +41,6 @@ scalability in the read-mostly situation, which were great.
 
 %What about update? In the Linux
 But, What about update? 
-Please turn your attention to the graph.
 AIM7 contains Linux fork-intensive workload.
 The AIM7 multiuser is composed of various workload such as disk-file operations,
 process creation, virtual memory operations, pipe, and arithmetic operations.
@@ -100,7 +100,7 @@ Time stamps based approach required per-core log managements.
 %Summary
 That brings me to the end of my presentation.
 I sincerely hope you'll all go away with a more complete picture of the
-scalability issue of the Linux kernel.
+Apache scalability issue of the Scale-up server.
 Let me just run over the key points again and just summarize the main issues as
 I see them.
 
@@ -112,9 +112,6 @@ for the solution of update lock contention and I shared with you evaluation of
 PLDU.
 Actually, the Linux kernel has another update heavy data structures too.
 So, I aim to make a our new method applied to other data structure.
-
-PLDU is implemented on to Linux kernel 4.2 and available as open-source from
-github.
 
 Thank you for listening.
 

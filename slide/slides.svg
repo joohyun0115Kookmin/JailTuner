@@ -30,7 +30,7 @@
      inkscape:cx="359.55123"
      inkscape:cy="181.34645"
      inkscape:document-units="mm"
-     inkscape:current-layer="g11789"
+     inkscape:current-layer="g18198"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="false"
@@ -8764,96 +8764,6 @@
         </g>
       </g>
     </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="g11789"
-     inkscape:label="1_1_history"
-     style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:26.78820801px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="20.120033"
-       y="305.65826"
-       id="text12919"
-       sodipodi:linespacing="125%"
-       transform="scale(0.86581727,1.1549781)"><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="305.65826"
-         id="tspan12978">M. Zaharia, M. Chowdhury, T. Das, A. Dave, J. Ma, M. McCauley, M. J. Franklin, S. Shenker, and I. Stoica.</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="339.14352"
-         id="tspan13414">Resilient Distributed Datasets: A Fault-tolerant Abstraction for In-memory Cluster Computing. In Proceedings of the 9th</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="372.62878"
-         id="tspan13416">USENIX Conference on Networked Systems Design and Implementation, NSDI’12, 2012.</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="406.11404"
-         id="tspan13418"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="439.5993"
-         id="tspan13420"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="473.08456"
-         id="tspan13422">X. Ren, G. Ananthanarayanan, A. Wierman, and M. Yu. Hopper: Decentralized Speculation-aware Cluster</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="506.56982"
-         id="tspan13424">Scheduling at Scale. In Proceedings of the 2015 ACM Conference on Special Interest Group on Data</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="540.05505"
-         id="tspan13426">Communication, SIGCOMM ’15, pages 379–392, 2015.</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="573.54034"
-         id="tspan13428"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="607.02563"
-         id="tspan13430"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="640.51086"
-         id="tspan13432">K. Ousterhout, R. Rasti, S. Ratnasamy, S. Shenker, and B.-G.Chun. Making Sense of Performance in Data Analytics</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="673.99609"
-         id="tspan13434">Frameworks. In Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation,</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="707.48138"
-         id="tspan13436">NSDI’15, 2015.</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="740.96667"
-         id="tspan13438"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="774.4519"
-         id="tspan13440"></tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="807.93713"
-         id="tspan13442">M. Maas, K. Asanović, T. Harris, and J. Kubiatowicz. Taurus: A Holistic Language Runtime System for</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="841.42242"
-         id="tspan13444">Coordinating Distributed Managed-Language Applications. In Proceedings of the Twenty-First International Conference</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="874.90771"
-         id="tspan13446">on Architectural Support for Programming Languages and Operating Systems, ASPLOS ’16, pages 457–471, 2016.</tspan><tspan
-         sodipodi:role="line"
-         x="20.120033"
-         y="908.39294"
-         id="tspan13448" /></text>
   </g>
   <g
      style="display:inline"
@@ -17857,6 +17767,23 @@
    id="path21448"
    style="fill:none;stroke:#0000ff;stroke-width:3.63236475;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.79999995;stroke-dasharray:none;stroke-opacity:1"
    d="m 917.86518,746.91717 21.9697,-21.62008" />
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   x="1014.2523"
+   y="632.75275"
+   id="text14226"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan14228"
+     x="1014.2523"
+     y="632.75275"
+     style="font-weight:bold;fill:#ff0000">Staggler Task</tspan><tspan
+     sodipodi:role="line"
+     x="1014.2523"
+     y="682.75275"
+     id="tspan14230"
+     style="font-weight:bold;fill:#ff0000">Problem</tspan></text>
 </g>
   <g
      inkscape:label="6_benefit_k_30"
