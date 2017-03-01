@@ -1,22 +1,11 @@
 \begin{thebibliography}{10}
 
-\bibitem{Kubernetes}
-Kubernetes.
-\newblock http://kubernetes.io/.
-
 \bibitem{Ahsan2016SVS}
 V.~V. E.~A. Ahsan Javed~Awan, Mats~Brorsson.
 \newblock {How Data Volume Affects Spark Based Data Analytics on a Scale-up
   Server}.
 \newblock In {\em Big Data Benchmarks, Performance Optimization, and Emerging
   Hardware}, Springer, Lecture Notes in Computer Science, 2016.
-
-\bibitem{Ansel2014OEF}
-J.~Ansel, S.~Kamil, K.~Veeramachaneni, J.~Ragan-Kelley, J.~Bosboom, U.-M.
-  O'Reilly, and S.~Amarasinghe.
-\newblock {OpenTuner: An Extensible Framework for Program Autotuning}.
-\newblock In {\em Proceedings of the 23rd International Conference on Parallel
-  Architectures and Compilation}, PACT '14, 2014.
 
 \bibitem{Appuswamy2013SVS}
 R.~Appuswamy, C.~Gkantsidis, D.~Narayanan, O.~Hodson, and A.~Rowstron.
@@ -99,12 +88,6 @@ M.~Maas, K.~Asanovi\'{c}, T.~Harris, and J.~Kubiatowicz.
   Architectural Support for Programming Languages and Operating Systems},
   ASPLOS '16, pages 457--471, 2016.
 
-\bibitem{Merkel2014DLL}
-D.~Merkel.
-\newblock {Docker: Lightweight Linux Containers for Consistent Development and
-  Deployment}.
-\newblock {\em Linux J.}, 2014, 2014.
-
 \bibitem{Ousterhout2015MSP}
 K.~Ousterhout, R.~Rasti, S.~Ratnasamy, S.~Shenker, and B.-G. Chun.
 \newblock {Making Sense of Performance in Data Analytics Frameworks}.
@@ -116,13 +99,6 @@ C.~Pogue, A.~Kumar, D.~Tollefson, and S.~Realmuto.
 \newblock {SPECjbb2013 1.0: An Overview}.
 \newblock In {\em Proceedings of the 5th ACM/SPEC International Conference on
   Performance Engineering}, ICPE '14.
-
-\bibitem{Qureshi2006UCP}
-M.~K. Qureshi and Y.~N. Patt.
-\newblock {Utility-Based Cache Partitioning: A Low-Overhead, High-Performance,
-  Runtime Mechanism to Partition Shared Caches}.
-\newblock In {\em Proceedings of the 39th Annual IEEE/ACM International
-  Symposium on Microarchitecture}, MICRO 39, pages 423--432, 2006.
 
 \bibitem{Ren2015HDS}
 X.~Ren, G.~Ananthanarayanan, A.~Wierman, and M.~Yu.
@@ -141,12 +117,6 @@ K.~Shvachko, H.~Kuang, S.~Radia, and R.~Chansler.
 \newblock {The Hadoop Distributed File System}.
 \newblock In {\em Proceedings of the 2010 IEEE 26th Symposium on Mass Storage
   Systems and Technologies (MSST)}, MSST '10, 2010.
-
-\bibitem{Borg}
-A.~Verma, L.~Pedrosa, M.~R. Korupolu, D.~Oppenheimer, E.~Tune, and J.~Wilkes.
-\newblock Large-scale cluster management at {Google} with {Borg}.
-\newblock In {\em Proceedings of the European Conference on Computer Systems
-  (EuroSys)}, Bordeaux, France, 2015.
 
 \bibitem{wang2014bigdatabench}
 L.~Wang, J.~Zhan, C.~Luo, Y.~Zhu, Q.~Yang, Y.~He, W.~Gao, Z.~Jia, Y.~Shi,
